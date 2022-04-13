@@ -1,0 +1,255 @@
+UnitBlueprint {
+    AI = {
+        StagingPlatformScanRadius = 1,
+    },
+    Audio = {
+        ActiveLoop = 'SC2/SC2/Experimentals/CYBRAN/UCX0115/snd_UCX0115_ExpResearch_Magnet_Active_loop',
+        Destroyed = 'SC2/SC2/Experimentals/CYBRAN/UCX0115/snd_UCX0115_ExpResearch_Destroy_Lrg_PreDestroy',
+        Killed = 'SC2/SC2/Experimentals/CYBRAN/UCX0115/snd_UCX0115_ExpResearch_Destroy_Lrg_PreDestroy',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Experimentals',
+    },
+    Build = {
+        BuildScaffoldUnit = 'ucb0021',
+        BuildSliderBone = 'UCX0115',
+        BuildSliderY = -5.5,
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'CYBRAN',
+        'STRUCTURE',
+        'TECH1',
+        'OPTICS',
+        'DRAGBUILD',
+        'SIZE12',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'PODSTAGINGPLATFORM',
+        'EXPERIMENTAL',
+    },
+    CollisionOffsetY = -0.25,
+    CollisionOffsetZ = -1.25,
+    Death = {
+        AirDestructionPlumeEffect = 'AirSmokeTrail01',
+        AirDestructionWaterPlumeEffect = 'AirWaterBubbleTrail01',
+        AirExplosionEffect = 'CybranDefaultDestroyEffectsAir02',
+        ExplosionEffect = 'CybranStructureDestroyEffectsExtraLarge02',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 10,
+        Health = 13500,
+        MaxHealth = 13500,
+        RegenRate = 48,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0039>Experimental Research Center',
+    Display = {
+        AnimationPermOpen = '/units/Cybran/xrb3301/xrb3301_aopen.sca',
+        DisplayName = '<LOC UNIT_NAME_0078>Proto-Brain Complex',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UCX0115',
+                        },
+                        Type = 'CybranProtoBrainBase01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODReduceImmune = true,
+            LODs = {
+                {
+                    LODCutoff = 120,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 240,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 12.8,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12,
+            },
+        },
+        UniformScale = 0.23,
+    },
+    Economy = {
+        BuildTime = 190,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 3375,
+        MassValue = 1000,
+        ProductionPerSecondResearch = 0.04,
+        RebuildBonusIds = {
+            'UCX0115',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 14,
+        SizeZ = 14,
+    },
+    General = {
+        BuildIconIndex = 8,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 210,
+        ExperienceValue = 4500,
+        FactionName = 'Cybran',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0079>Proto-Brain Complex',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 28,
+    },
+    LifeBarHeight = 0.32,
+    LifeBarOffset = 3.4,
+    LifeBarSize = 6.5,
+    Navigation = {
+        CostStamp = '/coststamps/Custom/UCX0115_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = -1.55,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -2,
+    SelectionMeshOffsetZ = -0.5,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.4,
+    SelectionMeshScaleZ = 0.7,
+    SelectionSizeX = 9.8,
+    SelectionSizeZ = 7.6,
+    SelectionThickness = 0.35,
+    SizeX = 5,
+    SizeY = 3,
+    SizeZ = 7.5,
+    StrategicIconName = 'icon_experimental_generic',
+    StrategicIconSortPriority = 200,
+    Transport = {
+        TransportBoneSets = {
+            {
+                Bones = {
+                    'AttachSpecial01',
+                },
+                TransportType = 'ProtoBrain',
+            },
+        },
+    },
+    Weapons = {
+        {
+            AboveWaterTargetsOnly = true,
+            Damage = 7500,
+            DamageFriendly = true,
+            DamageRadius = 4,
+            DamageType = 'Normal',
+            DisplayName = 'Death Weapon',
+            DummyWeapon = true,
+            FiringTolerance = 0.2,
+            Label = 'DeathWeapon',
+            WeaponCategory = 'Death',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Cybran/UCX0115/UCX0115_wreckage02_prop.bp',
+        Decay = 0,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

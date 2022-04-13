@@ -1,0 +1,258 @@
+UnitBlueprint {
+    AI = {
+        GuardReturnRadius = 35,
+        GuardScanRadius = 30,
+    },
+    Air = {
+        BankFactor = 0.3,
+        BankForward = true,
+        CanFly = true,
+        CirclingElevationChangeRatio = 0.25,
+        CirclingFlightChangeFrequency = 2,
+        CirclingRadiusChangeMaxRatio = 0.6,
+        CirclingRadiusChangeMinRatio = 0.3,
+        CirclingTurnMult = 2,
+        KLift = 3,
+        KLiftDamping = 2.5,
+        KMove = 1,
+        KMoveDamping = 2,
+        KRoll = 1.5,
+        KRollDamping = 2,
+        KTurn = 1.5,
+        KTurnDamping = 2,
+        LiftFactor = 2,
+        MaxAirspeed = 8,
+        MinAirspeed = 3,
+        StartTurnDistance = 0,
+    },
+    Audio = {
+        AmbientMove = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0116/snd_UIX0116_ExpPod_Move_Loop',
+        Killed = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0116/snd_UIX0116_ExpPod_Killed',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Sml_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_SEA',
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'TECH2',
+        'MOBILE',
+        'AIR',
+        'ANTINAVY',
+        'INTELLIGENCE',
+        'RADAR',
+        'SONAR',
+        'OVERLAYSONAR',
+        'VISIBLETORECON',
+        'ILLUMINATE',
+        'INSIGNIFICANTUNIT',
+    },
+    CollisionOffsetY = -0.1,
+    Death = {
+        ExplosionEffect = 'IlluminateDefaultDestroyEffectsAir01',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 350,
+        MaxHealth = 350,
+        RegenRate = 1,
+    },
+    Display = {
+        IdleEffects = {
+            Air = {
+                Effects = {
+                    {
+                        Bones = {
+                            -2,
+                        },
+                        Type = 'UIX0116IdleEffects01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODReduceImmune = true,
+            LODs = {
+                {
+                    LODCutoff = 400,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 500,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 600,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        MovementEffects = {
+            Air = {
+                Effects = {
+                    {
+                        Bones = {
+                            -2,
+                        },
+                        Type = 'UIX0116MovementEffects01',
+                    },
+                },
+            },
+        },
+        UniformScale = 0.08,
+    },
+    Economy = {
+        CaptureTimeMult = 0.6,
+        EnergyValue = 0,
+        MassValue = 0,
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 1,
+        SizeZ = 2,
+    },
+    General = {
+        CapCost = 0,
+        CommandCaps = {
+            RULEUCC_Attack = true,
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Stop = true,
+        },
+        ExperienceTable = 'EMPTY',
+        ExperienceValue = 0,
+        FactionName = 'Illuminate',
+        Icon = 'sea',
+        UnitWeight = 1,
+    },
+    Intel = {
+        SonarRadius = 32,
+        VisionRadius = 32,
+        WaterVisionRadius = 32,
+    },
+    LifeBarRender = false,
+    Physics = {
+        AttackElevation = 4,
+        BuildOnLayerCaps = {
+            LAYER_Air = true,
+        },
+        Elevation = 4,
+        MaxAcceleration = 5,
+        MaxBrake = 10,
+        MaxSpeed = 6,
+        MaxSteerForce = 5,
+        MeshExtentsX = 5,
+        MeshExtentsY = 0.65,
+        MeshExtentsZ = 2.15,
+        MotionType = 'RULEUMT_Air',
+        TurnRate = 180,
+    },
+    SizeX = 0.1,
+    SizeY = 0.1,
+    SizeZ = 0.1,
+    StrategicIconSortPriority = 165,
+    Weapons = {
+        {
+            AboveWaterTargetsOnly = false,
+            AlwaysRecheckTarget = false,
+            Audio = {
+                Fire = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0116/snd_UIX0116_ExpPod_Cannon',
+            },
+            AutoInitiateAttackCommand = true,
+            BallisticArc = 'RULEUBA_LowArc',
+            CollideFriendly = false,
+            Damage = 65,
+            DamageFriendly = false,
+            DamageRadius = 0,
+            DamageType = 'Normal',
+            DisplayName = 'Pod Laser',
+            FireTargetLayerCaps = {
+                Air = 'Sub|Water|Seabed|Land',
+            },
+            FiringRandomness = 0,
+            FiringTolerance = 0.1,
+            Label = 'MainGun',
+            MaxRadius = 25,
+            MuzzleChargeDelay = 0.1,
+            MuzzleFlashEffect = 'Illuminate_Plasma06_Launch01',
+            MuzzleSalvoDelay = 0.25,
+            MuzzleSalvoSize = 3,
+            MuzzleVelocity = 10,
+            ProjectileId = '/projectiles/Illuminate/ICannon04/ICannon04_proj.bp',
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'Turret_01',
+                    },
+                    RackBone = 'Turret_01',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = 0,
+            RackReloadTimeout = 0,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_DirectFire',
+            RateOfFire = 0.9,
+            SlavedToBody = true,
+            SlavedToBodyArcRange = 175,
+            TargetCheckInterval = 1,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TrackingRadius = 1.15,
+            TurretBoneMuzzle = 'Turret_01',
+            TurretBonePitch = 'Turret_01',
+            TurretBoneYaw = 'Turret_01',
+            TurretDualManipulators = false,
+            TurretPitch = 0,
+            TurretPitchRange = 80,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 360,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            WeaponCategory = 'Direct Fire Naval',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        Decay = 0,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+        },
+    },
+}

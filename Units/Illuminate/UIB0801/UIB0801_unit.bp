@@ -1,0 +1,266 @@
+UnitBlueprint {
+    Audio = {
+        DeathExplosion = 'SC2/SC2/Destructions/Explosions/ILLUMINATE/snd_Destroy_Lrg_PreDestroy',
+        Killed = 'SC2/SC2/Destructions/Explosions/ILLUMINATE/snd_Destroy_Huge',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        BuildScaffoldUnit = 'uib0022',
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'BUILTBYCOMMANDER',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'CONSTRUCTION',
+        'DRAGBUILD',
+        'SIZE16',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWQUEUE',
+        'SORTCONSTRUCTION',
+        'ILLUMINATE',
+        'RESEARCHSTATION',
+        'UIBASICSORTCATEGORY',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'UIB0801_revolution',
+                Meshes = {
+                    '/projectiles/debris/Illuminate/UIB0801/UIB0801_Turret_Debris_01_mesh',
+                    '/projectiles/debris/Illuminate/UIB0801/UIB0801_Turret_Debris_02_mesh',
+                },
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'UIB0801_light_01',
+                Mesh = '/projectiles/debris/Illuminate/UIB0801/UIB0801_Turret_Debris_03_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'UIB0801_light_02',
+                Mesh = '/projectiles/debris/Illuminate/UIB0801/UIB0801_Turret_Debris_04_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'IlluminateStructureDestroyEffectsLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 3,
+        Health = 6000,
+        MaxHealth = 6000,
+        RegenRate = 48,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0057>Research Production Facility',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.5,
+                OffsetZ = 0.25,
+            },
+        },
+        DisplayName = '<LOC UNIT_NAME_0114>Research Station',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIB0801_revolution',
+                        },
+                        Type = 'IlluminateResearchStation01',
+                    },
+                    {
+                        Bones = {
+                            'UIB0801_light_01',
+                            'UIB0801_light_02',
+                        },
+                        Type = 'IlluminateResearchStation02',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 800,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                Diffuse = '/Illuminate/Tar_default_diffuse',
+                FadeOut = 150,
+                Length = 12.8,
+                Normal = '/Illuminate/Tar_default_normal',
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12.8,
+            },
+        },
+        UniformScale = 0.055,
+    },
+    Economy = {
+        BuildRate = 1,
+        BuildTime = 42,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 750,
+        MassValue = 375,
+        ProductionPerSecondResearch = 0.0125,
+        RebuildBonusIds = {
+            'UIB0801',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 8,
+        SizeZ = 8,
+    },
+    General = {
+        BuildIconIndex = 4,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 80,
+        ConstructionBar = true,
+        ExperienceValue = 2000,
+        FactionName = 'Illuminate',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0115>Research Station',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 2.9,
+    LifeBarSize = 5.5,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default8x8_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 3.2,
+        MeshExtentsY = 3.2,
+        MeshExtentsZ = 3.2,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = -0.1,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -1.2,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 1,
+    SelectionMeshScaleY = 0.5,
+    SelectionMeshScaleZ = 1,
+    SelectionSizeX = 4.5,
+    SelectionSizeZ = 4.5,
+    SelectionThickness = 0.55,
+    ShowResearchUI = true,
+    SizeX = 6,
+    SizeY = 5,
+    SizeZ = 6,
+    StrategicIconName = 'icon_research',
+    StrategicIconSortPriority = 220,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Illuminate/UIB0801/UIB0801_Wreckage01_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+            Water = true,
+        },
+    },
+}

@@ -1,0 +1,134 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Expl_Water_Lrg',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    CollisionOffsetY = -0.3,
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Debris01',
+                Meshes = {
+                    '/projectiles/debris/Props/Barges/Barge01/Barge01_Turret_Debris_01_mesh',
+                    '/projectiles/debris/Props/Barges/Barge01/Barge01_Turret_Debris_02_mesh',
+                },
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 10000,
+        MaxHealth = 10000,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        DisplayName = '<LOC SCENARIO_0082>Naval Blockade',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Barges/Barge01/Barge01_Diffuse.dds',
+                                    MaskName = '/props/Barges/Barge01/Barge01_Mask.dds',
+                                    NormalName = '/props/Barges/Barge01/Barge01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Barges/Barge01/Barge01_lod0.scm',
+                },
+                {
+                    LODCutoff = 500,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Barges/Barge01/Barge01_Diffuse.dds',
+                                    MaskName = '/props/Barges/Barge01/Barge01_Mask.dds',
+                                    NormalName = '/props/Barges/Barge01/Barge01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Barges/Barge01/Barge01_lod1.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Barges/Barge01/Barge01_Diffuse.dds',
+                                    MaskName = '/props/Barges/Barge01/Barge01_Mask.dds',
+                                    NormalName = '/props/Barges/Barge01/Barge01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Barges/Barge01/Barge01_lod2.scm',
+                },
+            },
+        },
+        UniformScale = 0.4,
+    },
+    Economy = {
+        BuildTime = 10,
+        EnergyValue = 4000,
+        MassValue = 1200,
+    },
+    General = {
+        UnitName = '<LOC SCENARIO_0083>Naval Blockade',
+    },
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Water = true,
+        },
+        MotionType = 'RULEUMT_None',
+    },
+    SelectionMeshOffsetX = 4,
+    SelectionMeshOffsetY = 0,
+    SelectionMeshOffsetZ = -2,
+    SelectionMeshScaleX = 0.1,
+    SelectionMeshScaleY = 0.1,
+    SelectionMeshScaleZ = 0.1,
+
+    -- height
+    SizeX = 0.01,
+    SizeY = 0.01,
+    SizeZ = 0.01,
+    Wreckage = {
+        -- Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+
+		Blueprint = '/props/Barges/Barge02/Barge02_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+        },
+    },
+}

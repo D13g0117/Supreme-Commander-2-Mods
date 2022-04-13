@@ -1,0 +1,339 @@
+UnitBlueprint {
+    Audio = {
+        ActiveLoop = 'SC2/SC2/Buildings/ILLUMINATE/UIB0701/snd_UIB0701_MassExtractor_Active_Loop',
+        Destroyed = 'SC2/SC2/Destructions/Explosions/ILLUMINATE/snd_Destroy_Huge',
+        Killed = 'SC2/SC2/Destructions/Explosions/ILLUMINATE/snd_Destroy_Lrg_PreDestroy',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Sml_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        BuildScaffoldUnit = 'uib0022',
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'BUILTBYCOMMANDER',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'ECONOMIC',
+        'MASSPRODUCTION',
+        'MASSEXTRACTION',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SORTECONOMY',
+        'ILLUMINATE',
+        'UIBASICSORTCATEGORY',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'UIB0701_Arm02',
+                Mesh = '/projectiles/debris/Illuminate/UIB0701/UIB0701_Turret_Debris_01_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'UIB0701_Arm01',
+                Mesh = '/projectiles/debris/Illuminate/UIB0701/UIB0701_Turret_Debris_02_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'IlluminateStructureDestroyEffectsLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 20,
+        Health = 4000,
+        MaxHealth = 4000,
+        RegenRate = 10,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0054>Mass Production Facility',
+    Display = {
+        AnimationActivate = '/units/Illuminate/UIB0701/UIB0701_Aidle01.sca',
+        AnimationActivateLoop = true,
+        AnimationDeath = {
+            {
+                Animation = '/units/Illuminate/UIB0701/UIB0701_Adeath01.sca',
+                AnimationRateMax = 1.2,
+                AnimationRateMin = 1,
+                Weight = 100,
+            },
+        },
+        DisplayName = '<LOC UNIT_NAME_0108>Mass Extractor',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIB0701_Root',
+                        },
+                        Type = 'IlluminateMassExtractor01',
+                    },
+                    {
+                        Bones = {
+                            'UIB0701_Exhaust01',
+                            'UIB0701_Exhaust02',
+                            'UIB0701_Exhaust03',
+                            'UIB0701_Exhaust04',
+                        },
+                        Type = 'IlluminateMassExtractor02',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 60,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 170,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, alpha_test = 128',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 600,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, alpha_test = 128',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/illuminate/UIB0701/UIB0701_belt_diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/illuminate/UIB0701/UIB0701_belt_Mask.dds',
+                                    NormalName = '/Units/illuminate/UIB0701/UIB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, alpha_test = 128, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                Diffuse = '/Illuminate/Tar_default_diffuse',
+                FadeOut = 150,
+                Length = 10,
+                Normal = '/Illuminate/Tar_default_normal',
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 10,
+            },
+        },
+        UniformScale = 0.041,
+    },
+    Economy = {
+        BuildTime = 25,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 500,
+        MassValue = 200,
+        ProductionPerSecondMass = 1.2,
+        RebuildBonusIds = {
+            'UIB0701',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 6,
+        SizeZ = 6,
+    },
+    General = {
+        BuildIconIndex = 7,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 60,
+        ExperienceValue = 1000,
+        FactionName = 'Illuminate',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0109>Mass Extractor',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 1.45,
+    LifeBarSize = 2.5,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default6x6_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        BuildRestriction = 'RULEUBR_OnMassDeposit',
+        MaxSteerForce = 0,
+        MeshExtentsX = 2,
+        MeshExtentsY = 2,
+        MeshExtentsZ = 2,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = 0,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -1.5,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.6,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 3.1,
+    SelectionSizeZ = 3.1,
+    SelectionThickness = 0.45,
+    SizeX = 2,
+    SizeY = 6,
+    SizeZ = 2,
+    StrategicIconName = 'icon_structure_mass',
+    StrategicIconSortPriority = 245,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Illuminate/UIB0701/UIB0701_wreckage02_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+        },
+    },
+}

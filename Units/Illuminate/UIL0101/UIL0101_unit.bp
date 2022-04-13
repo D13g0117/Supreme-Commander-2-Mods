@@ -1,0 +1,513 @@
+UnitBlueprint {
+    AI = {
+        Attacker = {
+            RelocateToFire = true,
+        },
+    },
+    Audio = {
+        AmbientMoveLand = 'SC2/SC2/Units/illuminate/UIL0101/snd_UIL0101_Tank_Move_Loop',
+        AmbientMoveWater = 'SC2/SC2/Units/illuminate/UIL0101/snd_UIL0101_Tank_Move_Water_Lp',
+        Destroyed = 'SC2/SC2/Units/illuminate/UIL0101/snd_UIL0101_Tank_Destroy',
+        EnterWater = 'SC2/SC2/Units/illuminate/UIL0101/snd_UIL0101_Tank_Into_Water',
+        HoverKilledOnWater = 'SC2/SC2/Destructions/Explosions/ILLUMINATE/snd_Expl_Water_Lrg',
+        Killed = 'SC2/SC2/Destructions/Explosions/ILLUMINATE/snd_Destroy_Land_Med',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Sml_Land',
+        Sinking = 'SC2/SC2/Destructions/Explosions/snd_water_death_Loop_SMALL_NoMetal',
+        TeleportEnd = 'SC2/SC2/Units/ILLUMINATE/snd_TeleportEnd',
+        TeleportStart = 'SC2/SC2/Units/ILLUMINATE/snd_TeleportStart',
+        TransitionWater = 'SC2/SC2/Units/illuminate/UIL0101/snd_UIL0101_Tank_Into_Water',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_LAND',
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYFACTORY',
+        'TECH1',
+        'MOBILE',
+        'LAND',
+        'TANK',
+        'DIRECTFIRE',
+        'HOVER',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYDIRECTFIRE',
+        'ILLUMINATE',
+        'ANTISURFACE',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'T01_Barrel01',
+                Mesh = '/projectiles/debris/Illuminate/UIL0101/UIL0101_Turret_Debris_01_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'IlluminateDefaultDestroyEffectsMed01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 1500,
+        MaxHealth = 1500,
+        RegenRate = 4,
+        Shield = {
+            AllowPenetration = true,
+            ImpactEffects = 'ShieldHit01',
+            OwnerShieldTextureSet = 'Shield',
+            ShieldDamageAbsorb = 0.85,
+            ShieldMaxHealth = 150,
+            ShieldRechargeTime = 10,
+            ShieldReflectChance = 0.5,
+            ShieldReflectRandomVector = true,
+            ShieldRegenRate = 1,
+            SizeX = 0.6,
+            SizeY = 0.5,
+            SizeZ = 0.8,
+            StartOn = false,
+        },
+        SurfaceThreatLevel = 1,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0061>Tank',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0122>Yenzoo',
+        EffectGroupClassification = 'Small',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                },
+            },
+            Water = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 40,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, glow, environment_mapping, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/Units/Shared/IlluminateShield.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, glow, environment_mapping, point_cloud, shield',
+                                },
+                            },
+                            Name = 'Shield',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, glow, environment_mapping',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/Units/Shared/IlluminateShield.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, glow, environment_mapping, shield',
+                                },
+                            },
+                            Name = 'Shield',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 400,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, glow, environment_mapping',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/Units/Shared/IlluminateShield.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, glow, environment_mapping, shield',
+                                },
+                            },
+                            Name = 'Shield',
+                        },
+                    },
+                },
+            },
+        },
+        MovementEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                },
+            },
+            Water = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0101',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                },
+            },
+        },
+        UniformScale = 0.08,
+    },
+    Economy = {
+        BuildTime = 19,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 100,
+        MassValue = 40,
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    General = {
+        BuildIconIndex = 1,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 30,
+        CommandCaps = {
+            RULEUCC_Attack = true,
+            RULEUCC_CallTransport = true,
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Stop = true,
+        },
+        ExperienceTable = 'TANK',
+        ExperienceValue = 150,
+        FactionName = 'Illuminate',
+        Icon = 'amph',
+        MoveEnergyCost = 30,
+        TeleportCooldown = 20,
+        TeleportRange = 70,
+        UnitName = '<LOC UNIT_NAME_0123>Yenzoo',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 24,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 0.5,
+    LifeBarSize = 0.85,
+    Navigation = {
+        Radius = 1.3,
+    },
+    Physics = {
+        BackUpDistance = 2,
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        CollisionPushClass = 1,
+        Elevation = 0.5,
+        MaxAcceleration = 10,
+        MaxBrake = 10,
+        MaxSpeed = 3.2,
+        MaxSpeedReverse = 1,
+        MaxSteerForce = 10,
+        MeshExtentsX = 1.3,
+        MeshExtentsY = 0.65,
+        MeshExtentsZ = 1.5,
+        MotionType = 'RULEUMT_Hover',
+        RotateBodyWhileMoving = true,
+        TurnFacingRate = 120,
+        TurnRate = 270,
+        WobbleFactor = 0.009,
+        WobbleSpeed = 0.006,
+    },
+    SelectionCenterOffsetZ = 0,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.3,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.6,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 0.9,
+    SelectionSizeZ = 1.2,
+    SelectionThickness = 0.6,
+    SizeX = 1.1,
+    SizeY = 0.8,
+    SizeZ = 1.3,
+    StrategicIconName = 'icon_land_directfire',
+    StrategicIconSortPriority = 125,
+    Transport = {
+        StorageSize = 1,
+        TeleportTime = 1,
+    },
+    Weapons = {
+        {
+            AboveWaterTargetsOnly = true,
+            AlwaysRecheckTarget = false,
+            Audio = {
+                Fire = 'SC2/SC2/Units/illuminate/UIL0101/snd_UIL0101_Tank_Cannon_Tau',
+            },
+            AutoInitiateAttackOnPatrol = true,
+            BallisticArc = 'RULEUBA_LowArc',
+            CollideFriendly = false,
+            Damage = 60,
+            DamageFriendly = false,
+            DamageType = 'Normal',
+            DisplayName = 'Tau Cannon',
+            FireTargetLayerCaps = {
+                Land = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+            FiringTolerance = 0.2,
+            Label = 'TauCannon01',
+            MaxRadius = 20,
+            MuzzleFlashEffect = 'Illuminate_Cannon01_Launch01',
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+            MuzzleVelocity = 30,
+            ProjectileId = '/projectiles/Illuminate/ICannon05/ICannon05_proj.bp',
+            ProjectileLifetimeUsesMultiplier = 2,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'T01_B01_Muzzle01',
+                    },
+                    RackBone = 'T01_Barrel01',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = -0.6,
+            RackReloadTimeout = 10,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RackSlavedToTurret = true,
+            RangeCategory = 'UWRC_DirectFire',
+            RateOfFire = 1,
+            SlavedToBody = false,
+            TargetCheckInterval = 0.6,
+            TargetPriorities = {
+                'LAND MOBILE',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TrackingRadius = 1.15,
+            TurretBoneMuzzle = 'T01_B01_Muzzle01',
+            TurretBonePitch = 'T01_Barrel01',
+            TurretBoneYaw = 'Turret01',
+            TurretDualManipulators = false,
+            TurretPitch = 20,
+            TurretPitchRange = 40,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 180,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            UseFiringSolutionInsteadOfAimBone = true,
+            ValidateFiringTrajectory = true,
+            WeaponCategory = 'Direct Fire',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Illuminate/UIL0101/UIL0101_Wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+        },
+    },
+}

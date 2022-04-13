@@ -1,0 +1,105 @@
+UnitBlueprint {
+    Categories = {
+        'UPGRADEMODULE',
+        'LAND',
+        'CYBRAN',
+        'TECH1',
+        'SORTUPGRADES',
+        'OVERLAYRADAR',
+        'OVERLAYSONAR',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 1000,
+        MaxHealth = 1000,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0027>Factory Add-on',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0054>Intel Installation',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 20,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0303/UCB0303_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0303/UCB0303_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0303/UCB0303_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                    TeamName = '/Units/Cybran/UCB0303/UCB0303_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 40,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0303/UCB0303_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0303/UCB0303_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0303/UCB0303_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/Cybran/UCB0303/UCB0303_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0303/UCB0303_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0303/UCB0303_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0303/UCB0303_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/Cybran/UCB0303/UCB0303_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.03,
+    },
+    Economy = {
+        BuildTime = 9,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 90,
+        MassValue = 35,
+    },
+    General = {
+        BuildIconIndex = 4,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 940,
+        CapCost = 0,
+        ExperienceValue = 0,
+        FactionName = 'Cybran',
+        StructureUpgradeUnit = true,
+        UnitName = '<LOC UNIT_NAME_0055>Intel Installation',
+    },
+    Intel = {
+        RadarRadius = 150,
+        SonarRadius = 150,
+        VisionRadius = 75,
+    },
+    LifeBarRender = false,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.05,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.8,
+    SelectionMeshScaleY = 0.7,
+    SelectionMeshScaleZ = 0.8,
+}

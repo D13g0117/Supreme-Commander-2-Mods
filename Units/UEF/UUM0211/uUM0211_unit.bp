@@ -1,0 +1,105 @@
+UnitBlueprint {
+    Audio = {
+        ShieldOff = 'SC2/SC2/Upgrades/UEF/UUM0211/snd_UUM0211_Upgrade_ShieldOff',
+        ShieldOn = 'SC2/SC2/Upgrades/UEF/UUM0211/snd_UUM0211_Upgrade_ShieldOn',
+    },
+    Categories = {
+        'UPGRADEMODULE',
+        'LAND',
+        'UEF',
+        'TECH1',
+        'SORTUPGRADES',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 10,
+        EconomyThreatLevel = 0,
+        Health = 1000,
+        MaxHealth = 1000,
+        SurfaceThreatLevel = 10,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0117>Factory Add-on',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0234>Shield Generator',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/UEF/UUB0202/UUB0202_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUB0202/UUB0202_Mask.dds',
+                                    NormalName = '/Units/UEF/UUB0202/UUB0202_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                    TeamName = '/Units/UEF/UUB0202/UUB0202_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/UEF/UUB0202/UUB0202_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUB0202/UUB0202_Mask.dds',
+                                    NormalName = '/Units/UEF/UUB0202/UUB0202_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/UEF/UUB0202/UUB0202_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 300,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/UEF/UUB0202/UUB0202_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUB0202/UUB0202_Mask.dds',
+                                    NormalName = '/Units/UEF/UUB0202/UUB0202_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/UEF/UUB0202/UUB0202_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.06,
+    },
+    Economy = {
+        BuildTime = 14,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 250,
+        MassValue = 125,
+    },
+    General = {
+        BuildIconIndex = 3,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 950,
+        CapCost = 0,
+        ExperienceValue = 0,
+        FactionName = 'UEF',
+        StructureUpgradeUnit = true,
+        UnitName = '<LOC UNIT_NAME_0235>Shield Generator',
+    },
+    LifeBarRender = false,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.8,
+    SelectionMeshScaleY = 1,
+    SelectionMeshScaleZ = 0.8,
+    SizeX = 2,
+    SizeY = 8,
+    SizeZ = 2,
+}

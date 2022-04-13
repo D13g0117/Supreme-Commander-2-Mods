@@ -1,0 +1,307 @@
+UnitBlueprint {
+    AnimSet = {
+        build_loop = 'UIB0011_BuildLoop',
+        finish_build = 'UIB0011_FinishBuild',
+        reverse_finish_build = 'UIB0011_ReverseFinishBuild',
+        reverse_start_build = 'UIB0011_ReverseStartBuild',
+        start_build = 'UIB0011_StartBuild',
+    },
+    AnimTree = '/anims/factory_animtree.bp',
+    Audio = {
+        ConstructClose = 'SC2/SC2/Buildings/ILLUMINATE/UIB0011/snd_UIB0011_mobilegantry_Close',
+        ConstructLoop = 'SC2/SC2/Buildings/ILLUMINATE/UIB0011/snd_UIB0011_mobilegantry_Construct_Loop',
+        ConstructOpen = 'SC2/SC2/Buildings/ILLUMINATE/UIB0011/snd_UIB0011_mobilegantry_OPEN',
+        DeathExplosion = 'SC2/SC2/Buildings/ILLUMINATE/UIB0011/snd_UIB0011_mobilegantry_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Buildings/ILLUMINATE/UIB0011/snd_UIB0011_mobilegantry_Destroy_Huge',
+    },
+    Build = {
+        FinishBuildAnimDelay = 9.7,
+        FinishBuildRolloffDelay = 12,
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    CollisionOffsetZ = 0.5,
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Flag01',
+                Mesh = '/projectiles/debris/Illuminate/UIB0011/UIB0011_Turret_Debris_01_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'UIB0011_Seesaw_4',
+                Mesh = '/projectiles/debris/Illuminate/UIB0011/UIB0011_Turret_Debris_02_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIB0002/UIB0002_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'UIB0011_Seesaw_3',
+                Mesh = '/projectiles/debris/Illuminate/UIB0011/UIB0011_Turret_Debris_03_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'UIB0011_Seesaw_Eddy_3',
+                Mesh = '/projectiles/debris/Illuminate/UIB0011/UIB0011_Turret_Debris_04_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIB0002/UIB0002_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'UIB0011_Seesaw_1',
+                Mesh = '/projectiles/debris/Illuminate/UIB0011/UIB0011_Turret_Debris_05_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'IlluminateStructureDestroyEffectsExtraLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 7500,
+        MaxHealth = 7500,
+        RegenRate = 18,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        BuildAttachBone = 'BuildPoint01',
+        DisplayName = '<LOC SCENARIO_0084>Custom Factory',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 100,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0011/UIB0011_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0011/UIB0011_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0011/UIB0011_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, alpha_test = 128',
+                                    TeamName = '/Units/Illuminate/UIB0011/UIB0011_Team.dds',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0011/UIB0011_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0011/UIB0011_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0011/UIB0011_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud',
+                                    TeamName = '/Units/Illuminate/UIB0011/UIB0011_Team.dds',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0011/UIB0011_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0011/UIB0011_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0011/UIB0011_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping',
+                                    TeamName = '/Units/Illuminate/UIB0011/UIB0011_Team.dds',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            SortOrder = -1,
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 12.8,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12.8,
+            },
+        },
+        UniformScale = 0.1,
+    },
+    Economy = {
+        BuildTime = 10,
+        EnergyValue = 4000,
+        MassValue = 1200,
+    },
+    Footprint = {
+        SizeX = 24,
+        SizeZ = 24,
+    },
+    General = {
+        BuildBones = {
+            BuildEffectBones = {
+                'Muzzle01',
+            },
+        },
+        ConstructionBar = false,
+        FactionName = 'Illuminate',
+        UnitName = '<LOC SCENARIO_0085>Custom Factory',
+        UnitWeight = 1,
+    },
+    LifeBarRender = false,
+    Navigation = {
+        CostStamp = {
+            254,254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,254,
+        },
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 5.5,
+        MeshExtentsY = 4.5,
+        MeshExtentsZ = 5.5,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+        RaisedPlatforms = {
+
+            -- Platform 1
+            -8,
+            -8,
+            1.2,
+            8,
+            -8,
+            1.2,
+            -8,
+            8,
+            1.2,
+            8,
+            8,
+            1.2,
+
+            -- Platform 2
+            -5,
+            -8,
+            1.2,
+            5,
+            -8,
+            1.2,
+            -5,
+            -11,
+            1.2,
+            5,
+            -11,
+            1.2,
+
+            -- Platform 3
+            -5,
+            -12,
+            0,
+            5,
+            -12,
+            0,
+            -5,
+            -11,
+            1.2,
+            5,
+            -11,
+            1.2,
+        },
+        RollOffPoints = {
+            {
+                UnitSpin = 0,
+                X = 0,
+                Y = 0,
+                Z = 18,
+            },
+        },
+        SkirtOffsetX = -2,
+        SkirtOffsetZ = -2,
+        SkirtSizeX = 28,
+        SkirtSizeZ = 28,
+    },
+
+    -- height
+    SizeX = 16,
+    SizeY = 0.75,
+    SizeZ = 15,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Illuminate/UIB0011/UIB0011_Wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.3,
+        ReclaimTimeMultiplier = 1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

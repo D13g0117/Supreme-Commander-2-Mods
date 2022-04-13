@@ -1,0 +1,170 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Sml_Land',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'SELECTABLE',
+        'VISIBLETORECON',
+    },
+    Death = {
+        DebrisPieces = true,
+        ExplosionEffect = 'UEFDefaultDestroyEffectsMed01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 10000,
+        MaxHealth = 10000,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC SCENARIO_0086>Objective Target',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0,
+                OffsetY = 2,
+                OffsetZ = 0,
+            },
+        },
+        DisplayName = '<LOC SCENARIO_0087>Security Station',
+        HideHoverBox = false,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Gray_Diffuse.dds',
+                                    MaskName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Mask.dds',
+                                    NormalName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                    TeamName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_lod0.scm',
+                },
+                {
+                    LODCutoff = 500,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Gray_Diffuse.dds',
+                                    MaskName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Mask.dds',
+                                    NormalName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_lod1.scm',
+                },
+                {
+                    LODCutoff = 1000,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Gray_Diffuse.dds',
+                                    MaskName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Mask.dds',
+                                    NormalName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_lod2.scm',
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 6.4,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 6.4,
+            },
+        },
+        UniformScale = 0.024,
+    },
+    Economy = {
+        BuildTime = 10,
+        CaptureTimeMult = 0.25,
+        EnergyValue = 4000,
+        MassValue = 1200,
+    },
+    Footprint = {
+        SizeX = 3,
+        SizeZ = 4,
+    },
+    General = {
+        CapCost = 0,
+        ExperienceValue = 250,
+        FactionName = 'UEF',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC SCENARIO_0088>Security Station',
+        UnitWeight = 1,
+    },
+    Intel = {
+        RadarRadius = 350,
+        ReactivateTime = 5,
+        VisionRadius = 20,
+    },
+    LifeBarRender = false,
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 1.1,
+        MeshExtentsY = 2.75,
+        MeshExtentsZ = 1.1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionSizeX = 1.7,
+    SelectionSizeZ = 2.1,
+    SelectionThickness = 0.8,
+
+    -- height
+    SizeX = 1.8,
+    SizeY = 2.4,
+    SizeZ = 3.6,
+    StrategicIconName = 'icon_structure_intel',
+    StrategicIconSortPriority = 220,
+    Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.3,
+        ReclaimTimeMultiplier = 1,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

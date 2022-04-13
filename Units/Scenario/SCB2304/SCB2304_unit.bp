@@ -1,0 +1,160 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Sml_Land',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'SELECTABLE',
+        'VISIBLETORECON',
+    },
+    Death = {
+        DebrisPieces = true,
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 1200,
+        MaxHealth = 1200,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC SCENARIO_0094>Objective Target',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+        },
+        DisplayName = '<LOC SCENARIO_0095>Gate Control Mechanism',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 1000,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Crates/UEF_Crates/UEF_Crate01/Uef_crate01_diffuse.dds',
+                                    MaskName = '/props/Crates/UEF_Crates/UEF_Crate01/Uef_crate01_Mask.dds',
+                                    NormalName = '/props/Crates/UEF_Crates/UEF_Crate01/Uef_crate01_normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Crates/UEF_Crates/UEF_Crate01/UEF_crate01_lod0.scm',
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 12.8,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12.8,
+            },
+        },
+    },
+    Economy = {
+        BuildTime = 10,
+        CaptureTimeMult = 0.3,
+        EnergyValue = 4000,
+        MassValue = 1200,
+    },
+    Footprint = {
+        SizeX = 2,
+        SizeZ = 2,
+    },
+    General = {
+        CapCost = 0,
+        UnitName = '<LOC SCENARIO_0096>Gate Control Mechanism',
+        UnitWeight = 1,
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 1,
+        MeshExtentsY = 1,
+        MeshExtentsZ = 1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = 0,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 1,
+    SelectionMeshScaleY = 1,
+    SelectionMeshScaleZ = 1,
+    SelectionSizeX = 1.5,
+    SelectionSizeZ = 1.5,
+    SelectionThickness = 0.8,
+
+    -- height
+    SizeX = 2,
+    SizeY = 2,
+    SizeZ = 2,
+    StrategicIconName = 'icon_structure_generic',
+    StrategicIconSortPriority = 220,
+    Weapons = {
+        {
+            Damage = 100,
+            DamageFriendly = true,
+            DamageRadius = 1,
+            DamageType = 'Normal',
+            DisplayName = '<LOC SCENARIO_0097>Death Weapon',
+            DummyWeapon = true,
+            FiringTolerance = 0.2,
+            Label = 'DeathWeapon',
+            WeaponCategory = 'Death',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Crates/UEF/UEF_Crate01/UEF_Crate01_Wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.3,
+        ReclaimTimeMultiplier = 1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

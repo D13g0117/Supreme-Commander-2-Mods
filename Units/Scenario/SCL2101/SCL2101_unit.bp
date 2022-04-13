@@ -1,0 +1,100 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Huge',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'CIVILIAN',
+        'LAND',
+        'VISIBLETORECON',
+    },
+    CollisionOffsetY = 8,
+    CullVolumeScaleZ = 6.5,
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 8888,
+        MaxHealth = 8888,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        DisplayName = '<LOC SCENARIO_0121>Mine Walker',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            LODs = {
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Scenario/SCL2101/SCL2101_Diffuse.dds',
+                                    MaskName = '/Units/Scenario/SCL2101/SCL2101_Mask.dds',
+                                    NormalName = '/Units/Scenario/SCL2101/SCL2101_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, environment_mapping, glow, point_cloud, alpha_test = 128',
+                                    TeamName = '/Units/Scenario/SCL2101/SCL2101_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        PlaceholderMeshName = 'SCL2101',
+        UniformScale = 0.1,
+    },
+    Footprint = {
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+        CommandCaps = {
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+        },
+        UnitName = '<LOC SCENARIO_0122>Mine Walker',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 0,
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        CollisionPushable = false,
+        MaxAcceleration = 1.5,
+        MaxBrake = 10,
+        MaxSpeed = 0.6,
+        MaxSpeedReverse = 0,
+        MaxSteerForce = 10,
+        MeshExtentsX = 2.75,
+        MeshExtentsY = 6.75,
+        MeshExtentsZ = 3,
+        MotionType = 'RULEUMT_Amphibious',
+        StandUpright = true,
+        TurnRadius = 0,
+        TurnRate = 1,
+    },
+
+    -- height
+    SizeX = 20,
+    SizeY = 24,
+    SizeZ = 44,
+    Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        WreckageLayers = {
+            Land = true,
+            Water = true,
+        },
+    },
+}

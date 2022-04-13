@@ -1,0 +1,145 @@
+UnitBlueprint {
+    Categories = {
+        'ANTINAVY',
+        'UPGRADEMODULE',
+        'SEA',
+        'ILLUMINATE',
+        'TECH1',
+        'SORTUPGRADES',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        Health = 1000,
+        MaxHealth = 1000,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0070>Factory Add-on',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0140>Torpedo Turret',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 50,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 500,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.1,
+    },
+    Economy = {
+        BuildTime = 10,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 150,
+        MassValue = 75,
+    },
+    General = {
+        BuildIconIndex = 5,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 950,
+        CapCost = 0,
+        FactionName = 'ILLUMINATE',
+        UnitName = '<LOC UNIT_NAME_0141>Torpedo Turret',
+    },
+    LifeBarRender = false,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0.3,
+    SelectionMeshOffsetZ = -0.2,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.3,
+    SelectionMeshScaleZ = 0.9,
+    Weapons = {
+        {
+            AlwaysRecheckTarget = false,
+            Audio = {
+                Fire = 'SC2/SC2/Upgrades/ILLUMINATE/UIM0131/snd_UIM0131_Upgrade_Torpedo',
+            },
+            BallisticArc = 'RULEUBA_None',
+            CollideFriendly = false,
+            Damage = 150,
+            DamageFriendly = false,
+            DamageType = 'Normal',
+            DisplayName = 'Angler Torpedo',
+            FireTargetLayerCaps = {
+                Water = 'Seabed|Sub|Water',
+            },
+            FiringTolerance = 0.2,
+            Label = 'Torpedo01',
+            MaxRadius = 50,
+            MuzzleFlashEffect = 'TANTorpedoLand',
+            MuzzleSalvoDelay = 0.8,
+            MuzzleSalvoSize = 2,
+            MuzzleVelocity = 5,
+            ProjectileId = '/projectiles/Illuminate/ITorpedo01/ITorpedo01_proj.bp',
+            ProjectileLifetime = 10,
+            ProjectilesPerOnFire = 1,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'Turret_Muzzle',
+                    },
+                    RackBone = 'Turret_Muzzle',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = 0,
+            RackReloadTimeout = 10,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_AntiNavy',
+            RateOfFire = 0.25,
+            TargetCheckInterval = 2,
+            TargetPriorities = {
+                'NAVAL MOBILE',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER',
+            TrackingRadius = 1.15,
+            TurretBoneMuzzle = 'Turret_Muzzle',
+            TurretBonePitch = 'Turret',
+            TurretBoneYaw = 'Turret',
+            TurretDualManipulators = false,
+            TurretPitch = 0,
+            TurretPitchRange = 0,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 180,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            WeaponCategory = 'Anti Navy',
+        },
+    },
+}

@@ -1,0 +1,170 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Huge',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'SELECTABLE',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 37000,
+        MaxHealth = 37000,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC SCENARIO_0077>Objective Target',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+        },
+        DisplayName = '<LOC SCENARIO_0078>Reactor Relay Switch',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                	DiffuseName = '/props/Structures/Reactor_Core/Reactor_Core_Diffuse.dds',
+                                	NormalName = '/props/Structures/Reactor_Core/Reactor_Core_Normal.dds',
+                                	MaskName = '/props/Structures/Reactor_Core/Reactor_Core_Mask.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Reactor_Core_Switch/Reactor_Core_Switch01_lod0.scm',
+                },
+                {
+                    LODCutoff = 500,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                	DiffuseName = '/props/Structures/Reactor_Core/Reactor_Core_Diffuse.dds',
+                                	NormalName = '/props/Structures/Reactor_Core/Reactor_Core_Normal.dds',
+                                	MaskName = '/props/Structures/Reactor_Core/Reactor_Core_Mask.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Reactor_Core_Switch/Reactor_Core_Switch01_lod1.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                	DiffuseName = '/props/Structures/Reactor_Core/Reactor_Core_Diffuse.dds',
+                                	NormalName = '/props/Structures/Reactor_Core/Reactor_Core_Normal.dds',
+                                	MaskName = '/props/Structures/Reactor_Core/Reactor_Core_Mask.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Reactor_Core_Switch/Reactor_Core_Switch01_lod2.scm',
+                },
+            },
+        },
+        UniformScale = 0.01,
+    },
+    Economy = {
+        BuildTime = 10,
+        EnergyValue = 4000,
+        MassValue = 1200,
+    },
+    Footprint = {
+        SizeX = 14,
+        SizeZ = 9,
+    },
+    General = {
+        FactionName = 'UEF',
+        UnitName = '<LOC SCENARIO_0079>Reactor Relay Switch',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 1,
+        MeshExtentsY = 1,
+        MeshExtentsZ = 1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = 0,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 1,
+    SelectionMeshScaleY = 1,
+    SelectionMeshScaleZ = 1,
+    SelectionSizeX = 6,
+    SelectionSizeZ = 4,
+    SelectionThickness = 0.2,
+    SizeX = 9,
+    SizeY = 1,
+    SizeZ = 7,
+    StrategicIconName = 'icon_structure_generic',
+    StrategicIconSortPriority = 220,
+    Weapons = {
+        {
+            Damage = 100,
+            DamageFriendly = true,
+            DamageRadius = 1,
+            DamageType = 'Normal',
+            DisplayName = '<LOC SCENARIO_0080>Death Weapon',
+            DummyWeapon = true,
+            FiringTolerance = 0.2,
+            Label = 'DeathWeapon',
+            WeaponCategory = 'Death',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Structures/Reactor_Core_Switch/Reactor_Core_Switch_wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.3,
+        ReclaimTimeMultiplier = 1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

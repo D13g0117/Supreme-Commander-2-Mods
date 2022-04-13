@@ -1,0 +1,105 @@
+UnitBlueprint {
+    Categories = {
+        'UPGRADEMODULE',
+        'LAND',
+        'UEF',
+        'TECH1',
+        'SORTUPGRADES',
+        'OVERLAYRADAR',
+        'OVERLAYSONAR',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 1000,
+        MaxHealth = 1000,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0116>Factory Add-on',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0232>Intel Installation',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/UEF/UUB0301/UUB0301_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUB0301/UUB0301_Mask.dds',
+                                    NormalName = '/Units/UEF/UUB0301/UUB0301_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                    TeamName = '/Units/UEF/UUB0301/UUB0301_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/UEF/UUB0301/UUB0301_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUB0301/UUB0301_Mask.dds',
+                                    NormalName = '/Units/UEF/UUB0301/UUB0301_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/UEF/UUB0301/UUB0301_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 300,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/UEF/UUB0301/UUB0301_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUB0301/UUB0301_Mask.dds',
+                                    NormalName = '/Units/UEF/UUB0301/UUB0301_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/UEF/UUB0301/UUB0301_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.04,
+    },
+    Economy = {
+        BuildTime = 9,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 90,
+        MassValue = 35,
+    },
+    General = {
+        BuildIconIndex = 4,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 940,
+        CapCost = 0,
+        ExperienceValue = 0,
+        FactionName = 'UEF',
+        StructureUpgradeUnit = true,
+        UnitName = '<LOC UNIT_NAME_0233>Intel Installation',
+    },
+    Intel = {
+        RadarRadius = 150,
+        SonarRadius = 150,
+        VisionRadius = 75,
+    },
+    LifeBarRender = false,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.8,
+    SelectionMeshScaleY = 0.8,
+    SelectionMeshScaleZ = 0.8,
+}

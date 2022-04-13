@@ -1,0 +1,239 @@
+UnitBlueprint {
+    Audio = {
+        AmbientMove = 'SC2/SC2/Units/UEF/UUL0201/snd_UUL0201_MobileShield_Move_Loop',
+        Destroyed = 'SC2/SC2/Units/UEF/UUL0201/snd_UUL0201_MobileShield_Destroy',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Sml_Land',
+        ShieldOff = 'SC2/SC2/Units/UEF/UUL0201/snd_UUL0201_MobileShield_Shield_Activate',
+        ShieldOn = 'SC2/SC2/Units/UEF/UUL0201/snd_UUL0201_MobileShield_Shield_Activate',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_LAND',
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYFACTORY',
+        'TECH1',
+        'MOBILE',
+        'LAND',
+        'SHIELD',
+        'DEFENSE',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYINDIRECTFIRE',
+        'UEF',
+        'SORTMOBILE',
+    },
+    Death = {
+        ExplosionEffect = 'UEFDefaultDestroyEffectsMed01',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 560,
+        MaxHealth = 560,
+        RegenRate = 1,
+        Shield = {
+            AllowPenetration = false,
+            CollisionOffsetY = -1,
+            CollisionShape = 'Sphere',
+            ImpactEffects = 'ShieldHit01',
+            Mesh = '/meshes/Shield/Shield01_mesh',
+            PanelArray = {
+                Panel_1 = '/meshes/Shield/ShieldDomeSection01_mesh',
+                Panel_2 = '/meshes/Shield/ShieldDomeSection02_mesh',
+            },
+            ShieldMaxHealth = 600,
+            ShieldRechargeTime = 10,
+            ShieldRegenRate = 1,
+            ShieldSize = 26,
+            ShieldType = 'Panel',
+        },
+        SurfaceThreatLevel = 1,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0110>Mobile Shield Generator',
+    Display = {
+        AnimationOpen = '/units/UEF/UUL0201/UUL0201_AOpen01.sca',
+        DisplayName = '<LOC UNIT_NAME_0220>P-Shield',
+        EffectGroupClassification = 'Small',
+        LayerChangeEffects = {
+            AirLand = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UUL0201',
+                        },
+                        Type = 'Landing02',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 40,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                },
+                                {
+                                    DiffuseName = '/textures/Units/Shared/Treads/Treads01_Diffuse.dds',
+                                    MaskName = '/textures/Units/Shared/Treads/Treads01_Mask.dds',
+                                    NormalName = '/textures/Units/Shared/Treads/Treads01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 100,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, glow',
+                                },
+                                {
+                                    DiffuseName = '/textures/Units/Shared/Treads/Treads01_Diffuse.dds',
+                                    MaskName = '/textures/Units/Shared/Treads/Treads01_Mask.dds',
+                                    NormalName = '/textures/Units/Shared/Treads/Treads01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, anim_uvr',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 400,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                },
+                                {
+                                    DiffuseName = '/textures/Units/Shared/Treads/Treads01_Diffuse.dds',
+                                    MaskName = '/textures/Units/Shared/Treads/Treads01_Mask.dds',
+                                    NormalName = '/textures/Units/Shared/Treads/Treads01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, anim_uvr',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        MovementEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UUL0201',
+                        },
+                        Type = 'GroundKickup01',
+                    },
+                },
+                Treads = {
+                    ScrollMultiplier = 0.6,
+                    ScrollTreads = true,
+                },
+            },
+        },
+        SimulationBones = {
+            'arm_1_left',
+            'arm_2_left',
+            'arm_1_right',
+            'arm_2_right',
+        },
+        UniformScale = 0.11,
+    },
+    Economy = {
+        BuildTime = 17,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 150,
+        MassValue = 58,
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    General = {
+        BuildIconIndex = 6,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 70,
+        CommandCaps = {
+            RULEUCC_CallTransport = true,
+            RULEUCC_FormAttack = true,
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Stop = true,
+        },
+        ExperienceValue = 250,
+        FactionName = 'UEF',
+        Icon = 'land',
+        TeleportCooldown = 20,
+        UnitName = '<LOC UNIT_NAME_0221>P-Shield',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 0.3,
+    LifeBarSize = 0.7,
+    Navigation = {
+        Radius = 0.9,
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        CollisionPushClass = 1,
+        MaxAcceleration = 10,
+        MaxBrake = 10,
+        MaxSpeed = 4,
+        MaxSpeedReverse = 0,
+        MaxSteerForce = 10,
+        MeshExtentsX = 0.75,
+        MeshExtentsY = 0.6,
+        MeshExtentsZ = 0.85,
+        MotionType = 'RULEUMT_Land',
+        RotateOnSpot = true,
+        RotateOnSpotThreshold = 0.1,
+        TurnRate = 270,
+    },
+    SelectionCenterOffsetX = 0,
+    SelectionCenterOffsetZ = -0.05,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.9,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 0.65,
+    SelectionSizeZ = 0.7,
+    SelectionThickness = 0.85,
+    SizeX = 0.8,
+    SizeY = 0.5,
+    SizeZ = 0.8,
+    StrategicIconName = 'icon_land_shield',
+    StrategicIconSortPriority = 125,
+    Transport = {
+        StorageSize = 1,
+        TeleportTime = 1,
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/UEF/UUL0201/UUL0201_Wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

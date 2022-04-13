@@ -1,0 +1,347 @@
+UnitBlueprint {
+    AI = {
+        BeaconName = 'UIB0902',
+        BeaconRange = 700,
+    },
+    Audio = {
+        ActiveLoop = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0113/snd_UIX0113_ExpTeleporter_Active_Loop',
+        DeathExplosion = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0113/snd_UIX0113_ExpTeleporter_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0113/snd_UIX0113_ExpTeleporter_Destroy',
+        Killed = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0113/snd_UIX0113_ExpTeleporter_Killed',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Experimentals',
+    },
+    Build = {
+        BuildScaffoldUnit = 'uib0024',
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'CANTRANSPORTCOMMANDER',
+        'ILLUMINATE',
+        'STRUCTURE',
+        'STRATEGIC',
+        'TECH1',
+        'SIZE12',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SORTSTRATEGIC',
+        'DRAGBUILD',
+        'GATE',
+        'RALLYPOINT',
+        'TELEPORTATION',
+        'TRANSPORTALLIES',
+        'EXPERIMENTAL',
+    },
+    CollisionOffsetZ = 0.75,
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'RingHalf01',
+                Mesh = '/projectiles/debris/Illuminate/UIX0113/UIX0113_Turret_Debris_01_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIX0112/UIX0112_Debris_Projectile_01_proj.bp',
+            },
+            {
+                AttachBone = 'RingHalf02',
+                Mesh = '/projectiles/debris/Illuminate/UIX0113/UIX0113_Turret_Debris_02_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIX0112/UIX0112_Debris_Projectile_01_proj.bp',
+            },
+            {
+                AttachBone = 'RingHalf03',
+                Mesh = '/projectiles/debris/Illuminate/UIX0113/UIX0113_Turret_Debris_03_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIX0112/UIX0112_Debris_Projectile_01_proj.bp',
+            },
+            {
+                AttachBone = 'RingHalf04',
+                Mesh = '/projectiles/debris/Illuminate/UIX0113/UIX0113_Turret_Debris_04_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIX0112/UIX0112_Debris_Projectile_01_proj.bp',
+            },
+            {
+                AttachBone = 'Middle01',
+                Mesh = '/projectiles/debris/Illuminate/UIX0113/UIX0113_Turret_Debris_05_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIB0001/UIB0001_Tower_proj.bp',
+            },
+            {
+                AttachBone = 'Top01',
+                Mesh = '/projectiles/debris/Illuminate/UIX0113/UIX0113_Turret_Debris_06_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIB0001/UIB0001_Tower_proj.bp',
+            },
+            {
+                AttachBone = 'Spinner05',
+                Mesh = '/projectiles/debris/Illuminate/UIX0113/UIX0113_Turret_Debris_07_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIX0112/UIX0112_Debris_Projectile_01_proj.bp',
+            },
+            {
+                AttachBone = 'Spinner03',
+                Mesh = '/projectiles/debris/Illuminate/UIX0113/UIX0113_Turret_Debris_08_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIX0112/UIX0112_Debris_Projectile_01_proj.bp',
+            },
+        },
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 20,
+        Health = 18000,
+        MaxHealth = 18000,
+        RegenRate = 29,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0078>Experimental Teleporter',
+    Display = {
+        BuildAttachBone = 'Attachpoint',
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0.65,
+                OffsetY = 0.7,
+                OffsetZ = -0.4,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.65,
+                OffsetY = 0.7,
+                OffsetZ = -0.4,
+            },
+            {
+                Bone = 0,
+                OffsetX = 0,
+                OffsetY = 0.7,
+                OffsetZ = 0.7,
+            },
+        },
+        DisplayName = '<LOC UNIT_NAME_0156>Space Temple',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODReduceImmune = true,
+            LODs = {
+                {
+                    LODCutoff = 100,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 1000,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 12.8,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12.8,
+            },
+        },
+        UniformScale = 0.13,
+    },
+    Economy = {
+        BuildRate = 1,
+        BuildTime = 190,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 5175,
+        MassValue = 1460,
+        RebuildBonusIds = {
+            'UIX0113',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 14,
+        SizeZ = 14,
+    },
+    General = {
+        BuildIconIndex = 6,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 210,
+        CommandCaps = {
+            RULEUCC_Transport = true,
+        },
+        ExperienceValue = 4500,
+        FactionName = 'Illuminate',
+        Icon = 'land',
+        SelectionPriority = 5,
+        TeleportCooldown = 30,
+        UnitName = '<LOC UNIT_NAME_0157>Space Temple',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 28,
+    },
+    LifeBarHeight = 0.32,
+    LifeBarOffset = 6,
+    LifeBarSize = 7.5,
+    Navigation = {
+        CostStamp = '/coststamps/Custom/UIX0113_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 2.1,
+        MeshExtentsY = 1,
+        MeshExtentsZ = 2.1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+        OccupyRects = {
+
+            -- Offset from center of unit
+            -- offsetX, offsetZ, sizeX, sizeZ
+            -3,
+            -3,
+            0.5,
+            0.5,
+            -3,
+            3,
+            0.5,
+            0.5,
+            3,
+            -3,
+            0.5,
+            0.5,
+            3,
+            3,
+            0.5,
+            0.5,
+        },
+    },
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -2.5,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.45,
+    SelectionMeshScaleY = 0.7,
+    SelectionMeshScaleZ = 0.4,
+    SelectionSizeX = 9.5,
+    SelectionSizeZ = 9.5,
+    SelectionThickness = 0.4,
+    SizeX = 9,
+    SizeY = 9.5,
+    SizeZ = 10.3,
+    StrategicIconName = 'icon_experimental_generic',
+    StrategicIconSortPriority = 175,
+    Transport = {
+        StorageRange = 20,
+        StorageSize = 25,
+    },
+    Weapons = {
+        {
+            AlwaysRecheckTarget = false,
+            AutoInitiateAttackCommand = false,
+            AutoInitiateAttackOnPatrol = false,
+            BallisticArc = 'RULEUBA_None',
+            Damage = 0,
+            DamageRadius = 0,
+            DisplayName = 'Dummy Range Weapon',
+            Label = 'DummyRange01',
+            MaxRadius = 700,
+            MinRadius = 0,
+            RateOfFire = 0,
+            ScriptClass = 'BareBonesWeapon',
+            ScriptModule = '/lua/sim/DefaultWeapons.lua',
+            TargetCheckInterval = 99999,
+            Turreted = false,
+            WeaponCategory = 'None',
+        },
+        {
+            AboveWaterTargetsOnly = true,
+            Damage = 7500,
+            DamageFriendly = true,
+            DamageRadius = 4,
+            DamageType = 'Normal',
+            DisplayName = 'Death Weapon',
+            DummyWeapon = true,
+            FiringTolerance = 0.2,
+            Label = 'DeathWeapon',
+            WeaponCategory = 'Death',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Illuminate/UIX0113/UIX0113_wreckage01_prop.bp',
+        Decay = 0,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

@@ -1,0 +1,22 @@
+RawAnimBlueprint {
+     uib0002_Build = {
+     	ScaName = '/units/illuminate/uib0002/uib0002_abuild01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     uib0002_FinishBuild = {
+     	ScaName = '/units/illuminate/uib0002/uib0002_aopen01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'FinishBuild', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'SetStartFrame', 		AnimStateName = 'reverse_finish_build', AnimStartFrame = 0, },
+     	},
+		PlaybackSpeed = 2.0,
+     },
+     uib0002_ReverseFinishBuild = {
+     	ScaName = '/units/illuminate/uib0002/uib0002_aclose01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'ReverseFinishBuild' },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'StopBuild',},
+     	},
+		PlaybackSpeed = 2.0,
+     },
+}

@@ -1,0 +1,228 @@
+UnitBlueprint {
+    Audio = {
+        DeathExplosion = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        BuildScaffoldUnit = 'uub0028',
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'SONAR',
+        'INTELLIGENCE',
+        'DRAGBUILD',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYSONAR',
+        'SORTINTEL',
+        'UEF',
+        'UIADVANCEDSORTCATEGORY',
+    },
+    Death = {
+        DebrisPieces = true,
+        ExplosionEffect = 'UEFDefaultDestroyEffectsWater02',
+        ExplosionEffectScale = 0.8,
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 1,
+        Health = 300,
+        MaxHealth = 300,
+        RegenRate = 1,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0098>Intel Gathering Station',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0196>Sonar Installation',
+        IdleEffects = {
+            Water = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UUB0302',
+                        },
+                        Scale = 4,
+                        Type = 'SeaIdle03',
+                    },
+                    {
+                        Bones = {
+                            'UUB0302',
+                        },
+                        Type = 'UEFSonar01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 100,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 1000,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.02,
+    },
+    Economy = {
+        BuildTime = 25,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 400,
+        MassValue = 160,
+        RebuildBonusIds = {
+            'UUB0302',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        MinWaterDepth = 1.5,
+        SizeX = 4,
+        SizeZ = 4,
+    },
+    General = {
+        BuildIconIndex = 2,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 190,
+        CommandCaps = {
+            RULEUCC_Pause = true,
+        },
+        ExperienceTable = 'TURRET',
+        ExperienceValue = 250,
+        FactionName = 'UEF',
+        Icon = 'sea',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0197>Sonar Installation',
+        UnitWeight = 1,
+    },
+    Intel = {
+        ReactivateTime = 10,
+        ShowIntelOnSelect = true,
+        SonarRadius = 300,
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 1,
+    LifeBarSize = 1.75,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default4x4_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Water = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsOffsetY = -1.2,
+        MeshExtentsX = 1.25,
+        MeshExtentsY = 2,
+        MeshExtentsZ = 1.25,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetX = -0.1,
+    SelectionCenterOffsetZ = -0.3,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.3,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.2,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 1.8,
+    SelectionSizeZ = 1.5,
+    SelectionThickness = 0.3,
+    SizeX = 2.5,
+    SizeY = 0.25,
+    SizeZ = 3.5,
+    StrategicIconName = 'icon_structure_intel',
+    StrategicIconSortPriority = 235,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/UEF/UUB0302/UUB0302_wreckage02_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+        },
+    },
+}

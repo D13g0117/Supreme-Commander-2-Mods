@@ -1,0 +1,152 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Huge',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Antenna01',
+                Meshes = {
+                    '/projectiles/debris/Props/Structures/CommArray01/CommArray01_Turret_Debris_01_mesh',
+                    '/projectiles/debris/Props/Structures/CommArray01/CommArray01_Turret_Debris_02_mesh',
+                },
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'LeftDebris01',
+                Meshes = {
+                	'/projectiles/debris/Props/Structures/CommArray01/CommArray01_Turret_Debris_03_mesh',
+                	'/projectiles/debris/Props/Structures/CommArray01/CommArray01_Turret_Debris_06_mesh',
+                	'/projectiles/debris/Props/Structures/CommArray01/CommArray01_Turret_Debris_07_mesh',
+                	'/projectiles/debris/Props/Structures/CommArray01/CommArray01_Turret_Debris_08_mesh',
+                },	
+                Projectile = '/projectiles/debris/Props/Structures/CommArray01/CommArray01_Large_proj.bp',
+            },
+            {
+                AttachBone = 'Barrier01',
+                Mesh = '/projectiles/debris/Props/Structures/CommArray01/CommArray01_Turret_Debris_04_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Walkway01',
+                Mesh = '/projectiles/debris/Props/Structures/CommArray01/CommArray01_Turret_Debris_05_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'IlluminateStructureDestroyEffectsExtraLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 8888,
+        MaxHealth = 8888,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        DisplayName = '<LOC SCENARIO_0063>Communications Station',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODReduceImmune = true,
+            LODs = {
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/CommArray01/CommArray01_Diffuse.dds',
+                                    MaskName = '/props/Structures/CommArray01/CommArray01_Mask.dds',
+                                    NormalName = '/props/Structures/CommArray01/CommArray01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/CommArray01/CommArray01_lod0.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/CommArray01/CommArray01_Diffuse.dds',
+                                    MaskName = '/props/Structures/CommArray01/CommArray01_Mask.dds',
+                                    NormalName = '/props/Structures/CommArray01/CommArray01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/CommArray01/CommArray01_lod1.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/CommArray01/CommArray01_Diffuse.dds',
+                                    MaskName = '/props/Structures/CommArray01/CommArray01_Mask.dds',
+                                    NormalName = '/props/Structures/CommArray01/CommArray01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/CommArray01/CommArray01_lod2.scm',
+                },
+            },
+        },
+        UniformScale = 0.35,
+    },
+    Economy = {
+        BuildTime = 10,
+        EnergyValue = 4000,
+        MassValue = 1200,
+    },
+    Footprint = {
+        SizeX = 76,
+        SizeZ = 78,
+    },
+    General = {
+        UnitName = '<LOC SCENARIO_0064>Communications Station',
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SizeX = 66,
+    SizeY = 20,
+    SizeZ = 66,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Structures/CommArray01/CommArray01_Wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 9001,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

@@ -1,0 +1,17 @@
+UnitBlueprint {
+    Merge = true,
+    BlueprintId = "uub0202", -- UEF Shield Generator
+    Defense = {
+        Health = 15000,
+        MaxHealth = 15000,
+        RegenRate = 10,
+        Shield = {
+            ShieldSize = 100,
+        },
+    },
+    Economy = {
+        BuildTime = 10,
+        EnergyValue = 70,
+        MassValue = 30,
+    },
+}

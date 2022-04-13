@@ -1,0 +1,11 @@
+MeshBlueprint {
+    IconFadeInZoom = 130,
+    LODs = {
+        {
+            MeshName = 'UUL0001_lod0.scm',
+            DiffuseName = 'UUL0001_Diffuse.dds',
+            NormalName = 'UUL0001_Normal.dds',
+            LODCutoff = 195,
+        },
+    },
+}

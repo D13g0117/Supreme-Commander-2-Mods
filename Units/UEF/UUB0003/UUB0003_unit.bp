@@ -1,0 +1,372 @@
+UnitBlueprint {
+    AnimSet = {
+        alt_finish_build = 'uub0003_FinishBuild_Submarine',
+        alt_reverse_finish_build = 'uub0003_ReverseFinishBuild_Submarine',
+        finish_build = 'uub0003_FinishBuild',
+        reverse_finish_build = 'uub0003_ReverseFinishBuild',
+    },
+    AnimTree = '/anims/factory_animtree.bp',
+    Audio = {
+        ConstructClose = 'SC2/SC2/Buildings/UEF/UUB0003/snd_UUB0003_navalfactory_Close',
+        ConstructLoop = 'SC2/SC2/Buildings/UEF/UUB0003/snd_UUB0003_navalfactory_Construct_Loop',
+        ConstructOpen = 'SC2/SC2/Buildings/UEF/UUB0003/snd_UUB0003_navalfactory_OPEN',
+        DeathExplosion = 'SC2/SC2/Buildings/UEF/UUB0003/snd_UUB0003_navalfactory_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Buildings/UEF/UUB0003/snd_UUB0003_navalfactory_Destroy_Huge',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Factory',
+    },
+    Build = {
+        BuildModifiersExclusionCategory = {
+            'UPGRADEMODULE',
+            'EXPERIMENTAL',
+        },
+        BuildScaffoldUnit = 'uub0027',
+        EffectBones = {
+            'Right_Exhaust',
+        },
+        FinishBuildAnimDelay = 2,
+        FinishBuildRolloffDelay = 5,
+        ForceMoveToRolloffPoint = true,
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'BUILTBYCOMMANDER',
+        'STRUCTURE',
+        'NAVAL',
+        'TECH1',
+        'CONSTRUCTION',
+        'FACTORY',
+        'RALLYPOINT',
+        'DRAGBUILD',
+        'SIZE16',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWQUEUE',
+        'SORTCONSTRUCTION',
+        'UEF',
+        'UIBASICSORTCATEGORY',
+    },
+    CollisionOffsetX = -2,
+    CollisionOffsetZ = 2,
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'LeftArm',
+                Meshes = {
+                    '/projectiles/debris/UEF/UUB0003/UUB0003_Turret_Debris_01_mesh',
+                    '/projectiles/debris/UEF/UUB0003/UUB0003_Turret_Debris_02_mesh',
+                },
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Beam01',
+                Mesh = '/projectiles/debris/UEF/UUB0003/UUB0003_Turret_Debris_03_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Tower01',
+                Mesh = '/projectiles/debris/UEF/UUB0003/UUB0003_Turret_Debris_04_mesh',
+                Projectile = '/projectiles/debris/UEF/UUB0001/UUB0001_Debris_Projectile_01_proj.bp',
+            },
+            {
+                AttachBone = 'Radar01',
+                Mesh = '/projectiles/debris/UEF/UUB0003/UUB0003_Turret_Debris_05_mesh',
+                Projectile = '/projectiles/debris/UEF/UUB0001/UUB0001_Debris_Projectile_01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'UEFDefaultDestroyEffectsWater02',
+        ExplosionEffectScale = 2.6,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 5,
+        Health = 10000,
+        MaxHealth = 10000,
+        RegenRate = 18,
+        Shield = {
+            AllowPenetration = false,
+            CollisionShape = 'Sphere',
+            ImpactEffects = 'ShieldHit01',
+            Mesh = '/meshes/Shield/Shield01_mesh',
+            PanelArray = {
+                Panel_1 = '/meshes/Shield/ShieldDomeSection01_mesh',
+                Panel_2 = '/meshes/Shield/ShieldDomeSection02_mesh',
+            },
+            ShieldMaxHealth = 12500,
+            ShieldRechargeTime = 40,
+            ShieldRegenRate = 60,
+            ShieldSize = 25,
+            ShieldType = 'Panel',
+            StartOn = false,
+        },
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0087>Naval Production Facility',
+    Display = {
+        AnimationUpgrade = '/units/UEF/UUB0003/UUB0003_aupgrade.sca',
+        BlinkingLights = {
+            {
+                BLBone = 'Radar02',
+                BLOffsetX = -0.1,
+                BLOffsetY = 7.2,
+                BLOffsetZ = 2.2,
+                BLScale = 2.8,
+            },
+        },
+        BlinkingLightsFx = {
+            Green = '/effects/emitters/ambient/units/light_green_03_emit.bp',
+            Red = '/effects/emitters/ambient/units/light_red_03_emit.bp',
+            Yellow = '/effects/emitters/ambient/units/light_yellow_02_emit.bp',
+        },
+        BuildAttachBone = 'buildPoint01',
+        DisplayName = '<LOC UNIT_NAME_0174>Sea Factory',
+        IdleEffects = {
+            Water = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UUB0003',
+                        },
+                        Type = 'UEFSeaFactory01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp02.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, alpha_test = 128, environment_mapping, point_cloud, glow',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp02.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, alpha_test = 128, environment_mapping, point_cloud, glow, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp02.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, alpha_test = 128, ambient_occlusion, team_color, point_cloud, glow',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp02.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, alpha_test = 128, ambient_occlusion, team_color, point_cloud, glow, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp02.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp02.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        SimulationBones = {
+            'buildPoint01',
+        },
+        UniformScale = 0.09,
+    },
+    Economy = {
+        BuildRate = 1,
+        BuildTime = 50,
+        BuildableCategory = {
+            'BUILTBYFACTORY UEF MOBILE CONSTRUCTION',
+            'BUILTBYFACTORY UEF NAVAL TECH1',
+            'UEF UPGRADEMODULE LAND',
+            'UEF UPGRADEMODULE SEA',
+        },
+        CaptureTimeMult = 0.6,
+        EnergyValue = 700,
+        InitialRallyZ = 16,
+        MassValue = 320,
+        ProductionPerSecondEnergy = 1,
+        RebuildBonusIds = {
+            'UUB0003',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        MinWaterDepth = 1.5,
+        SizeX = 24,
+        SizeZ = 18,
+    },
+    General = {
+        BuildIconIndex = 3,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 30,
+        CommandCaps = {
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Pause = true,
+            RULEUCC_Stop = true,
+        },
+        ConstructionBar = true,
+		EarnXPFromCombat = false,
+        ExperienceTable = 'NAVALFACTORY',
+        ExperienceValue = 1000,
+        FactionName = 'UEF',
+        Icon = 'sea',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0175>Sea Factory',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 3.35,
+    LifeBarSize = 8,
+    Navigation = {
+        CostStamp = '/coststamps/Custom/UUB0003_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Water = true,
+        },
+        CollisionOffsetX = 0,
+        MaxSteerForce = 0,
+        MeshExtentsX = 6,
+        MeshExtentsY = 4,
+        MeshExtentsZ = 18,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+        RollOffPoints = {
+            {
+                UnitSpin = 0,
+                X = -15,
+                Y = 0,
+                Z = 5,
+            },
+            {
+                UnitSpin = 180,
+                X = 15,
+                Y = 0,
+                Z = 5,
+            },
+        },
+    },
+    SelectionCenterOffsetX = -0.5,
+    SelectionCenterOffsetZ = 0.7,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0.2,
+    SelectionMeshOffsetZ = 0.5,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.15,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 13,
+    SelectionSizeZ = 11,
+    SelectionThickness = 0.3,
+    SizeX = 14,
+    SizeY = 5,
+    SizeZ = 11,
+    StrategicIconName = 'icon_factory_naval',
+    StrategicIconSortPriority = 220,
+    Upgrades = {
+        {
+            Bones = {
+                'Addon01',
+            },
+            UpgradeUnits = {
+                'UUM0111',
+            },
+        },
+        {
+            Bones = {
+                'Addon02',
+            },
+            UpgradeUnits = {
+                'UUM0121',
+            },
+        },
+        {
+            Bones = {
+                'Addon05',
+            },
+            UpgradeUnits = {
+                'UUM0131',
+            },
+        },
+        {
+            Bones = {
+                'Addon03',
+            },
+            UpgradeUnits = {
+                'UUM0141',
+            },
+        },
+        {
+            Bones = {
+                'Addon04',
+            },
+            UpgradeUnits = {
+                'UUM0211',
+            },
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/UEF/UUB0003/UUB0003_Wreckage01_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Seabed = true,
+            Water = true,
+        },
+    },
+}

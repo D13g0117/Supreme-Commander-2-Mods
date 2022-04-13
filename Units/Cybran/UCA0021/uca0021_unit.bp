@@ -1,0 +1,130 @@
+UnitBlueprint {
+    Air = {
+        BankFactor = 0.3,
+        BankForward = true,
+        CanFly = true,
+        CirclingAirSpeed = 10,
+        CirclingElevationChangeRatio = 0.25,
+        CirclingFlightChangeFrequency = 2,
+        CirclingRadiusChangeMaxRatio = 0.9,
+        CirclingRadiusChangeMinRatio = 0.6,
+        CirclingTurnMult = 3,
+        KLift = 3,
+        KLiftDamping = 2.5,
+        KMove = 1,
+        KMoveDamping = 2,
+        KRoll = 1.5,
+        KRollDamping = 2,
+        KTurn = 1.5,
+        KTurnDamping = 2,
+        LiftFactor = 2,
+        MaxAirspeed = 16,
+        MinAirspeed = 6,
+        StartTurnDistance = 10,
+    },
+    AverageDensity = 1,
+    Categories = {
+        'PRODUCTSC2',
+        'CYBRAN',
+        'AIR',
+        'TECH1',
+        'CONSTRUCTION',
+        'ENGINEER',
+        'RECLAIM',
+        'UNTARGETABLE',
+        'NOFORMATION',
+        'INSIGNIFICANTUNIT',
+    },
+    CollisionOffsetY = 0.1,
+    Defense = {
+        Health = 1800,
+        MaxHealth = 1800,
+    },
+    Display = {
+        AnimationOpen = '/units/Cybran/UCA0021/UCA0021_aopen01.sca',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        IdleEffects = {
+            Air = {
+                Effects = {
+                    {
+                        Bones = {
+                            -2,
+                        },
+                        Type = 'UCA0021IdleExhaust01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 400,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        MovementEffects = {
+            Air = {
+                Effects = {
+                    {
+                        Bones = {
+                            -2,
+                        },
+                        Type = 'UCA0021MovementExhaust01',
+                    },
+                },
+            },
+        },
+        UniformScale = 0.1,
+    },
+    Economy = {
+        BuildRate = 0,
+    },
+    Footprint = {
+        MaxSlope = 0.25,
+        SizeX = 1,
+        SizeZ = 1,
+    },
+    General = {
+        CapCost = 0,
+        CommandCaps = {
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Reclaim = true,
+            RULEUCC_Repair = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Stop = true,
+        },
+        FactionName = 'Cybran',
+        Icon = 'air',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 16,
+    },
+    LifeBarRender = false,
+    Physics = {
+        AttackElevation = 10,
+        BuildOnLayerCaps = {
+            LAYER_Air = true,
+        },
+        Elevation = 2,
+        GroundCollisionOffset = 1.6,
+        MaxSpeed = 0.5,
+        MotionType = 'RULEUMT_Air',
+    },
+    SizeSphere = 0.3,
+    SizeX = 0.3,
+    SizeY = 0.1,
+    SizeZ = 0.3,
+}

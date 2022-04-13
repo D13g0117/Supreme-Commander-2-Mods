@@ -1,0 +1,95 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 8888,
+        MaxHealth = 8888,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC SCENARIO_0065>Objective Target',
+    Display = {
+        DisplayName = '<LOC SCENARIO_0066>Main Gate',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 1000,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/U01_Gate01/U01_gate01_Diffuse.dds',
+                                    MaskName = '/props/Structures/U01_Gate01/U01_gate01_Mask.dds',
+                                    NormalName = '/props/Structures/U01_Gate01/U01_gate01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/U01_Gate01/U01_gate01_lod0.scm',
+                },
+            },
+        },
+        UniformScale = 0.17,
+    },
+    Economy = {
+        BuildTime = 10,
+        EnergyValue = 4000,
+        MassValue = 1200,
+    },
+    Footprint = {
+        SizeX = 3,
+        SizeZ = 22,
+    },
+    General = {
+        UnitName = '<LOC SCENARIO_0067>Main Gate',
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = 0,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 1,
+    SelectionMeshScaleY = 1,
+    SelectionMeshScaleZ = 1,
+    SelectionSizeX = 1,
+    SelectionSizeZ = 14.5,
+    SelectionThickness = 0.07,
+
+    -- height
+    SizeX = 1.6,
+    SizeY = 6,
+    SizeZ = 22,
+    Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

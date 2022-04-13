@@ -1,0 +1,258 @@
+UnitBlueprint {
+    Abilities = {
+        {
+            Blueprint = 'ConvertEnergy',
+        },
+        {
+            Blueprint = 'PowerDetonate',
+        },
+    },
+    Audio = {
+        ActiveLoop = 'SC2/SC2/Buildings/UEF/UUB0704/snd_UUB0704_MassConvertor_Active',
+        DeathExplosion = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+        DoneBeingBuilt = 'SC2/SC2/Buildings/UEF/UUB0704/snd_UUB0704_MassConvertor_Activate',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        OnConvert = 'SC2/SC2/Buildings/UEF/UUB0704/snd_UUB0704_MassConvertor_Activate',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        BuildScaffoldUnit = 'ucb0022',
+        BuildSliderBone = 'Algorithm_Gen',
+        BuildSliderY = -2,
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'BUILTBYCOMMANDER',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'ECONOMIC',
+        'MASSPRODUCTION',
+        'DRAGBUILD',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SORTECONOMY',
+        'CYBRAN',
+        'UIADVANCEDSORTCATEGORY',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Effect01',
+                Mesh = '/projectiles/debris/Cybran/UCB0704/UCB0704_Turret_Debris_01_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Effect02',
+                Mesh = '/projectiles/debris/Cybran/UCB0704/UCB0704_Turret_Debris_02_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'CybranStructureDestroyEffectsLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 10,
+        Health = 2400,
+        MaxHealth = 2400,
+        RegenRate = 6,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0101>Mass Conversion Facility',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 1.75,
+                OffsetY = 1.75,
+                OffsetZ = 0.5,
+            },
+            {
+                Bone = 0,
+                OffsetX = -1.75,
+                OffsetY = 1.75,
+                OffsetZ = 0.5,
+            },
+            {
+                Bone = 0,
+                OffsetX = -1.75,
+                OffsetY = -1.75,
+                OffsetZ = 0.5,
+            },
+        },
+        DisplayName = '<LOC UNIT_NAME_0202>Mass Convertor',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Gray_Diffuse.dds',
+                                    MaskName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Mask.dds',
+                                    NormalName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                    TeamName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_lod0.scm',
+                },
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Gray_Diffuse.dds',
+                                    MaskName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Mask.dds',
+                                    NormalName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_lod1.scm',
+                },
+                {
+                    LODCutoff = 800,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Gray_Diffuse.dds',
+                                    MaskName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Mask.dds',
+                                    NormalName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Algorithm_Gen/Algorithm_Gen_lod2.scm',
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                Diffuse = '/UEF/Tar_default_diffuse',
+                FadeOut = 150,
+                Length = 7,
+                Normal = '/UEF/Tar_default_normal',
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 7,
+            },
+        },
+        UniformScale = 0.03,
+    },
+    Economy = {
+        BuildTime = 30,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 1500,
+        MassValue = 50,
+        RebuildBonusIds = {
+            'UCB0704',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 4,
+        SizeZ = 4,
+    },
+    General = {
+        BuildIconIndex = 1,
+        BuildIconPage = 2,
+        BuildIconSortPriority = 90,
+        ExperienceValue = 750,
+        FactionName = 'Cybran',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0203>Mass Convertor',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 1.3,
+    LifeBarSize = 2.5,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default4x4_coststamp.lua',
+    },
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = 0,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.7,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.2,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 2.55,
+    SelectionSizeZ = 2.1,
+    SelectionThickness = 0.5,
+    SizeX = 4,
+    SizeY = 0.5,
+    SizeZ = 3,
+    StrategicIconName = 'icon_structure_mass',
+    StrategicIconSortPriority = 240,
+    Weapons = {
+        {
+            Damage = 5000,
+            DamageFriendly = true,
+            DamageRadius = 10,
+            DamageType = 'Normal',
+            DisplayName = 'Death Weapon',
+            DummyWeapon = true,
+            FiringTolerance = 0.2,
+            Label = 'DeathWeapon',
+            WeaponCategory = 'Death',
+        },
+        {
+            Damage = 2500,
+            DamageFriendly = false,
+            DamageRadius = 15,
+            DamageType = 'Normal',
+            DisplayName = 'Power Detonate',
+            DummyWeapon = true,
+            ExplosionEffect = 'PowerDetonateEffectsLarge01',
+            Label = 'PowerDetonate',
+            WeaponCategory = 'Death',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Cybran/UCB0704/UCB0704_wreckage01_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

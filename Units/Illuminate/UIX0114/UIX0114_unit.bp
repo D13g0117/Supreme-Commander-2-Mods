@@ -1,0 +1,255 @@
+UnitBlueprint {
+    AI = {
+        TargetBones = {
+            'UIX0114',
+        },
+    },
+    Audio = {
+        ActiveLoop = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0114/snd_UIX0114_ExpTeleporter_Active_Loop',
+        CaptureLoop = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0114/snd_UIX0114_ExpConvertRay_Construct_Loop',
+        DeathExplosion = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0114/snd_UIX0114_ExpConvertRay_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Experimentals/ILLUMINATE/UIX0114/snd_UIX0114_ExpConvertRay_Destroy',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Experimentals',
+    },
+    Build = {
+        BuildArmManipulators = {
+            {
+                AimBone = 'T01_B01_Muzzle01',
+                PitchBone = 'T01_Barrel01',
+                YawBone = 'Turret01',
+            },
+        },
+        BuildScaffoldUnit = 'uib0021',
+        EffectBones = {
+            'T01_B01_Muzzle01',
+        },
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'ILLUMINATE',
+        'STRUCTURE',
+        'STRATEGIC',
+        'TECH1',
+        'SIZE16',
+        'DRAGBUILD',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SORTSTRATEGIC',
+        'CAPTURE',
+        'EXPERIMENTAL',
+        'ANTISURFACE',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'T01_Barrel01',
+                Mesh = '/projectiles/debris/Illuminate/UIX0114/UIX0114_Turret_Debris_01_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIX0112/UIX0112_Debris_Projectile_01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'IlluminateStructureDestroyEffectsExtraLarge02',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 20,
+        Health = 18500,
+        MaxHealth = 18500,
+        RegenRate = 43,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0079>Experimental Conversion Ray',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0158>Loyalty Gun',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODReduceImmune = true,
+            LODs = {
+                {
+                    LODCutoff = 100,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 1000,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping, glow',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping, glow, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 12.8,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12.8,
+            },
+        },
+        UniformScale = 0.1,
+    },
+    Economy = {
+        BuildTime = 190,
+        CaptureRate = 2,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 4810,
+        MassValue = 1400,
+        MaxCaptureDistance = 175,
+        RebuildBonusIds = {
+            'UIX0114',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 12,
+        SizeZ = 12,
+    },
+    General = {
+        BuildIconIndex = 7,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 220,
+        CommandCaps = {
+            RULEUCC_Capture = true,
+            RULEUCC_Stop = true,
+        },
+        ExperienceValue = 4500,
+        FactionName = 'Illuminate',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0159>Loyalty Gun',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 28,
+    },
+    LifeBarHeight = 0.32,
+    LifeBarOffset = 5.15,
+    LifeBarSize = 7,
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -2.5,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.5,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 8.5,
+    SelectionSizeZ = 8,
+    SelectionThickness = 0.45,
+    SizeX = 11,
+    SizeY = 4,
+    SizeZ = 11,
+    StrategicIconName = 'icon_experimental_generic',
+    StrategicIconSortPriority = 175,
+    Weapons = {
+        {
+            AlwaysRecheckTarget = false,
+            AutoInitiateAttackCommand = false,
+            AutoInitiateAttackOnPatrol = false,
+            BallisticArc = 'RULEUBA_None',
+            Damage = 0,
+            DamageRadius = 0,
+            DisplayName = 'Dummy Range Weapon',
+            Label = 'DummyRange01',
+            MaxRadius = 175,
+            RateOfFire = 0,
+            ScriptClass = 'BareBonesWeapon',
+            ScriptModule = '/lua/sim/DefaultWeapons.lua',
+            TargetCheckInterval = 99999,
+            Turreted = false,
+            WeaponCategory = 'None',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Illuminate/UIX0114/UIX0114_wreckage02_prop.bp',
+        Decay = 0,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

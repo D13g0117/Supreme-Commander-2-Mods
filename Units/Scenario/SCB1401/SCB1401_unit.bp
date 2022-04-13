@@ -1,0 +1,120 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 8888,
+        MaxHealth = 8888,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        DisplayName = '<LOC SCENARIO_0072>Experimental Factory Platform Generator',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 420,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Gray_Diffuse.dds',
+                                    MaskName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Mask.dds',
+                                    NormalName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128',
+                                    TeamName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_lod0.scm',
+                },
+                {
+                    LODCutoff = 550,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Diffuse.dds',
+                                    MaskName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Mask.dds',
+                                    NormalName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud',
+                                    TeamName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_lod1.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Diffuse.dds',
+                                    MaskName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Mask.dds',
+                                    NormalName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, glow',
+                                    TeamName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Exp_Factory_Platform/Exp_Factory_Platform_lod2.scm',
+                },
+            },
+        },
+        UniformScale = 0.14,
+    },
+    Economy = {
+        BuildTime = 8888,
+    },
+    Footprint = {
+        SizeX = 9,
+        SizeZ = 9,
+    },
+    General = {
+        UnitName = '<LOC SCENARIO_0073>Experimental Factory Platform Generator',
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+
+    -- height
+    SizeX = 5,
+    SizeY = 11.5,
+    SizeZ = 5,
+    StrategicIconName = 'icon_structure_generic',
+    StrategicIconSortPriority = 220,
+    Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

@@ -1,0 +1,25 @@
+RawAnimBlueprint {
+	UCL0001_Hunker = {
+		ScaName = '/Units/Cybran/UCL0001/UCL0001_AhunkerStart01.sca',
+		PlaybackSpeed = 1.0,
+	},
+	UCL0001_HunkerEnd = {
+		ScaName = '/Units/Cybran/UCL0001/UCL0001_AhunkerEnd01.sca',
+		Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'OnIdle',},
+		},
+		PlaybackSpeed = 1.0,
+	},
+	UCL0001_Walk = {
+		ScaName = '/Units/Cybran/UCL0001/UCL0001_Awalk01.sca',
+		PlaybackSpeed = 1.0,
+	},
+	UCL0001_Idle = {
+		ScaName = '/Units/Cybran/UCL0001/UCL0001_Aidle01.sca',
+		PlaybackSpeed = 1.0,
+	},
+	UCL0001_Killed = {
+		ScaName = '/Units/Cybran/UCL0001/UCL0001_Adeath01.sca',
+		PlaybackSpeed = 1.0,
+	},
+}

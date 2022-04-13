@@ -1,0 +1,127 @@
+UnitBlueprint {
+    AnimSet = {
+        build_phase_01 = 'uib0025_Build_Phase01',
+        build_phase_02 = 'uib0025_Build_Phase02',
+        build_phase_03 = 'uib0025_Build_Phase03',
+        build_transition_01 = 'uib0025_Build_Transition01',
+        build_transition_02 = 'uib0025_Build_Transition02',
+        deploy = 'uib0025_Deploy',
+        pack = 'uib0025_Pack',
+    },
+    AnimTree = '/anims/illuminate_scaffolding_animtree.bp',
+    Audio = {
+        BuildPhase01 = 'SC2/SC2/Buildings/ILLUMINATE/Scaffolding/snd_Phase1_lp',
+        BuildPhase02 = 'SC2/SC2/Buildings/ILLUMINATE/Scaffolding/snd_Phase2_lp',
+        BuildPhase03 = 'SC2/SC2/Buildings/ILLUMINATE/Scaffolding/snd_Phase3_lp',
+        Deploy = 'SC2/SC2/Buildings/ILLUMINATE/Scaffolding/snd_unpack',
+        Pack = 'SC2/SC2/Buildings/ILLUMINATE/Scaffolding/snd_pack',
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'STRUCTURE',
+        'LAND',
+        'ILLUMINATE',
+        'UNTARGETABLE',
+    },
+    CollisionOffsetX = 0.3,
+    CollisionOffsetZ = -0.05,
+    Display = {
+        BuildEffectSphereHeight = 2,
+        BuildEffectSphereScale = 1,
+        BuildEffectsScale = 0.25,
+        BuildPointBones = {
+            'UIB0025_buildPoint01',
+        },
+        BuildSphereScaleMul01 = 2,
+        BuildSphereScaleMul02 = 7,
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 300,
+            LODs = {
+                {
+                    LODCutoff = 60,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0021/UIB0021_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0021/UIB0021_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0021/UIB0021_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                    TeamName = '/Units/Illuminate/UIB0021/UIB0021_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 120,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0021/UIB0021_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0021/UIB0021_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0021/UIB0021_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                    TeamName = '/Units/Illuminate/UIB0021/UIB0021_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 600,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0021/UIB0021_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0021/UIB0021_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0021/UIB0021_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                    TeamName = '/Units/Illuminate/UIB0021/UIB0021_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        SimulationBones = {
+            'UIB0025_B01_Antenna01',
+            'UIB0025_B02_Antenna01',
+            'UIB0025_Blade01',
+            'UIB0025_Blade02',
+            'UIB0025_SpinnerCenter',
+        },
+        UniformScale = 0.035,
+    },
+    Footprint = {
+        SizeX = 0,
+        SizeZ = 0,
+    },
+    General = {
+        CapCost = 0,
+        FactionName = 'Illuminate',
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+            LAYER_Water = true,
+        },
+        MeshExtentsX = 0,
+        MeshExtentsY = 0,
+        MeshExtentsZ = 0,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SizeX = 0,
+    SizeY = 0,
+    SizeZ = 0,
+}

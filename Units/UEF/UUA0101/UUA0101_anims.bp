@@ -1,0 +1,16 @@
+RawAnimBlueprint {
+     UUA0101_Land = {
+     	ScaName = '/units/UEF/UUA0101/UUA0101_aland01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'OnIdle',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     UUA0101_TakeOff = {
+     	ScaName = '/units/UEF/UUA0101/UUA0101_aland01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'OnIdle',},
+     	},
+		PlaybackSpeed = -1.0,
+     },
+}

@@ -1,0 +1,105 @@
+UnitBlueprint {
+    Audio = {
+        ShieldOff = 'SC2/SC2/Upgrades/CYBRAN/UCM0211/snd_UCM0211_Upgrade_ShieldOff',
+        ShieldOn = 'SC2/SC2/Upgrades/CYBRAN/UCM0211/snd_UCM0211_Upgrade_ShieldOn',
+    },
+    Categories = {
+        'UPGRADEMODULE',
+        'LAND',
+        'CYBRAN',
+        'TECH1',
+        'SORTUPGRADES',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 10,
+        EconomyThreatLevel = 0,
+        Health = 1000,
+        MaxHealth = 1000,
+        SurfaceThreatLevel = 10,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0028>Factory Add-on',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0056>Shield Generator',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0202/UCB0202_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0202/UCB0202_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0202/UCB0202_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                    TeamName = '/Units/Cybran/UCB0202/UCB0202_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0202/UCB0202_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0202/UCB0202_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0202/UCB0202_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/Cybran/UCB0202/UCB0202_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 800,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0202/UCB0202_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0202/UCB0202_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0202/UCB0202_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/Cybran/UCB0202/UCB0202_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.04,
+    },
+    Economy = {
+        BuildTime = 14,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 250,
+        MassValue = 125,
+    },
+    General = {
+        BuildIconIndex = 3,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 950,
+        CapCost = 0,
+        ExperienceValue = 0,
+        FactionName = 'Cybran',
+        StructureUpgradeUnit = true,
+        UnitName = '<LOC UNIT_NAME_0057>Shield Generator',
+    },
+    LifeBarRender = false,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.8,
+    SelectionMeshScaleY = 1,
+    SelectionMeshScaleZ = 0.8,
+    SizeX = 2,
+    SizeY = 8,
+    SizeZ = 2,
+}

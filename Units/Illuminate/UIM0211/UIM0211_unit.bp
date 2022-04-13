@@ -1,0 +1,121 @@
+UnitBlueprint {
+    Audio = {
+        ShieldOff = 'SC2/SC2/Upgrades/CYBRAN/UIM0211/snd_UIM0211_Upgrade_ShieldOff',
+        ShieldOn = 'SC2/SC2/Upgrades/ILLUMINATE/UIM0211/snd_UIM0211_Upgrade_ShieldOn',
+    },
+    Categories = {
+        'UPGRADEMODULE',
+        'LAND',
+        'ILLUMINATE',
+        'TECH1',
+        'SORTUPGRADES',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 10,
+        EconomyThreatLevel = 0,
+        Health = 1000,
+        MaxHealth = 1000,
+        SurfaceThreatLevel = 10,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0072>Factory Add-on',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0144>Shield Generator',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'Addon02',
+                        },
+                        Scale = 0.6,
+                        Type = 'IlluminateShieldGenerator01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 60,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0202/UIB0202_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0202/UIB0202_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0202/UIB0202_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                    TeamName = '/Units/Illuminate/UIB0202/UIB0202_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 120,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0202/UIB0202_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0202/UIB0202_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0202/UIB0202_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow',
+                                    TeamName = '/Units/Illuminate/UIB0202/UIB0202_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 600,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0202/UIB0202_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0202/UIB0202_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0202/UIB0202_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/Illuminate/UIB0202/UIB0202_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.08,
+    },
+    Economy = {
+        BuildTime = 14,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 250,
+        MassValue = 125,
+    },
+    General = {
+        BuildIconIndex = 3,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 950,
+        CapCost = 0,
+        ExperienceValue = 0,
+        FactionName = 'Illuminate',
+        StructureUpgradeUnit = true,
+        UnitName = '<LOC UNIT_NAME_0145>Shield Generator',
+    },
+    LifeBarRender = false,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0.4,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.8,
+    SelectionMeshScaleZ = 0.9,
+    SizeX = 1,
+    SizeY = 4,
+    SizeZ = 1,
+}

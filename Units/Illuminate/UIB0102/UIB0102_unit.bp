@@ -1,0 +1,369 @@
+UnitBlueprint {
+    Audio = {
+        Killed = 'SC2/SC2/Destructions/Explosions/ILLUMINATE/snd_Destroy_Land_Med',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Sml_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        BuildScaffoldUnit = 'uib0025',
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'ANTIAIR',
+        'DEFENSE',
+        'DRAGBUILD',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYANTIAIR',
+        'SORTDEFENSE',
+        'ILLUMINATE',
+        'SHIELDUPGRADE',
+        'UIBASICSORTCATEGORY',
+    },
+    CollisionOffsetZ = 0.25,
+    Death = {
+        DestructionParts = {
+            {
+                AttachBone = 'T01_Barrel01',
+                Meshes = {
+                    '/projectiles/debris/Illuminate/UIB0102/UIB0102_Turret_Debris_01_mesh',
+                    '/projectiles/debris/Illuminate/UIB0102/UIB0102_Turret_Debris_02_mesh',
+                    '/projectiles/debris/Illuminate/UIB0102/UIB0102_Turret_Debris_03_mesh',
+                },
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'T01_B01_Top02',
+                Mesh = '/projectiles/debris/Illuminate/UIB0102/UIB0102_Turret_Debris_04_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'T01_B01_Top01',
+                Mesh = '/projectiles/debris/Illuminate/UIB0102/UIB0102_Turret_Debris_05_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'IlluminateStructureDestroyEffectsSmall01',
+    },
+    Defense = {
+        AirThreatLevel = 5,
+        EconomyThreatLevel = 0,
+        Health = 3800,
+        MaxHealth = 3800,
+        RegenRate = 6,
+        Shield = {
+            AllowPenetration = true,
+            CollisionOffsetZ = 0.25,
+            ImpactEffects = 'ShieldHit01',
+            OwnerShieldTextureSet = 'Shield',
+            ShieldDamageAbsorb = 0.85,
+            ShieldMaxHealth = 950,
+            ShieldRechargeTime = 10,
+            ShieldReflectChance = 0.5,
+            ShieldReflectRandomVector = true,
+            ShieldRegenRate = 2,
+            SizeX = 0.7,
+            SizeY = 1.6,
+            SizeZ = 0.7,
+            StartOn = false,
+        },
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0048>Air Defense Tower',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0,
+                OffsetY = 0.75,
+                OffsetZ = 0,
+            },
+        },
+        DisplayName = '<LOC UNIT_NAME_0096>Anti-Air Tower',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 50,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/Units/Shared/IlluminateShield.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, shield',
+                                },
+                            },
+                            Name = 'Shield',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 100,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/Units/Shared/IlluminateShield.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, shield',
+                                },
+                            },
+                            Name = 'Shield',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 500,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/Units/Shared/IlluminateShield.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping, shield',
+                                },
+                            },
+                            Name = 'Shield',
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.1,
+    },
+    Economy = {
+        BuildTime = 28,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 560,
+        MassValue = 225,
+        RebuildBonusIds = {
+            'UIB0102',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        MinWaterDepth = 1,
+        SizeX = 2,
+        SizeZ = 2,
+    },
+    General = {
+        BuildIconIndex = 6,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 110,
+        CommandCaps = {
+            RULEUCC_Attack = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Stop = true,
+        },
+        ExperienceTable = 'TURRET',
+        ExperienceValue = 300,
+        FactionName = 'Illuminate',
+        Icon = 'amph',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0097>Anti-Air Tower',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 24,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 1.25,
+    LifeBarSize = 1.35,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default2x2_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+            LAYER_Water = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 1,
+        MeshExtentsY = 1.25,
+        MeshExtentsZ = 1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = -0.3,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.2,
+    SelectionMeshOffsetZ = -0.3,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.9,
+    SelectionMeshScaleZ = 0.7,
+    SelectionSizeX = 0.9,
+    SelectionSizeZ = 0.9,
+    SelectionThickness = 1,
+    SizeX = 1,
+    SizeY = 2.75,
+    SizeZ = 1,
+    StrategicIconName = 'icon_structure_antiair',
+    StrategicIconSortPriority = 205,
+    Weapons = {
+        {
+            AlwaysRecheckTarget = false,
+            Audio = {
+                Fire = 'SC2/SC2/Buildings/ILLUMINATE/UIB0102/snd_UIB0102_AADefense_Shleo_AA_Autogun',
+            },
+            BallisticArc = 'RULEUBA_None',
+            CannotAttackGround = true,
+            CollideFriendly = false,
+            Damage = 120,
+            DamageFriendly = false,
+            DamageType = 'Normal',
+            DisplayName = 'Shleo AA AutoGun',
+            FireTargetLayerCaps = {
+                Land = 'Air',
+                Water = 'Air',
+            },
+            FiringRandomness = 0,
+            FiringTolerance = 0.2,
+            Label = 'AntiAir01',
+            MaxRadius = 66,
+            MuzzleFlashEffect = 'Illuminate_AntiAir01_Launch01',
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 2,
+            MuzzleVelocity = 45,
+            ProjectileId = '/projectiles/Illuminate/IAntiAir02/IAntiAir02_proj.bp',
+            ProjectileLifetimeUsesMultiplier = 2,
+            ProjectilesPerOnFire = 1,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'T01_B01_Muzzle01',
+                    },
+                    RackBone = 'T01_Barrel01',
+                },
+                {
+                    MuzzleBones = {
+                        'T01_B01_Muzzle02',
+                    },
+                    RackBone = 'T01_Barrel01',
+                },
+                {
+                    MuzzleBones = {
+                        'T01_B01_Muzzle03',
+                    },
+                    RackBone = 'T01_Barrel01',
+                },
+                {
+                    MuzzleBones = {
+                        'T01_B01_Muzzle04',
+                    },
+                    RackBone = 'T01_Barrel01',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = -0.4,
+            RackReloadTimeout = 10,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_AntiAir',
+            RateOfFire = 1.5,
+            TargetCheckInterval = 0.5,
+            TargetPriorities = {
+                'AIR MOBILE',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE,STRUCTURE,NAVAL',
+            TrackingRadius = 1.4,
+            TurretBoneMuzzle = 'T01_B01_Bottom02',
+            TurretBonePitch = 'T01_Barrel01',
+            TurretBoneYaw = 'Turret01',
+            TurretPitch = 45,
+            TurretPitchRange = 45,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 180,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            WeaponCategory = 'Anti Air',
+            WeaponRepackTimeout = 1,
+            WeaponUnpackAnimation = '/units/Illuminate/UIB0102/UIB0102_AOpen01.sca',
+            WeaponUnpackAnimationRate = 1,
+            WeaponUnpacks = true,
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Illuminate/UIB0102/UIB0102_Wreckage01_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+            Water = true,
+        },
+    },
+}

@@ -1,0 +1,122 @@
+UnitBlueprint {
+    AnimSet = {
+        build_phase_01 = 'uub0025_Build_Phase01',
+        build_phase_02 = 'uub0025_Build_Phase02',
+        build_phase_03 = 'uub0025_Build_Phase03',
+        build_transition_01 = 'uub0025_Build_Transition01',
+        build_transition_02 = 'uub0025_Build_Transition02',
+        deploy = 'uub0025_Deploy',
+        pack = 'uub0025_Pack',
+    },
+    AnimTree = '/anims/uef_scaffolding_animtree.bp',
+    Audio = {
+        BuildPhase01 = 'SC2/SC2/Buildings/UEF/Scaffolding/snd_Phase1_lp',
+        BuildPhase02 = 'SC2/SC2/Buildings/UEF/Scaffolding/snd_Phase2_lp',
+        BuildPhase03 = 'SC2/SC2/Buildings/UEF/Scaffolding/snd_Phase3_lp',
+        Deploy = 'SC2/SC2/Buildings/UEF/Scaffolding/snd_unpack',
+        Pack = 'SC2/SC2/Buildings/UEF/Scaffolding/snd_pack',
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'STRUCTURE',
+        'LAND',
+        'UEF',
+        'UNTARGETABLE',
+    },
+    CollisionOffsetX = 0.3,
+    CollisionOffsetZ = -0.05,
+    Display = {
+        BuildEffectsScale = 0.5,
+        BuildPointBones = {
+            'UUB0025_BuildPoint01',
+        },
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 300,
+            LODs = {
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/UEF/UUB0021/UUB0021_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUB0021/UUB0021_Mask.dds',
+                                    NormalName = '/Units/UEF/UUB0021/UUB0021_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, alpha_test = 128',
+                                    TeamName = '/Units/UEF/UUB0021/UUB0021_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/UEF/UUB0021/UUB0021_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUB0021/UUB0021_Mask.dds',
+                                    NormalName = '/Units/UEF/UUB0021/UUB0021_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, alpha_test = 128',
+                                    TeamName = '/Units/UEF/UUB0021/UUB0021_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 800,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/UEF/UUB0021/UUB0021_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUB0021/UUB0021_Mask.dds',
+                                    NormalName = '/Units/UEF/UUB0021/UUB0021_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, alpha_test = 128',
+                                    TeamName = '/Units/UEF/UUB0021/UUB0021_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        SimulationBones = {
+            'UUB0025_T01_Pod01',
+            'UUB0025_T01_Pod02',
+            'UUB0025_T01_Base01',
+            'UUB0025_T01_Base02',
+            'UUB0025_T01_Muzzle01',
+            'UUB0025_T01_Tower01',
+            'UUB0025_T01_Tower02',
+        },
+        UniformScale = 0.032,
+    },
+    Footprint = {
+        SizeX = 0,
+        SizeZ = 0,
+    },
+    General = {
+        CapCost = 0,
+        FactionName = 'UEF',
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+            LAYER_Water = true,
+        },
+        MeshExtentsX = 0,
+        MeshExtentsY = 0,
+        MeshExtentsZ = 0,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SizeX = 0,
+    SizeY = 0,
+    SizeZ = 0,
+}

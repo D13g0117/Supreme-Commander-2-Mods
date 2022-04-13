@@ -1,0 +1,17 @@
+RawAnimBlueprint {
+     uub0704_Convert = {
+     	ScaName = '/units/UEF/UUB0704/UUB0704_Abuild01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'OnReverseConvert',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     uub0704_ReverseConvert = {
+     	ScaName = '/units/UEF/UUB0704/UUB0704_Abuild01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'OnIdle',		Direction = 'Reverse', },
+     	},
+		PlaybackSpeed = -1.0,
+		BlendInTime = 0.0,
+     },
+}

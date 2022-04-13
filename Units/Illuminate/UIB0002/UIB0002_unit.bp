@@ -1,0 +1,457 @@
+UnitBlueprint {
+    AnimSet = {
+        build_loop = 'uib0002_Build',
+        finish_build = 'uib0002_FinishBuild',
+        reverse_finish_build = 'uib0002_ReverseFinishBuild',
+    },
+    AnimTree = '/anims/factory_animtree.bp',
+    Audio = {
+        ConstructClose = 'SC2/SC2/Buildings/ILLUMINATE/UIB0002/snd_UIB0002_airfactory_Close',
+        ConstructLoop = 'SC2/SC2/Buildings/ILLUMINATE/UIB0002/snd_UIB0002_airfactory_Construct_Loop',
+        ConstructOpen = 'SC2/SC2/Buildings/ILLUMINATE/UIB0002/snd_UIB0002_airfactory_OPEN',
+        DeathExplosion = 'SC2/SC2/Buildings/ILLUMINATE/UIB0002/snd_UIB0002_airfactory_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Buildings/ILLUMINATE/UIB0002/snd_UIB0002_airfactory_Destroy_Huge',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Factory',
+    },
+    Build = {
+        BuildModifiersExclusionCategory = {
+            'UPGRADEMODULE',
+            'EXPERIMENTAL',
+        },
+        BuildScaffoldUnit = 'uib0021',
+        EffectBones = {
+            0,
+        },
+        FinishBuildAnimDelay = 2,
+        FinishBuildRolloffDelay = 2,
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'BUILTBYCOMMANDER',
+        'STRUCTURE',
+        'AIR',
+        'TECH1',
+        'CONSTRUCTION',
+        'FACTORY',
+        'RALLYPOINT',
+        'DRAGBUILD',
+        'SIZE16',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWQUEUE',
+        'SORTCONSTRUCTION',
+        'ILLUMINATE',
+        'UIBASICSORTCATEGORY',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Tower01',
+                Mesh = '/projectiles/debris/Illuminate/UIB0002/UIB0002_Turret_Debris_01_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIB0002/UIB0002_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'Tower02',
+                Mesh = '/projectiles/debris/Illuminate/UIB0002/UIB0002_Turret_Debris_02_mesh',
+                Projectile = '/projectiles/debris/Illuminate/UIB0002/UIB0002_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'SmallSpinner04',
+                Mesh = '/projectiles/debris/Illuminate/UIB0002/UIB0002_Turret_Debris_03_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'MidFloor02',
+                Mesh = '/projectiles/debris/Illuminate/UIB0002/UIB0002_Turret_Debris_04_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'InnerFloor01',
+                Mesh = '/projectiles/debris/Illuminate/UIB0002/UIB0002_Turret_Debris_05_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 5,
+        Health = 7500,
+        MaxHealth = 7500,
+        RegenRate = 18,
+        Shield = {
+            AllowPenetration = true,
+            CollisionOffsetY = 0,
+            CollisionShape = 'Sphere',
+            ImpactEffects = 'ShieldHit01',
+            Mesh = '/meshes/Shield/Shield03_mesh',
+            PanelArray = {
+                Panel_1 = '/meshes/Shield/ShieldDomeSection05_mesh',
+                Panel_2 = '/meshes/Shield/ShieldDomeSection06_mesh',
+            },
+            ShieldDamageAbsorb = 0.85,
+            ShieldMaxHealth = 10000,
+            ShieldRechargeTime = 40,
+            ShieldReflectChance = 0.5,
+            ShieldReflectRandomVector = true,
+            ShieldRegenRate = 30,
+            ShieldSize = 25,
+            ShieldType = 'Panel',
+            StartOn = false,
+        },
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0045>Air Production Facility',
+    Display = {
+        AnimationDeath = {
+            {
+                Animation = '/units/Illuminate/UIB0002/UIB0002_ADeath.sca',
+                AnimationRateMax = 1,
+                AnimationRateMin = 1,
+                Weight = 100,
+            },
+        },
+        BlinkingLights = {
+            {
+                BLBone = 'AttachPoint01',
+                BLOffsetX = 0,
+                BLOffsetY = -0.55,
+                BLOffsetZ = 1.68,
+                BLScale = 2.5,
+            },
+            {
+                BLBone = 'AttachPoint02',
+                BLOffsetX = 0,
+                BLOffsetY = -0.55,
+                BLOffsetZ = 1.68,
+                BLScale = 2.5,
+            },
+            {
+                BLBone = 'AttachPoint03',
+                BLOffsetX = 0,
+                BLOffsetY = -0.55,
+                BLOffsetZ = 1.66,
+                BLScale = 2.5,
+            },
+            {
+                BLBone = 'AttachPoint04',
+                BLOffsetX = 0,
+                BLOffsetY = -0.55,
+                BLOffsetZ = 1.66,
+                BLScale = 2.5,
+            },
+        },
+        BlinkingLightsFx = {
+            Green = '/effects/emitters/ambient/units/light_green_03_emit.bp',
+            Red = '/effects/emitters/ambient/units/light_red_03_emit.bp',
+            Yellow = '/effects/emitters/ambient/units/light_yellow_02_emit.bp',
+        },
+        BuildAttachBone = 'BuildPoint01',
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 1.2,
+                OffsetY = 0.7,
+                OffsetZ = 0.5,
+            },
+            {
+                Bone = 0,
+                OffsetX = -1.2,
+                OffsetY = 0.7,
+                OffsetZ = 0.5,
+            },
+            {
+                Bone = 0,
+                OffsetX = -1.2,
+                OffsetY = 0.7,
+                OffsetZ = -0.5,
+            },
+            {
+                Bone = 0,
+                OffsetX = 1.2,
+                OffsetY = 0.7,
+                OffsetZ = -0.5,
+            },
+            {
+                Bone = 0,
+                OffsetX = 0,
+                OffsetY = 1.7,
+                OffsetZ = -1,
+            },
+        },
+        DisplayName = '<LOC UNIT_NAME_0090>Air Factory',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, alpha_test = 128',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 250,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, point_cloud, glow, environment_mapping',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, point_cloud, glow, environment_mapping, chrome, build_overlay',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, glow, environment_mapping, point_cloud',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, glow, environment_mapping, point_cloud, chrome, build_overlay',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+            SortOrder = -1,
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                Diffuse = '/Illuminate/Tar_default_diffuse',
+                FadeOut = 150,
+                Length = 22,
+                Normal = '/Illuminate/Tar_default_normal',
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 22,
+            },
+        },
+        UniformScale = 0.1,
+    },
+    Economy = {
+        BuildRate = 1,
+        BuildTime = 50,
+        BuildableCategory = {
+            'BUILTBYFACTORY ILLUMINATE MOBILE CONSTRUCTION',
+            'BUILTBYFACTORY ILLUMINATE AIR TECH1',
+            'ILLUMINATE UPGRADEMODULE LAND',
+        },
+        CaptureTimeMult = 0.6,
+        EnergyValue = 500,
+        InitialRallyZ = 12,
+        MassValue = 280,
+        ProductionPerSecondEnergy = 1,
+        RebuildBonusIds = {
+            'UIB0002',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 14,
+        SizeZ = 14,
+    },
+    General = {
+        BuildIconIndex = 2,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 20,
+        CommandCaps = {
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Pause = true,
+            RULEUCC_Stop = true,
+        },
+        ConstructionBar = true,
+		EarnXPFromCombat = false,
+        ExperienceTable = 'AIRFACTORY',
+        ExperienceValue = 1000,
+        FactionName = 'Illuminate',
+        Icon = 'air',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0091>Air Factory',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 5.55,
+    LifeBarSize = 8.5,
+    Navigation = {
+        CostStamp = '/coststamps/Custom/UIB0002_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 4.25,
+        MeshExtentsY = 2.5,
+        MeshExtentsZ = 5,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = -0.1,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 4,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.4,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 9.4,
+    SelectionSizeZ = 9.5,
+    SelectionThickness = 0.4,
+    SizeX = 13,
+    SizeY = 1,
+    SizeZ = 13,
+    StrategicIconName = 'icon_factory_air',
+    StrategicIconSortPriority = 220,
+    Upgrades = {
+        {
+            Bones = {
+                'AttachPoint01',
+            },
+            UpgradeUnits = {
+                'UIM0141',
+            },
+        },
+        {
+            Bones = {
+                'AttachPoint02',
+            },
+            UpgradeUnits = {
+                'UIM0211',
+            },
+        },
+        {
+            Bones = {
+                'AttachPoint04',
+            },
+            UpgradeUnits = {
+                'UIM0111',
+            },
+        },
+        {
+            Bones = {
+                'AttachPoint03',
+            },
+            UpgradeUnits = {
+                'UIM0121',
+            },
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Illuminate/UIB0002/UIB0002_Wreckage01_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

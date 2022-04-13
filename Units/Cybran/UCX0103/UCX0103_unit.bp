@@ -1,0 +1,272 @@
+UnitBlueprint {
+    Abilities = {
+        {
+            Blueprint = 'BombBouncerCharge',
+        },
+        {
+            Blueprint = 'BombBouncerMegaBlast',
+        },
+    },
+    Audio = {
+        AmbientMove = 'SC2/SC2/Experimentals/CYBRAN/UCX0103/snd_UCX0103_BombBouncer_Move_Loop',
+        ChargeActivate = 'SC2/SC2/Experimentals/CYBRAN/UCX0103/snd_UCX0103_BombBouncer_Manual_Charge_loop',
+        Destroyed = 'SC2/SC2/Experimentals/CYBRAN/UCX0103/snd_UCX0103_BombBouncer_Destroy',
+
+        -- DoneBeingBuilt = 'SC2/SC2/Experimentals/CYBRAN/UCX0103/snd_UCX0103_BombBouncer_Activate',
+        MegaBlast = 'SC2/SC2/Experimentals/CYBRAN/UCX0103/snd_UCX0103_BombBouncer_MegaBlast',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        Pack = 'SC2/SC2/Experimentals/CYBRAN/UCX0103/snd_UCX0103_BombBouncer_Open',
+        ShieldOff = 'SC2/SC2/Experimentals/CYBRAN/UCX0103/snd_UCX0103_BombBouncer_Shield_Off',
+        ShieldOn = 'SC2/SC2/Experimentals/CYBRAN/UCX0103/snd_UCX0103_BombBouncer_Shield_On',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Experimentals',
+        Unpack = 'SC2/SC2/Experimentals/CYBRAN/UCX0103/snd_UCX0103_BombBouncer_Open',
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'CYBRAN',
+        'MOBILE',
+        'LAND',
+        'TECH1',
+        'DIRECTFIRE',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYDIRECTFIRE',
+        'EXPERIMENTAL',
+        'BOMBBOUNCER',
+    },
+    CollisionOffsetZ = 0.1,
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'UCX0103_Head',
+                Meshes = {
+                    '/projectiles/debris/Cybran/UCX0103/UCX0103_Turret_Debris_01_mesh',
+                    '/projectiles/debris/Cybran/UCX0103/UCX0103_Turret_Debris_02_mesh',
+                    '/projectiles/debris/Cybran/UCX0103/UCX0103_Turret_Debris_03_mesh',
+                },
+                Projectile = '/projectiles/debris/DebrisGenericLow01/DebrisGenericLow01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'CybranStructureDestroyEffectsExtraLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 10,
+        EconomyThreatLevel = 0,
+        Health = 26500,
+        MaxHealth = 26500,
+        RegenRate = 71,
+        Shield = {
+            CollisionOffsetY = 4,
+            ImpactEffects = 'ShieldHit01',
+            Mesh = '/units/cybran/ucx0103/ucx0103-shield_mesh',
+            ShieldDamageAbsorb = 0.85,
+            ShieldMaxHealth = 12000,
+            ShieldRechargeTime = 20,
+            ShieldReflectChance = 1,
+            ShieldRegenRate = 80,
+            ShieldSize = 0.25,
+            SizeX = 16,
+            SizeY = 0.5,
+            SizeZ = 16,
+        },
+        SurfaceThreatLevel = 5,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0034>Experimental Reflector Shield',
+    Display = {
+        AnimationWalk = '/units/Cybran/ucx0103/ucx0103_Awalk01.sca',
+        DisplayName = '<LOC UNIT_NAME_0068>Bomb Bouncer',
+        EffectGroupClassification = 'Medium',
+        HalfBakedShutdownEffect = 'HalfBakedShutdownAmbients',
+        HalfBakedShutdownEffectBone = 'UCX0103_Head',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODReduceImmune = true,
+            LODs = {
+                {
+                    LODCutoff = 150,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 400,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, point_cloud, glow',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 1000,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        MovementEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UCX0103_LeftAnkle01',
+                            'UCX0103_LeftAnkle02',
+                            'UCX0103_RightAnkle01',
+                            'UCX0103_RightAnkle02',
+                        },
+                        Type = 'GroundKickup01',
+                    },
+                },
+                Footfall = {
+                    Bones = {
+                        {
+                            FootBone = 'UCX0103_LeftAnkle01',
+                            Type = 'FootFall02',
+                        },
+                        {
+                            FootBone = 'UCX0103_LeftAnkle02',
+                            Type = 'FootFall02',
+                        },
+                        {
+                            FootBone = 'UCX0103_RightAnkle01',
+                            Type = 'FootFall02',
+                        },
+                        {
+                            FootBone = 'UCX0103_RightAnkle02',
+                            Type = 'FootFall02',
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.1,
+    },
+    Economy = {
+        BuildTime = 115,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 2375,
+        MassValue = 475,
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    General = {
+        BuildIconIndex = 3,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 10,
+        CommandCaps = {
+            RULEUCC_CallTransport = true,
+            RULEUCC_FormAttack = true,
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Stop = true,
+        },
+        ExperienceTable = 'MINI',
+        ExperienceValue = 1500,
+        FactionName = 'Cybran',
+        Icon = 'land',
+        TeleportCooldown = 20,
+        UnitName = '<LOC UNIT_NAME_0069>Bomb Bouncer',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.32,
+    LifeBarOffset = 3.5,
+    LifeBarSize = 6.25,
+    Navigation = {
+        IgnoreNeighbors = true,
+        Radius = 4.85,
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        CollisionPushClass = 3,
+        MaxAcceleration = 1.5,
+        MaxBrake = 10,
+        MaxSpeed = 3.1,
+        MaxSpeedReverse = 0,
+        MaxSteerForce = 10,
+        MeshExtentsX = 0.9,
+        MeshExtentsY = 0.7,
+        MeshExtentsZ = 1.6,
+        MotionType = 'RULEUMT_Land',
+        RotateOnSpot = false,
+        TurnRate = 45,
+    },
+    SelectionCenterOffsetZ = 0,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -1.5,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.8,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 3.6,
+    SelectionSizeZ = 3.1,
+    SelectionThickness = 0.6,
+    SizeX = 4,
+    SizeY = 5,
+    SizeZ = 4,
+    StrategicIconName = 'icon_experimental_generic',
+    StrategicIconSortPriority = 125,
+    Transport = {
+        StorageSize = 30,
+        TeleportTime = 5,
+    },
+    Weapons = {
+        {
+            AlwaysRecheckTarget = false,
+            AutoInitiateAttackCommand = false,
+            AutoInitiateAttackOnPatrol = false,
+            BallisticArc = 'RULEUBA_None',
+            Damage = 0,
+            DamageRadius = 0,
+            DisplayName = 'Dummy Range Weapon',
+            Label = 'DummyRange01',
+            MaxRadius = 20,
+            MinRadius = 0,
+            RateOfFire = 0,
+            ScriptClass = 'BareBonesWeapon',
+            ScriptModule = '/lua/sim/DefaultWeapons.lua',
+            TargetCheckInterval = 99999,
+            Turreted = false,
+            WeaponCategory = 'None',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Cybran/UCX0103/UCX0103_wreckage01_prop.bp',
+        Decay = 0,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

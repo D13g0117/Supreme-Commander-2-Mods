@@ -1,0 +1,289 @@
+UnitBlueprint {
+    Abilities = {
+        {
+            Blueprint = 'PowerDetonate',
+        },
+    },
+    Audio = {
+        ActiveLoop = 'SC2/SC2/Buildings/CYBRAN/UCB0702/snd_UCB0702_EnergyProduction_Active',
+        DeathExplosion = 'SC2/SC2/Destructions/Explosions/CYBRAN/snd_Destroy_Lrg_PreDestroy',
+        DoneBeingBuilt = 'SC2/SC2/Buildings/UEF/UUB0704/snd_UUB0704_MassConvertor_Activate',
+        Killed = 'SC2/SC2/Destructions/Explosions/CYBRAN/snd_Destroy_Huge',
+        OnConvert = 'SC2/SC2/Buildings/UEF/UUB0704/snd_UUB0704_MassConvertor_Activate',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        BuildScaffoldUnit = 'ucb0022',
+        BuildSliderBone = 'UCB0702',
+        BuildSliderZ = -4,
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'BUILTBYCOMMANDER',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'ECONOMIC',
+        'ENERGYPRODUCTION',
+        'ENERGYEXTRACTION',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SORTECONOMY',
+        'DRAGBUILD',
+        'CYBRAN',
+        'UIBASICSORTCATEGORY',
+    },
+    CollisionOffsetZ = -0.5,
+    Death = {
+        DebrisPieces = true,
+        ExplosionEffect = 'CybranStructureDestroyEffectsLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 2,
+        Health = 3000,
+        MaxHealth = 3000,
+        RegenRate = 3,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0015>Energy Production Facility',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+        },
+        DisplayName = '<LOC UNIT_NAME_0030>Energy Generator',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UCB0702',
+                        },
+                        Type = 'CybranPowerGenerator01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 800,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, glow, environment_mapping, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, glow, environment_mapping, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                Diffuse = '/Cybran/Tar_default_diffuse',
+                FadeOut = 150,
+                Length = 8,
+                Normal = '/Cybran/Tar_default_normal',
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 8,
+            },
+        },
+        UniformScale = 0.13,
+    },
+    Economy = {
+        BuildTime = 24,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 100,
+        MassValue = 70,
+        ProductionPerSecondEnergy = 6,
+        RebuildBonusIds = {
+            'UCB0702',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 6,
+        SizeZ = 6,
+    },
+    General = {
+        BuildIconIndex = 8,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 70,
+        ExperienceValue = 500,
+        FactionName = 'Cybran',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0031>Energy Generator',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 1.6,
+    LifeBarSize = 3,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default6x6_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 3.1,
+        MeshExtentsY = 1.4,
+        MeshExtentsZ = 3.1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = -0.5,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -1.5,
+    SelectionMeshOffsetZ = -0.2,
+    SelectionMeshScaleX = 0.8,
+    SelectionMeshScaleY = 0.5,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 1.65,
+    SelectionSizeZ = 2.9,
+    SelectionThickness = 0.5,
+    SizeX = 2.5,
+    SizeY = 2,
+    SizeZ = 3,
+    StrategicIconName = 'icon_structure_energy',
+    StrategicIconSortPriority = 245,
+    Weapons = {
+        {
+            Damage = 900,
+            DamageFriendly = true,
+            DamageRadius = 5,
+            DamageType = 'Normal',
+            DisplayName = 'Death Weapon',
+            DummyWeapon = true,
+            FiringTolerance = 0.2,
+            Label = 'DeathWeapon',
+            WeaponCategory = 'Death',
+        },
+        {
+            Damage = 1000,
+            DamageFriendly = false,
+            DamageRadius = 15,
+            DamageType = 'Normal',
+            DisplayName = 'Power Detonate',
+            DummyWeapon = true,
+            ExplosionEffect = 'PowerDetonateEffectsLarge01',
+            Label = 'PowerDetonate',
+            WeaponCategory = 'Death',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Cybran/UCB0702/UCB0702_wreckage02_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

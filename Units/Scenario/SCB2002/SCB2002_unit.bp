@@ -1,0 +1,48 @@
+UnitBlueprint {
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        AnimationActivate = '/Units/Scenario/SCB2002/SCB2002_A001.sca',
+        AnimationActivateLoop = true,
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            CastShadow = false,
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, no_self_shadow, point_cloud, alpha_test = 128',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.1,
+    },
+    General = {
+        FactionName = 'UEF',
+        UnitName = 'FLAG',
+        UnitWeight = 1,
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MotionType = 'RULEUMT_None',
+        OccupyGround = false,
+    },
+}

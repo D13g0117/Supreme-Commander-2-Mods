@@ -1,0 +1,184 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    CollisionOffsetZ = 0.5,
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Roof01',
+                Mesh = '/projectiles/debris/Props/Buildings/Building01/Building01_Turret_Debris_01_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Ledge01',
+                Mesh = '/projectiles/debris/Props/Buildings/Building01/Building01_Turret_Debris_02_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'UEFStructureDestroyEffectsExtraLarge02',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 16000,
+        MaxHealth = 16000,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+        },
+        DisplayName = '<LOC SCENARIO_0031>Derelict Generic Building',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Buildings/Derelict/DBuilding01/DBuilding01_diffuse.dds',
+                                    MaskName = '/props/Buildings/Building01/Building01_Mask.dds',
+                                    NormalName = '/props/Buildings/Derelict/DBuilding01/DBuilding01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, alpha_test = 128',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Buildings/Building01/Building01_lod0.scm',
+                },
+                {
+                    LODCutoff = 400,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Buildings/Derelict/DBuilding01/DBuilding01_diffuse.dds',
+                                    MaskName = '/props/Buildings/Building01/Building01_Mask.dds',
+                                    NormalName = '/props/Buildings/Derelict/DBuilding01/DBuilding01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, alpha_test = 128',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Buildings/Building01/Building01_lod1.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Buildings/Derelict/DBuilding01/DBuilding01_diffuse.dds',
+                                    MaskName = '/props/Buildings/Building01/Building01_Mask.dds',
+                                    NormalName = '/props/Buildings/Derelict/DBuilding01/DBuilding01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, alpha_test = 128',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Buildings/Building01/Building01_lod2.scm',
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 12.8,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12.8,
+            },
+        },
+        UniformScale = 0.2,
+    },
+    Economy = {
+        BuildTime = 30,
+        EnergyValue = 200,
+        MassValue = 100,
+    },
+    Footprint = {
+        SizeX = 10,
+        SizeZ = 18,
+    },
+    General = {
+        FactionName = 'UEF',
+        UnitName = '<LOC SCENARIO_0032>Derelict Generic Building',
+        UnitWeight = 1,
+    },
+    LifeBarRender = false,
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 1,
+        MeshExtentsY = 1,
+        MeshExtentsZ = 1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+
+    -- height
+    SizeX = 7,
+    SizeY = 8,
+    SizeZ = 12,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Buildings/Building01/Building01_wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.3,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

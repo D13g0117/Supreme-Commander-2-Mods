@@ -1,0 +1,120 @@
+UnitBlueprint {
+    Categories = {
+        'UPGRADEMODULE',
+        'LAND',
+        'ILLUMINATE',
+        'TECH1',
+        'SORTUPGRADES',
+        'OVERLAYRADAR',
+        'OVERLAYSONAR',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 1000,
+        MaxHealth = 1000,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0071>Factory Add-on',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0142>Intel Installation',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIM0141',
+                        },
+                        Type = 'IlluminateRadarStation01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 20,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0301/UIB0301_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0301/UIB0301_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0301/UIB0301_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                    TeamName = '/Units/Illuminate/UIB0301/UIB0301_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 40,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0301/UIB0301_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0301/UIB0301_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0301/UIB0301_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow',
+                                    TeamName = '/Units/Illuminate/UIB0301/UIB0301_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0301/UIB0301_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0301/UIB0301_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0301/UIB0301_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/Illuminate/UIB0301/UIB0301_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.05,
+    },
+    Economy = {
+        BuildTime = 9,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 90,
+        MassValue = 35,
+    },
+    General = {
+        BuildIconIndex = 4,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 940,
+        CapCost = 0,
+        ExperienceValue = 0,
+        FactionName = 'Illuminate',
+        StructureUpgradeUnit = true,
+        UnitName = '<LOC UNIT_NAME_0143>Intel Installation',
+    },
+    Intel = {
+        RadarRadius = 150,
+        SonarRadius = 150,
+        VisionRadius = 75,
+    },
+    LifeBarRender = false,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.5,
+    SelectionMeshOffsetZ = -0.5,
+    SelectionMeshScaleX = 0.8,
+    SelectionMeshScaleY = 0.8,
+    SelectionMeshScaleZ = 0.7,
+}

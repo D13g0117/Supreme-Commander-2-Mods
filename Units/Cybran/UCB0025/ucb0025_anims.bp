@@ -1,0 +1,36 @@
+RawAnimBlueprint {
+     ucb0025_Deploy = {
+     	ScaName = '/units/cybran/ucb0025/ucb0025_adeploy01.sca',
+		PlaybackSpeed = 1.0,
+     	Events = {
+     		{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'play_deploy', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'play_idle', },
+     	},
+     },
+	 ucb0025_OpenDoors = {
+     	ScaName = '/units/cybran/ucb0025/ucb0025_adoor01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',		LuaStrArg = 'play_open', },
+     	},
+		PlaybackSpeed = 1.0,
+     },
+	 ucb0025_CloseDoors = {
+     	ScaName = '/units/cybran/ucb0025/ucb0025_adoor01.sca',
+		PlaybackSpeed = -1.0,
+     },
+	 ucb0025_BuildLoop = {
+     	ScaName = '/units/cybran/ucb0025/ucb0025_abuild01.sca',
+		Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'play_pack', },
+		},
+		PlaybackSpeed = 1.0,
+     },
+     ucb0025_Pack = {
+     	ScaName = '/units/cybran/ucb0025/ucb0025_aretract01.sca',
+		Events = {
+			{ Trigger = 'OnStart',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimStartTrigger',	LuaStrArg = 'play_pack', },
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',		LuaStrArg = 'play_pack', },
+		},
+		PlaybackSpeed = 1.0,
+     },
+}

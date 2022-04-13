@@ -1,0 +1,183 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Debris01',
+                Mesh = '/projectiles/debris/Props/Buildings/Building06/Building06_Turret_Debris_01_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Debris02',
+                Mesh = '/projectiles/debris/Props/Buildings/Building06/Building06_Turret_Debris_02_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'UEFStructureDestroyEffectsLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 1000,
+        MaxHealth = 1000,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+        },
+        DisplayName = '<LOC SCENARIO_0027>Generic Building',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Buildings/Building06/Building06_Diffuse.dds',
+                                    MaskName = '/props/Buildings/Building06/Building06_mask.dds',
+                                    NormalName = '/props/Buildings/Building06/Building06_normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, alpha_test = 128',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Buildings/Building06/Building06_lod0.scm',
+                },
+                {
+                    LODCutoff = 400,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Buildings/Building06/Building06_Diffuse.dds',
+                                    MaskName = '/props/Buildings/Building06/Building06_mask.dds',
+                                    NormalName = '/props/Buildings/Building06/Building06_normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, alpha_test = 128',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Buildings/Building06/Building06_lod1.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Buildings/Building06/Building06_Diffuse.dds',
+                                    MaskName = '/props/Buildings/Building06/Building06_mask.dds',
+                                    NormalName = '/props/Buildings/Building06/Building06_normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, alpha_test = 128',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Buildings/Building06/Building06_lod2.scm',
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 12.8,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12.8,
+            },
+        },
+        UniformScale = 0.2,
+    },
+    Economy = {
+        BuildTime = 30,
+        EnergyValue = 200,
+        MassValue = 100,
+    },
+    Footprint = {
+        SizeX = 10,
+        SizeZ = 10,
+    },
+    General = {
+        FactionName = 'UEF',
+        UnitName = '<LOC SCENARIO_0028>Generic Building',
+        UnitWeight = 1,
+    },
+    LifeBarRender = false,
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 1,
+        MeshExtentsY = 1,
+        MeshExtentsZ = 1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+
+    -- height
+    SizeX = 7,
+    SizeY = 8,
+    SizeZ = 7,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Buildings/Building06/Building06_wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.3,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

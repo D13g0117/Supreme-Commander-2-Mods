@@ -1,0 +1,339 @@
+UnitBlueprint {
+    Audio = {
+        Close = 'SC2/SC2/Buildings/UEF/UUB0102/snd_UUB0102_AADefense_Close',
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Sml_Land',
+        Open = 'SC2/SC2/Buildings/UEF/UUB0102/snd_UUB0102_AADefense_OPEN',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        BuildScaffoldUnit = 'uub0025',
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'ANTIAIR',
+        'DEFENSE',
+        'DRAGBUILD',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYANTIAIR',
+        'SORTDEFENSE',
+        'UEF',
+        'UIBASICSORTCATEGORY',
+    },
+    Death = {
+        DestructionParts = {
+            {
+                AttachBone = 'T01_Rack01',
+                Meshes = {
+                    '/projectiles/debris/UEF/UUB0102/UUB0102_Turret_Debris_01_mesh',
+                    '/projectiles/debris/UEF/UUB0102/UUB0102_Turret_Debris_02_mesh',
+                },
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Armor01',
+                Mesh = '/projectiles/debris/UEF/UUB0102/UUB0102_Turret_Debris_03_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Armor03',
+                Mesh = '/projectiles/debris/UEF/UUB0102/UUB0102_Turret_Debris_04_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'UEFDefaultDestroyEffectsWater02',
+        ExplosionEffectScale = 0.7,
+    },
+    Defense = {
+        AirThreatLevel = 5,
+        EconomyThreatLevel = 0,
+        Health = 4500,
+        MaxHealth = 4500,
+        RegenRate = 6,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0091>Air Defense Tower',
+    Display = {
+        AnimationDeath = {
+            {
+                Animation = '/units/UEF/UIB0102/UIB0102_ADeath.sca',
+                AnimationRateMax = 1,
+                AnimationRateMin = 1,
+                Weight = 100,
+            },
+        },
+        AnimationOpen = '/units/UEF/UUB0102/UUB0102_aopen01.sca',
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0,
+                OffsetY = 0.75,
+                OffsetZ = 0,
+            },
+        },
+        DisplayName = '<LOC UNIT_NAME_0182>Heavy Anti-Air Tower',
+        IdleEffects = {
+            Water = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UUB0102',
+                        },
+                        Type = 'SeaIdle02',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 50,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 100,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 500,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.09,
+    },
+    Economy = {
+        BuildTime = 28,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 560,
+        MassValue = 225,
+        RebuildBonusIds = {
+            'UUB0102',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        MinWaterDepth = 1,
+        SizeX = 2,
+        SizeZ = 2,
+    },
+    General = {
+        BuildIconIndex = 6,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 110,
+        CommandCaps = {
+            RULEUCC_Attack = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Stop = true,
+        },
+        ExperienceTable = 'TURRET',
+        ExperienceValue = 300,
+        FactionName = 'UEF',
+        Icon = 'amph',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0183>Heavy Anti-Air Tower',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 24,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 0.55,
+    LifeBarSize = 1.2,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default2x2_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+            LAYER_Water = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 1,
+        MeshExtentsY = 1.25,
+        MeshExtentsZ = 1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.95,
+    SelectionMeshScaleY = 0.8,
+    SelectionMeshScaleZ = 0.95,
+    SelectionSizeX = 1.3,
+    SelectionSizeZ = 1.3,
+    SelectionThickness = 0.9,
+    SizeX = 1.7,
+    SizeY = 1.4,
+    SizeZ = 1,
+    StrategicIconName = 'icon_structure_antiair',
+    StrategicIconSortPriority = 205,
+    Weapons = {
+        {
+            AlwaysRecheckTarget = false,
+            Audio = {
+                RackSalvoBeginFire = 'SC2/SC2/Buildings/UEF/UUB0102/snd_UUB0102_AADefense_Shleo_AA_Autogun',
+            },
+            BallisticArc = 'RULEUBA_None',
+            CannotAttackGround = true,
+            CollideFriendly = false,
+            Damage = 27,
+            DamageFriendly = false,
+            DamageType = 'Normal',
+            DisplayName = 'Linked Railgun',
+            FireTargetLayerCaps = {
+                Land = 'Air',
+                Water = 'Air',
+            },
+            FiringTolerance = 0.2,
+            Label = 'AntiAir01',
+            MaxRadius = 66,
+            MuzzleFlashEffect = 'UEF_Flak01_Launch01',
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+            MuzzleVelocity = 45,
+            ProjectileId = '/projectiles/UEF/UAntiAir02/UAntiAir02_proj.bp',
+            ProjectileLifetimeUsesMultiplier = 2,
+            ProjectilesPerOnFire = 4,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'T01_B01_Muzzle01',
+                        'T01_B02_Muzzle01',
+                        'T01_B03_Muzzle01',
+                        'T01_B04_Muzzle01',
+                    },
+                    RackBone = 'T01_Barrel01',
+                },
+                {
+                    MuzzleBones = {
+                        'T01_B05_Muzzle01',
+                        'T01_B06_Muzzle01',
+                        'T01_B07_Muzzle01',
+                        'T01_B08_Muzzle01',
+                    },
+                    RackBone = 'T01_Barrel01',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = 0,
+            RackRecoilReturnSpeed = 0,
+            RackReloadTimeout = 0,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_AntiAir',
+            RateOfFire = 1.5,
+            TargetCheckInterval = 0.5,
+            TargetPriorities = {
+                'AIR MOBILE',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE,STRUCTURE,NAVAL',
+            TrackingRadius = 1.4,
+            TurretBoneMuzzle = 'T01_B01_Muzzle01',
+            TurretBonePitch = 'T01_Rack01',
+            TurretBoneYaw = 'Turret01',
+            TurretDualManipulators = false,
+            TurretPitch = 0,
+            TurretPitchRange = 80,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 180,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            WeaponCategory = 'Anti Air',
+            WeaponRepackTimeout = 3600,
+            WeaponUnpackAnimation = '/units/UEF/uub0102/uub0102_aopen01.sca',
+            WeaponUnpackAnimationRate = 0.7,
+            WeaponUnpacks = true,
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/UEF/UUB0102/UUB0102_wreckage01_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+            Water = true,
+        },
+    },
+}

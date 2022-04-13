@@ -1,0 +1,36 @@
+UnitBlueprint {
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+    },
+    Description = 'LARGE O-GRID BLOCKER',
+    Display = {
+        DisplayName = 'LARGE O-GRID BLOCKER',
+        HideHoverBox = true,
+        HideLifeBars = true,
+    },
+    Footprint = {
+        SizeX = 9,
+        SizeZ = 9,
+    },
+    General = {
+        UnitName = 'LARGE O-GRID BLOCKER',
+        UnitWeight = 0,
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+            LAYER_Water = true,
+        },
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+
+    -- height
+    SizeX = 0,
+    SizeY = 0,
+    SizeZ = 0,
+}

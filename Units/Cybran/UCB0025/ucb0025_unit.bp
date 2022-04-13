@@ -1,0 +1,141 @@
+UnitBlueprint {
+    AnimSet = {
+        build_loop = 'ucb0025_BuildLoop',
+        close_doors = 'ucb0025_CloseDoors',
+        deploy = 'ucb0025_Deploy',
+        open_doors = 'ucb0025_OpenDoors',
+        pack = 'ucb0025_Pack',
+    },
+    AnimTree = '/anims/cybran_scaffolding_animtree.bp',
+    Audio = {
+        BuildClose = 'SC2/SC2/Buildings/CYBRAN/Scaffolding/snd_pack',
+        BuildLoop = 'SC2/SC2/Buildings/CYBRAN/Scaffolding/snd_Phase1_lp',
+        BuildOpen = 'SC2/SC2/Buildings/CYBRAN/Scaffolding/snd_unpack',
+        Deploy = 'SC2/SC2/Buildings/CYBRAN/Scaffolding/snd_unpack',
+        Pack = 'SC2/SC2/Buildings/CYBRAN/Scaffolding/snd_pack',
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'STRUCTURE',
+        'CYBRAN',
+        'UNTARGETABLE',
+    },
+    CollisionOffsetX = 0.3,
+    CollisionOffsetZ = -0.05,
+    Display = {
+        BuildEffectsScale = 0.2,
+        BuildPointBones = {
+            'UCB0025_buildpoint01',
+            'UCB0025_buildpoint03',
+            'UCB0025_buildpoint05',
+        },
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 300,
+            LODs = {
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0021/UCB0021_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0021/UCB0021_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0021/UCB0021_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                    TeamName = '/Units/Cybran/UCB0021/UCB0021_Team.dds',
+                                },
+                                {
+                                    DiffuseName = '/meshes/Shield/Shield01_Diffuse.dds',
+                                    EffectName = '/meshes/Shield/Shield01_Effect.dds',
+                                    ShaderMacros = 'alpha_blend, edge_highlight, pulse_alpha = 4, shield_dome',
+                                    ShaderState = 'AlphaBlendState',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0021/UCB0021_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0021/UCB0021_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0021/UCB0021_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                    TeamName = '/Units/Cybran/UCB0021/UCB0021_Team.dds',
+                                },
+                                {
+                                    DiffuseName = '/meshes/Shield/Shield01_Diffuse.dds',
+                                    EffectName = '/meshes/Shield/Shield01_Effect.dds',
+                                    ShaderMacros = 'alpha_blend, edge_highlight, pulse_alpha = 4, shield_dome',
+                                    ShaderState = 'AlphaBlendState',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 800,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0021/UCB0021_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0021/UCB0021_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0021/UCB0021_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                    TeamName = '/Units/Cybran/UCB0021/UCB0021_Team.dds',
+                                },
+                                {
+                                    DiffuseName = '/meshes/Shield/Shield01_Diffuse.dds',
+                                    EffectName = '/meshes/Shield/Shield01_Effect.dds',
+                                    ShaderMacros = 'alpha_blend, edge_highlight, pulse_alpha = 4, shield_dome',
+                                    ShaderState = 'AlphaBlendState',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        SimulationBones = {
+            'UCB0025_buildpoint01',
+            'UCB0025_buildpoint03',
+            'UCB0025_buildpoint05',
+            'UCB0025_botEmitter01',
+            'UCB0025_botEmitter03',
+            'UCB0025_botEmitter05',
+            'UCB0025_T01_B01_Muzzle01',
+            'UCB0025_T03_B01_Muzzle01',
+            'UCB0025_T05_B01_Muzzle01',
+        },
+        UniformScale = 0.07,
+    },
+    Footprint = {
+        SizeX = 0,
+        SizeZ = 0,
+    },
+    General = {
+        CapCost = 0,
+        FactionName = 'Cybran',
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+            LAYER_Water = true,
+        },
+        MeshExtentsX = 0,
+        MeshExtentsY = 0,
+        MeshExtentsZ = 0,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SizeX = 0,
+    SizeY = 0,
+    SizeZ = 0,
+}

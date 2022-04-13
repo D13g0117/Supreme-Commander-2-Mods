@@ -1,0 +1,331 @@
+UnitBlueprint {
+    Abilities = {
+        {
+            Blueprint = 'Magnet',
+        },
+        {
+            Blueprint = 'MagnetPush',
+        },
+    },
+    Audio = {
+        ActiveLoop = 'SC2/SC2/Experimentals/CYBRAN/UCX0114/snd_UCX0114_ExpUnitMagnet_Magnet_Active_loop',
+        DeathExplosion = 'SC2/SC2/Experimentals/CYBRAN/UCX0114/snd_UCX0114_ExpUnitMagnet_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Experimentals/CYBRAN/UCX0114/snd_UCX0114_ExpUnitMagnet_Destroy',
+
+        -- DoneBeingBuilt = 'SC2/SC2/Experimentals/CYBRAN/UCX0114/snd_UCX0114_ExpUnitMagnet_Activate',
+        Killed = 'SC2/SC2/Experimentals/CYBRAN/UCX0114/snd_UCX0114_ExpUnitMagnet_Killed',
+        MagnetPull = 'SC2/SC2/Experimentals/CYBRAN/UCX0114/snd_UCX0114_ExpUnitMagnet_Magnet_PULL_loop',
+        MagnetPush = 'SC2/SC2/Experimentals/CYBRAN/UCX0114/snd_UCX0114_ExpUnitMagnet_Magnet_PUSH_loop',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Experimentals',
+    },
+    Build = {
+        BuildScaffoldUnit = 'ucb0021',
+        BuildSliderBone = 'UCX0114',
+        BuildSliderY = -5.5,
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'CYBRAN',
+        'STRUCTURE',
+        'STRATEGIC',
+        'TECH1',
+        'INDIRECTFIRE',
+        'DRAGBUILD',
+        'SIZE16',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWATTACKRETICLE',
+        'OVERLAYINDIRECTFIRE',
+        'SORTSTRATEGIC',
+        'EXPERIMENTAL',
+    },
+    CollisionOffsetY = -0.25,
+    CollisionOffsetZ = -1,
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Elevator01',
+                Meshes = {
+                    '/projectiles/debris/Cybran/UCX0114/UCX0114_Turret_Debris_01_mesh',
+                    '/projectiles/debris/Cybran/UCX0114/UCX0114_Turret_Debris_02_mesh',
+                    '/projectiles/debris/Cybran/UCX0114/UCX0114_Turret_Debris_03_mesh',
+                    '/projectiles/debris/Cybran/UCX0114/UCX0114_Turret_Debris_04_mesh',
+                },
+                Projectile = '/projectiles/debris/DebrisGenericLow01/DebrisGenericLow01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'CybranStructureDestroyEffectsExtraLarge02',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 10,
+        Health = 16500,
+        MaxHealth = 16500,
+        RegenRate = 60,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0038>Experimental Unit Magnet',
+    Display = {
+        AnimationDeath = {
+            {
+                Animation = '/units/Illuminate/xsb2302/xsb2302_ADeath.sca',
+                AnimationRateMax = 1,
+                AnimationRateMin = 1,
+                Weight = 100,
+            },
+        },
+        DisplayName = '<LOC UNIT_NAME_0076>Magnetron',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UCX0114',
+                        },
+                        Type = 'CybranMagnetron01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODReduceImmune = true,
+            LODs = {
+                {
+                    LODCutoff = 100,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 300,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 1000,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud, environment_mapping, alpha_test = 128',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud, environment_mapping, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass',
+                                    ShaderState = 'PortalCutoutState',
+                                },
+                                {
+                                    ShaderMacros = 'z_pass, max_depth',
+                                    ShaderState = 'PortalDepthState',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 12.8,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12.8,
+            },
+        },
+        UniformScale = 1.05,
+    },
+    Economy = {
+        BuildTime = 190,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 4000,
+        MassValue = 1140,
+        RebuildBonusIds = {
+            'UCX0114',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 16,
+        SizeZ = 16,
+    },
+    General = {
+        BuildIconIndex = 7,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 220,
+        ExperienceTable = 'MAJOR',
+        ExperienceValue = 4500,
+        FactionName = 'Cybran',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0077>Magnetron',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 40,
+    },
+    LifeBarHeight = 0.32,
+    LifeBarOffset = 4.9,
+    LifeBarSize = 7.4,
+    Navigation = {
+        CostStamp = '/coststamps/Custom/UCX0114_coststamp.lua',
+    },
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MeshExtentsX = 5.75,
+        MeshExtentsY = 4.5,
+        MeshExtentsZ = 8,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = -2,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -1,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.8,
+    SelectionMeshScaleY = 0.1,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 9.8,
+    SelectionSizeZ = 7.2,
+    SelectionThickness = 0.4,
+    SizeX = 4,
+    SizeY = 7,
+    SizeZ = 4,
+    StrategicIconName = 'icon_experimental_generic',
+    StrategicIconSortPriority = 175,
+    Weapons = {
+        {
+            AlwaysRecheckTarget = false,
+            AutoInitiateAttackCommand = false,
+            AutoInitiateAttackOnPatrol = false,
+            BallisticArc = 'RULEUBA_None',
+            Damage = 0,
+            DamageRadius = 0,
+            DisplayName = 'Dummy Range Weapon',
+            Label = 'DummyRange01',
+            MaxRadius = 250,
+            MinRadius = 0,
+            RateOfFire = 0,
+            ScriptClass = 'BareBonesWeapon',
+            ScriptModule = '/lua/sim/DefaultWeapons.lua',
+            TargetCheckInterval = 99999,
+            Turreted = false,
+            WeaponCategory = 'None',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Cybran/UCX0114/UCX0114_wreckage02_prop.bp',
+        Decay = 0,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

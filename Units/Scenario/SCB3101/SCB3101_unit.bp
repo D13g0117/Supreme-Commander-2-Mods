@@ -1,0 +1,146 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 8888,
+        MaxHealth = 8888,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC SCENARIO_0101>Objective Target',
+    Display = {
+        DisplayName = '<LOC SCENARIO_0102>Brackman Teleporter',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Gray_Diffuse.dds',
+                                    MaskName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Mask.dds',
+                                    NormalName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                    TeamName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_lod0.scm',
+                },
+                {
+                    LODCutoff = 500,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Gray_Diffuse.dds',
+                                    MaskName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Mask.dds',
+                                    NormalName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_lod1.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Gray_Diffuse.dds',
+                                    MaskName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Mask.dds',
+                                    NormalName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/Brackman_Teleporter/Brackman_Teleporter_lod2.scm',
+                },
+            },
+        },
+        UniformScale = 0.14,
+    },
+    Economy = {
+        BuildTime = 8888,
+    },
+    Footprint = {
+        SizeX = 21,
+        SizeZ = 21,
+    },
+    General = {
+        SelectionPriority = 5,
+        UnitName = '<LOC SCENARIO_0103>Brackman Teleporter',
+        UnitWeight = 1,
+    },
+    LifeBarRender = false,
+    Navigation = {
+        CostStamp = {
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+            254,254,254,254,254,254,10,10,10,10,10,10,10,10,254,254,254,254,254,254,254,
+        },
+    },
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MeshExtentsX = 5.5,
+        MeshExtentsY = 4.5,
+        MeshExtentsZ = 5.5,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    -- height
+    SizeX = 14,
+    SizeY = 1,
+    SizeZ = 19,
+    Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

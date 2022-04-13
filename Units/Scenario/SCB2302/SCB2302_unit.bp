@@ -1,0 +1,115 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'SELECTABLE',
+        'VISIBLETORECON',
+    },
+    CollisionOffsetX = 0,
+    CollisionOffsetY = 0,
+    CollisionOffsetZ = 0,
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'DebrisAttach01',
+                Meshes = {
+                    '/projectiles/debris/Props/Structures/U01_gate01/U01_gate01_Turret_Debris_01_mesh',
+                    '/projectiles/debris/Props/Structures/U01_gate01/U01_gate01_Turret_Debris_02_mesh',
+                },
+                Projectile = '/projectiles/debris/Props/Structures/U01_gate01/U01_gate01_Turret_proj.bp',
+            },
+        },
+        ExplosionEffect = 'UEFStructureDestroyEffectsExtraLarge02',
+     },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 8888,
+        MaxHealth = 8888,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC SCENARIO_0607>Objective Target',
+    Display = {
+        DisplayName = '<LOC SCENARIO_0089>Main Gate',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Structures/U01_Gate01/U01_gate01_Diffuse.dds',
+                                    MaskName = '/props/Structures/U01_Gate01/U01_gate01_Mask.dds',
+                                    NormalName = '/props/Structures/U01_Gate01/U01_gate01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Structures/U01_Gate01/U01_gate01_lod0.scm',
+                },
+            },
+        },
+        UniformScale = 0.27,
+    },
+    Economy = {
+        BuildTime = 10,
+        EnergyValue = 4000,
+        MassValue = 1200,
+    },
+    General = {
+        CapCost = 0,
+        UnitName = '<LOC SCENARIO_0090>Main Gate',
+    },
+    HideHoverBox = false,
+    HideLifeBars = true,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 1,
+        MeshExtentsY = 1,
+        MeshExtentsZ = 1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = false,
+    },
+    SelectionCenterOffsetZ = 0,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = 0,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 1,
+    SelectionMeshScaleY = 1,
+    SelectionMeshScaleZ = 1,
+    SelectionSizeX = 1.6,
+    SelectionSizeZ = 23,
+    SelectionThickness = 0.1,
+
+    -- height
+    SizeX = 2.2,
+    SizeY = 2,
+    SizeZ = 34,
+    StrategicIconName = 'icon_structure_generic',
+    StrategicIconSortPriority = 220,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Structures/U01_gate01/U01_gate01_wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

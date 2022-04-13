@@ -1,0 +1,102 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Huge',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Debris01',
+                Meshes = {
+                	'/projectiles/debris/Props/Buildings/Illuminate/IBuilding02/IBuilding02_Turret_Debris_01_mesh',
+                	'/projectiles/debris/Props/Buildings/Illuminate/IBuilding02/IBuilding02_Turret_Debris_02_mesh',
+                	'/projectiles/debris/Props/Buildings/Illuminate/IBuilding02/IBuilding02_Turret_Debris_03_mesh',
+                },
+                Projectile = '/projectiles/debris/Illuminate/UIB0001/UIB0001_Tower_proj.bp',
+            },
+        },
+        ExplosionEffect = 'IlluminateStructureDestroyEffectsExtraLarge02',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 10000,
+        MaxHealth = 10000,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        DisplayName = '<LOC SCENARIO_0047>Illuminate Residence',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Buildings/Illuminate/IBuilding01/IBuilding_Diffuse.dds',
+                                    MaskName = '/props/Buildings/Illuminate/IBuilding01/IBuilding_Mask.dds',
+                                    NormalName = '/props/Buildings/Illuminate/IBuilding01/IBuilding_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, environment_mapping, alpha_test = 128',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Buildings/Illuminate/IBuilding02/IBuilding02_lod0.scm',
+                },
+            },
+        },
+        UniformScale = 0.08,
+    },
+    Economy = {
+        BuildTime = 30,
+        EnergyValue = 200,
+        MassValue = 100,
+    },
+    Footprint = {
+        SizeX = 28,
+        SizeZ = 26,
+    },
+    General = {
+        UnitName = '<LOC SCENARIO_0048>Illuminate Residence',
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+
+    -- height
+    SizeX = 25,
+    SizeY = 3,
+    SizeZ = 21,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Buildings/Illuminate/IBuilding02/IBuilding02_wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

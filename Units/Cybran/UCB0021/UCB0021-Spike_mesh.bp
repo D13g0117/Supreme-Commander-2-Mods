@@ -1,0 +1,21 @@
+MeshBlueprint {
+    LODs = {
+		{
+			MaterialSets = {
+				{
+					Materials = {
+						{
+                            DiffuseName = '/Units/Cybran/UCB0021/UCB0021_Diffuse.dds',
+                            MaskName = '/Units/Cybran/UCB0021/UCB0021_Mask.dds',
+							NormalName = '/Units/Cybran/UCB0021/UCB0021_Normal.dds',
+							TeamName = '/Units/Cybran/UCB0021/UCB0021_Team.dds',
+                            ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                        },
+					},
+				},
+			},
+            MeshName  = '/units/cybran/ucb0021/ucb0021-spike_lod0.scm',
+		},
+	},
+	UniformScale = 0.1,
+}

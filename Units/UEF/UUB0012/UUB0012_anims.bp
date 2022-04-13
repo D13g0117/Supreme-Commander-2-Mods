@@ -1,0 +1,39 @@
+RawAnimBlueprint {
+     UUB0012_Build = {
+     	ScaName = '/units/UEF/UUB0012/UUB0012_Abuild01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',		AnimCommand = 'BuildLoopComplete', },     	
+		},
+		PlaybackSpeed = 1.0,
+     },
+     UUB0012_FinishBuild = {
+     	ScaName = '/units/UEF/UUB0012/UUB0012_Aopen01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'FinishBuild', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'SetStartFrame', 		AnimStateName = 'reverse_finish_build', AnimStartFrame = 0, },
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     UUB0012_ReverseFinishBuild = {
+     	ScaName = '/units/UEF/UUB0012/UUB0012_Aclose01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'ReverseFinishBuild' },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'StopBuild',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     UUB0012_StartBuild = {
+     	ScaName = '/units/uef/UUB0012/UUB0012_astart01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'BuildLoop',},
+     	},
+		PlaybackSpeed = 1.0,     
+     },
+     UUB0012_ReverseStartBuild = {
+     	ScaName = '/units/uef/UUB0012/UUB0012_astart01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'Idle',},
+     	},     	
+		PlaybackSpeed = -1.0,     
+     }, 
+}

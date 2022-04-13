@@ -1,0 +1,17 @@
+RawAnimBlueprint {
+     uub0002_FinishBuild = {
+     	ScaName = '/units/uef/uub0002/uub0002_aopen02.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'FinishBuild', },
+     	},
+		PlaybackSpeed = 3.5,
+     },
+     uub0002_ReverseFinishBuild = {
+     	ScaName = '/units/uef/uub0002/uub0002_aopen02.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'ReverseFinishBuild',	Direction = 'Reverse', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'StopBuild',			Direction = 'Reverse', },
+     	},
+		PlaybackSpeed = -3.5,
+     },
+}

@@ -1,0 +1,297 @@
+UnitBlueprint {
+    Abilities = {
+        {
+            Blueprint = 'PowerDetonate',
+        },
+    },
+    Audio = {
+        DeathExplosion = 'SC2/SC2/Destructions/Explosions/CYBRAN/snd_Destroy_Lrg_PreDestroy',
+
+        -- DoneBeingBuilt = 'SC2/SC2/Buildings/CYBRAN/UCB0303/snd_UCB0303_IntelStation_Activate',
+        Killed = 'SC2/SC2/Destructions/Explosions/CYBRAN/snd_Destroy_Huge',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        BuildScaffoldUnit = 'ucb0027',
+        BuildSliderBone = 'UCB0303',
+        BuildSliderY = -1.5,
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'BUILTBYCOMMANDER',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'INTELLIGENCE',
+        'RADAR',
+        'SONAR',
+        'DRAGBUILD',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWQUEUE',
+        'OVERLAYRADAR',
+        'OVERLAYSONAR',
+        'SORTINTEL',
+        'CYBRAN',
+        'UIADVANCEDSORTCATEGORY',
+    },
+    CollisionOffsetZ = 0,
+    Death = {
+        DebrisPieces = true,
+        ExplosionEffect = 'CybranDefaultDestroyEffectsWater01',
+        ExplosionEffectScale = 0.8,
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 1,
+        Health = 1000,
+        MaxHealth = 1000,
+        RegenRate = 2,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0013>Intel Gathering Station',
+    Display = {
+        AnimationUpgrade = '/units/Cybran/UCB0303/UCB0303_aupgrade.sca',
+        DisplayName = '<LOC UNIT_NAME_0026>Radar/Sonar Installation',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'Addon05',
+                        },
+                        Type = 'CybranRadar01',
+                    },
+                    {
+                        Bones = {
+                            'Addon01',
+                            'Addon02',
+                        },
+                        Type = 'CybranRadar02',
+                    },
+                },
+            },
+            Water = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UCB0303',
+                        },
+                        Scale = 4,
+                        Type = 'SeaIdle03',
+                    },
+                    {
+                        Bones = {
+                            'UCB0303',
+                        },
+                        Type = 'CybranSonar01',
+                    },
+                    {
+                        Bones = {
+                            'Addon05',
+                        },
+                        Type = 'CybranSonar02',
+                    },
+                    {
+                        Bones = {
+                            'Addon01',
+                            'Addon02',
+                        },
+                        Type = 'CybranSonar03',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 60,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 120,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 600,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                Diffuse = '/Cybran/Tar_default_diffuse',
+                FadeOut = 150,
+                Length = 6.4,
+                Normal = '/Cybran/Tar_default_normal',
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 6.4,
+            },
+        },
+        UniformScale = 0.0175,
+    },
+    Economy = {
+        BuildTime = 30,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 250,
+        MassValue = 100,
+        RebuildBonusIds = {
+            'UCB0303',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 4,
+        SizeZ = 4,
+    },
+    General = {
+        BuildIconIndex = 1,
+        BuildIconPage = 2,
+        BuildIconSortPriority = 180,
+        CommandCaps = {
+            RULEUCC_Pause = true,
+        },
+        ExperienceValue = 300,
+        FactionName = 'Cybran',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0027>Radar/Sonar Installation',
+        UnitWeight = 1,
+    },
+    Intel = {
+        RadarRadius = 210,
+        ShowIntelOnSelect = true,
+        SonarRadius = 210,
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 0.85,
+    LifeBarSize = 1.75,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default4x4_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+            LAYER_Water = true,
+        },
+        MaxSteerForce = 0,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = -0.1,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.5,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.85,
+    SelectionMeshScaleY = 0.4,
+    SelectionMeshScaleZ = 0.85,
+    SelectionSizeX = 1.9,
+    SelectionSizeZ = 1.6,
+    SelectionThickness = 0.65,
+    SizeX = 2,
+    SizeY = 1,
+    SizeZ = 2,
+    StrategicIconName = 'icon_structure_intel',
+    StrategicIconSortPriority = 230,
+    Weapons = {
+        {
+            Damage = 1000,
+            DamageFriendly = false,
+            DamageRadius = 15,
+            DamageType = 'Normal',
+            DisplayName = 'Power Detonate',
+            DummyWeapon = true,
+            ExplosionEffect = 'PowerDetonateEffectsMedium01',
+            Label = 'PowerDetonate',
+            WeaponCategory = 'Death',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Cybran/UCB0303/UCB0303_wreckage02_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+        },
+    },
+}

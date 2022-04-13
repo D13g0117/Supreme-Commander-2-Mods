@@ -1,0 +1,304 @@
+UnitBlueprint {
+    Abilities = {
+        {
+            Blueprint = 'PowerDetonate',
+        },
+    },
+    Audio = {
+        ActiveLoop = 'SC2/SC2/Buildings/CYBRAN/UCB0701/snd_UCB0701_MassExtractor_Active',
+        DeathExplosion = 'SC2/SC2/Destructions/Explosions/CYBRAN/snd_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Destructions/Explosions/CYBRAN/snd_Destroy_Huge',
+
+        -- DoneBeingBuilt = 'SC2/SC2/Buildings/CYBRAN/UCB0701/snd_UCB0701_MassExtractor_Activate',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        BuildScaffoldUnit = 'ucb0022',
+        BuildSliderBone = 'UCB0701',
+        BuildSliderZ = -4,
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'BUILTBYCOMMANDER',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'ECONOMIC',
+        'MASSPRODUCTION',
+        'MASSEXTRACTION',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SORTECONOMY',
+        'CYBRAN',
+        'UIBASICSORTCATEGORY',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Debris01',
+                Meshes = {
+                    '/projectiles/debris/Cybran/UCB0701/UCB0701_Turret_Debris_01_mesh',
+                    '/projectiles/debris/Cybran/UCB0701/UCB0701_Turret_Debris_02_mesh',
+                    '/projectiles/debris/Cybran/UCB0701/UCB0701_Turret_Debris_04_mesh',
+                },
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Turbine04',
+                Mesh = '/projectiles/debris/Cybran/UCB0701/UCB0701_Turret_Debris_03_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'CybranStructureDestroyEffectsLarge01',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 20,
+        Health = 4000,
+        MaxHealth = 4000,
+        RegenRate = 10,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0014>Mass Production Facility',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0028>Mass Extractor',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UCB0701',
+                        },
+                        Type = 'CybranMassExtractor01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 130,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                },
+                                {
+                                    DiffuseName = '/Units/cybran/UCB0701/UCB0701_belt_diffuse.dds',
+                                    MaskName = '/Units/cybran/UCB0701/UCB0701_belt_Mask.dds',
+                                    NormalName = '/Units/cybran/UCB0701/UCB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/cybran/UCB0701/UCB0701_belt_diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/cybran/UCB0701/UCB0701_belt_Mask.dds',
+                                    NormalName = '/Units/cybran/UCB0701/UCB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, point_cloud, glow',
+                                },
+                                {
+                                    DiffuseName = '/Units/cybran/UCB0701/UCB0701_belt_diffuse.dds',
+                                    MaskName = '/Units/cybran/UCB0701/UCB0701_belt_Mask.dds',
+                                    NormalName = '/Units/cybran/UCB0701/UCB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, point_cloud, glow, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/cybran/UCB0701/UCB0701_belt_diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/cybran/UCB0701/UCB0701_belt_Mask.dds',
+                                    NormalName = '/Units/cybran/UCB0701/UCB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 800,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud',
+                                },
+                                {
+                                    DiffuseName = '/Units/cybran/UCB0701/UCB0701_belt_diffuse.dds',
+                                    MaskName = '/Units/cybran/UCB0701/UCB0701_belt_Mask.dds',
+                                    NormalName = '/Units/cybran/UCB0701/UCB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/cybran/UCB0701/UCB0701_belt_diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/cybran/UCB0701/UCB0701_belt_Mask.dds',
+                                    NormalName = '/Units/cybran/UCB0701/UCB0701_belt_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, environment_mapping, anim_uvr, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                Diffuse = '/Cybran/Tar_default_diffuse',
+                FadeOut = 150,
+                Length = 8,
+                Normal = '/Cybran/Tar_default_normal',
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 8,
+            },
+        },
+        UniformScale = 0.24,
+    },
+    Economy = {
+        BuildTime = 25,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 500,
+        MassValue = 200,
+        ProductionPerSecondMass = 1.2,
+        RebuildBonusIds = {
+            'UCB0701',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 6,
+        SizeZ = 6,
+    },
+    General = {
+        BuildIconIndex = 7,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 60,
+        ExperienceValue = 1000,
+        FactionName = 'Cybran',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0029>Mass Extractor',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 1.45,
+    LifeBarSize = 2.75,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default6x6_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        BuildRestriction = 'RULEUBR_OnMassDeposit',
+        MaxSteerForce = 0,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetZ = 0.13,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -1,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.6,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 2.75,
+    SelectionSizeZ = 2.55,
+    SelectionThickness = 0.55,
+    SizeX = 2.25,
+    SizeY = 3.5,
+    SizeZ = 3.75,
+    StrategicIconName = 'icon_structure_mass',
+    StrategicIconSortPriority = 245,
+    Weapons = {
+        {
+            Damage = 7500,
+            DamageFriendly = false,
+            DamageRadius = 15,
+            DamageType = 'Normal',
+            DisplayName = 'Power Detonate',
+            DummyWeapon = true,
+            ExplosionEffect = 'PowerDetonateEffectsLarge01',
+            Label = 'PowerDetonate',
+            WeaponCategory = 'Death',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Cybran/UCB0701/UCB0701_wreckage01_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+        },
+    },
+}

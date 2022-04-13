@@ -1,0 +1,57 @@
+RawAnimBlueprint {
+     uub0026_Deploy = {
+     	ScaName = '/units/uef/uub0026/uub0026_astart01.sca',
+		PlaybackSpeed = 1.0,
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'play_build_loop_phase_01',},
+     	},
+     },
+	 uub0026_Build_Phase01 = {
+     	ScaName = '/units/uef/uub0026/uub0026_afirstPhase01.sca',
+     	Events = {
+     		{ Trigger = 'OnStart',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimStartTrigger',	LuaStrArg = 'play_build_loop_phase_01', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'play_build_transition_01',},
+     	},
+		PlaybackSpeed = 0.5,
+     },
+	 uub0026_Build_Transition01 = {
+     	ScaName = '/units/uef/uub0026/uub0026_afirstTrans01.sca',
+		Events = {
+			{ Trigger = 'OnStart',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimStartTrigger',	LuaStrArg = 'play_build_transition_01', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'play_build_loop_phase_02',},
+		},
+		PlaybackSpeed = 1.0,
+     },
+     uub0026_Build_Phase02 = {
+     	ScaName = '/units/uef/uub0026/uub0026_asecondPhase01.sca',
+		Events = {
+			{ Trigger = 'OnStart',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimStartTrigger',	LuaStrArg = 'play_build_loop_phase_02', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'play_build_transition_02',},
+		},
+		PlaybackSpeed = 1.0,
+     },
+	 uub0026_Build_Transition02 = {
+     	ScaName = '/units/uef/uub0026/uub0026_asecondTrans01.sca',
+		Events = {
+			{ Trigger = 'OnStart',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimStartTrigger',	LuaStrArg = 'play_build_transition_02', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'play_build_loop_phase_03',},
+		},
+		PlaybackSpeed = 1.0,
+     },
+     uub0026_Build_Phase03 = {
+     	ScaName = '/units/uef/uub0026/uub0026_athirdPhase01.sca',
+		Events = {
+			{ Trigger = 'OnStart',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimStartTrigger',	LuaStrArg = 'play_build_loop_phase_03', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'play_pack',},
+		},
+		PlaybackSpeed = 1.0,
+     },
+     uub0026_Pack = {
+     	ScaName = '/units/uef/uub0026/uub0026_aend01.sca',
+		Events = {
+			{ Trigger = 'OnStart',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimStartTrigger',	LuaStrArg = 'play_pack', },
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'pack', },
+		},
+		PlaybackSpeed = 1.0,
+     },
+}

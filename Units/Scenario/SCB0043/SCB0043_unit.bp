@@ -1,0 +1,168 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 1200,
+        MaxHealth = 1200,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+        },
+        DisplayName = '<LOC SCENARIO_0061>UEF Crane',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Gray_Diffuse.dds',
+                                    MaskName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Mask.dds',
+                                    NormalName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, alpha_test = 128, team_color',
+                                    TeamName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Cranes/UEF_Crane01/UEF_Crane01_lod0.scm',
+                },
+                {
+                    LODCutoff = 400,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Gray_Diffuse.dds',
+                                    MaskName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Mask.dds',
+                                    NormalName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, glow, alpha_test = 128, team_color',
+                                    TeamName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Cranes/UEF_Crane01/UEF_Crane01_lod1.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Gray_Diffuse.dds',
+                                    MaskName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Mask.dds',
+                                    NormalName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, glow, alpha_test = 128, team_color',
+                                    TeamName = '/props/Cranes/UEF_Crane01/UEF_Crane01_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Cranes/UEF_Crane01/UEF_Crane01_lod2.scm',
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 12.8,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12.8,
+            },
+        },
+        UniformScale = 0.6,
+    },
+    Economy = {
+        BuildTime = 30,
+        EnergyValue = 200,
+        MassValue = 100,
+    },
+    Footprint = {
+        SizeX = 8,
+        SizeZ = 10,
+    },
+    General = {
+        UnitName = '<LOC SCENARIO_0062>UEF Crane',
+        UnitWeight = 1,
+    },
+    LifeBarRender = false,
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 1,
+        MeshExtentsY = 1,
+        MeshExtentsZ = 1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+
+    -- height
+    SizeX = 6,
+    SizeY = 2,
+    SizeZ = 7.5,
+    Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.3,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

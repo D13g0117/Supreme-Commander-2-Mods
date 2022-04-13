@@ -1,0 +1,172 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Huge',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'SELECTABLE',
+        'VISIBLETORECON',
+    },
+	CollisionOffsetZ = 0,
+	Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Debris01',
+                Mesh = '/projectiles/debris/Props/Structures/Power_Coil/Power_Coil_Turret_Debris_01_mesh',
+                Projectile = '/projectiles/debris/Props/Structures/Power_Coil/Power_Coil_02_proj.bp',
+            },
+            {
+                AttachBone = 'Debris02',
+                Mesh = '/projectiles/debris/Props/Structures/Power_Coil/Power_Coil_Turret_Debris_02_mesh',
+                Projectile = '/projectiles/debris/Props/Structures/Power_Coil/Power_Coil_01_proj.bp',
+            },
+            {
+                AttachBone = 'Debris03',
+                Mesh = '/projectiles/debris/Props/Structures/Power_Coil/Power_Coil_Turret_Debris_03_mesh',
+                Projectile = '/projectiles/debris/Props/Structures/Power_Coil/Power_Coil_02_proj.bp',
+            },
+        },
+    },
+	Defense = {
+		AirThreatLevel = 0,
+		EconomyThreatLevel = 5,
+		Health = 65536,
+		MaxHealth = 65536,
+		RegenRate = 4,
+		SubThreatLevel = 0,
+		SurfaceThreatLevel = 0,
+		Shield = {
+            AllowPenetration = false,
+            CollisionOffsetY = -1,
+            CollisionShape = 'Sphere',
+            ImpactEffects = 'ShieldHit01',
+            Mesh = '/meshes/Shield/Shield01_mesh',
+            PanelArray = {
+                Panel_1 = '/meshes/Shield/ShieldDomeSection01_mesh',
+                Panel_2 = '/meshes/Shield/ShieldDomeSection02_mesh',
+            },
+            ShieldMaxHealth = 1000000,
+            ShieldRechargeTime = 0.1,
+            ShieldRegenRate = 1000000,
+            ShieldSize = 121,
+        },
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC SCENARIO_0112>Objective Target',
+    Display = {
+   		DisplayName = '<LOC SCENARIO_0113>Power Coil',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+				{
+                    LODCutoff = 200,
+                    MeshName = '/props/Structures/Power_Coil/Power_Coil_lod0.scm',
+					MaterialSets = {
+						{
+							Materials = {
+								{
+				                    DiffuseName = '/props/Structures/Power_Coil/Power_Coil_Gray_Diffuse.dds',
+				                    MaskName = '/props/Structures/Power_Coil/Power_Coil_Mask.dds',
+				                    NormalName = '/props/Structures/Power_Coil/Power_Coil_Normal.dds',
+				                    TeamName = '/props/Structures/Power_Coil/Power_Coil_Team.dds',
+				                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, environment_mapping, point_cloud, glow, team_color',
+								},
+							},
+						},
+					},
+				},
+				{
+                    LODCutoff = 500,
+                    MeshName = '/props/Structures/Power_Coil/Power_Coil_lod1.scm',
+					MaterialSets = {
+						{
+							Materials = {
+								{
+				                    DiffuseName = '/props/Structures/Power_Coil/Power_Coil_Gray_Diffuse.dds',
+				                    MaskName = '/props/Structures/Power_Coil/Power_Coil_Mask.dds',
+				                    NormalName = '/props/Structures/Power_Coil/Power_Coil_Normal.dds',
+				                    TeamName = '/props/Structures/Power_Coil/Power_Coil_Team.dds',
+				                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, glow, team_color',
+								},
+							},
+						},
+					},
+				},
+				{
+                    LODCutoff = 9001,
+                    MeshName = '/props/Structures/Power_Coil/Power_Coil_lod2.scm',
+					MaterialSets = {
+						{
+							Materials = {
+								{
+				                    DiffuseName = '/props/Structures/Power_Coil/Power_Coil_Gray_Diffuse.dds',
+				                    MaskName = '/props/Structures/Power_Coil/Power_Coil_Mask.dds',
+				                    NormalName = '/props/Structures/Power_Coil/Power_Coil_Normal.dds',
+				                    TeamName = '/props/Structures/Power_Coil/Power_Coil_Team.dds',
+				                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+								},
+							},
+						},
+					},
+				},
+			},
+        },
+        UniformScale = 0.16,
+    },
+    Economy = {
+        BuildTime = 10,
+        EnergyValue = 4000,
+        MassValue = 1200,
+    },
+    Footprint = {
+        SizeX = 24,
+        SizeZ = 24,
+    },
+    General = {
+        SelectionPriority = 5,
+        UnitName = '<LOC SCENARIO_0114>Power Coil',
+        UnitWeight = 1,
+    },
+    Physics = {
+        BuildOnLayerCaps = {
+			          LAYER_Land = true,
+        },
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetX = 0,
+    SelectionCenterOffsetZ = 17,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetZ = 16,
+    SelectionMeshScaleX = 0.4,
+	SelectionMeshScaleY = 0.05,
+    SelectionMeshScaleZ = 0.4,
+    SelectionSizeX = 14,
+	SelectionSizeZ = 14,
+    SelectionThickness = 0.2,
+
+    -- height
+    SizeX = 19,
+    SizeY = 3,
+    SizeZ = 19,
+    CollisionOffsetX = 0,
+    CollisionOffsetY = 0,
+    CollisionOffsetZ = 0,
+    StrategicIconName = 'icon_structure_generic',
+    StrategicIconSortPriority = 220,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Structures/Power_Coil/Power_Coil_wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

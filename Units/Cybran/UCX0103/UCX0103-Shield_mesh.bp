@@ -1,0 +1,23 @@
+MeshBlueprint {
+    LODs = {
+		{
+            LODCutoff = 1000,
+			MaterialSets = {
+				{
+					Materials = {
+						{
+							DiffuseName = '/Units/Cybran/UCX0103/UCX0103-Shield_Diffuse.dds',
+							ShaderMacros = 'alpha_blend, edge_highlight',
+							ShaderState = 'AlphaBlendState',
+						},
+					},
+				},
+			},
+            MeshName = '/units/cybran/ucx0103/ucx0103-shield_lod0.scm',
+		},
+		UniformScale = 0.05,
+		
+	},
+	DrawAfterWater = true,
+    SortOrder = 1000,
+}

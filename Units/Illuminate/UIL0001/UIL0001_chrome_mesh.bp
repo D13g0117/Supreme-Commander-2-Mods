@@ -1,0 +1,38 @@
+MeshBlueprint {
+	IconFadeInZoom = 130,
+    LODs = {
+        {
+            LODCutoff = 80,
+			MeshName = '/Units/Illuminate/UIL0001/UIL0001_lod0.scm',
+			DiffuseName = '/Units/Illuminate/UIL0001/UIL0001_Diffuse.dds',
+			NormalName = '/Units/Illuminate/UIL0001/UIL0001_Normal.dds',
+			TeamName = '/Units/Illuminate/UIL0001/UIL0001_Team.dds',
+			MaskName = '/Units/Illuminate/UIL0001/UIL0001_Mask.dds',
+			RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp02.dds',
+			EffectName = '/textures/Units/Shared/Chrome.win.dds',
+            ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, chrome',
+        },
+        {
+            LODCutoff = 160,
+			MeshName = '/Units/Illuminate/UIL0001/UIL0001_lod1.scm',
+			DiffuseName = '/Units/Illuminate/UIL0001/UIL0001_Diffuse.dds',
+			NormalName = '/Units/Illuminate/UIL0001/UIL0001_Normal.dds',
+			TeamName = '/Units/Illuminate/UIL0001/UIL0001_Team.dds',
+			MaskName = '/Units/Illuminate/UIL0001/UIL0001_Mask.dds',
+            RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp02.dds',
+			EffectName = '/textures/Units/Shared/Chrome.win.dds',
+            ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, chrome',
+        },
+        {
+            LODCutoff = 800,
+			MeshName = '/Units/Illuminate/UIL0001/UIL0001_lod2.scm',
+			DiffuseName = '/Units/Illuminate/UIL0001/UIL0001_Diffuse.dds',
+			NormalName = '/Units/Illuminate/UIL0001/UIL0001_Normal.dds',
+			TeamName = '/Units/Illuminate/UIL0001/UIL0001_Team.dds',
+			MaskName = '/Units/Illuminate/UIL0001/UIL0001_Mask.dds',
+            RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp02.dds',
+			EffectName = '/textures/Units/Shared/Chrome.win.dds',
+            ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, environment_mapping, team_color, chrome',
+        },
+    },
+}

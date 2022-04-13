@@ -1,0 +1,128 @@
+UnitBlueprint {
+    Audio = {
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med',
+        Killed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    Death = {
+        DebrisPieces = true,
+        ExplosionEffect = 'UEFStructureDestroyEffectsExtraLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 8888,
+        MaxHealth = 8888,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        DisplayName = '<LOC SCENARIO_0007>Coalition Warehouse',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Gray_Diffuse.dds',
+                                    MaskName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Mask.dds',
+                                    NormalName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, point_cloud',
+                                    TeamName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_lod0.scm',
+                },
+                {
+                    LODCutoff = 500,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Gray_Diffuse.dds',
+                                    MaskName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Mask.dds',
+                                    NormalName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, point_cloud',
+                                    TeamName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_lod1.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Gray_Diffuse.dds',
+                                    MaskName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Mask.dds',
+                                    NormalName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud',
+                                    TeamName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/props/Warehouses/UEF/UWarehouse02/UWarehouse02_lod2.scm',
+                },
+            },
+        },
+        UniformScale = 0.07,
+    },
+    Economy = {
+        BuildTime = 30,
+        EnergyValue = 200,
+        MassValue = 100,
+    },
+    Footprint = {
+        SizeX = 7,
+        SizeZ = 12,
+    },
+    General = {
+        FactionName = 'UEF',
+        UnitName = '<LOC SCENARIO_0008>Coalition Warehouse',
+        UnitWeight = 1,
+    },
+    LifeBarRender = false,
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+
+    -- height
+    SizeX = 5,
+    SizeY = 6,
+    SizeZ = 10,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Warehouses/UEF/UWarehouse02/UWarehouse02_Wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

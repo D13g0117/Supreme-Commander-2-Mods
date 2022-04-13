@@ -1,0 +1,447 @@
+UnitBlueprint {
+    AI = {
+        Attacker = {
+            RelocateToFire = true,
+        },
+    },
+    Audio = {
+        AmbientMove = 'SC2/SC2/Units/illuminate/UIL0203/snd_UIL0203_AntiMissile_Move_Loop',
+        Killed = 'SC2/SC2/Units/illuminate/UIL0203/snd_UIL0203_AntiMissile_Destroy',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Sml_Land',
+        ShieldOff = 'SC2/SC2/Units/illuminate/UIL0203/snd_UIL0203_AntiMissile_Shield_On_Off',
+        ShieldOn = 'SC2/SC2/Units/illuminate/UIL0203/snd_UIL0203_AntiMissile_Shield_On_Off',
+        Sinking = 'SC2/SC2/Destructions/Explosions/snd_water_death_Loop_SMALL_NoMetal',
+        TeleportEnd = 'SC2/SC2/Units/ILLUMINATE/snd_TeleportEnd',
+        TeleportStart = 'SC2/SC2/Units/ILLUMINATE/snd_TeleportStart',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_LAND',
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYFACTORY',
+        'TECH1',
+        'MOBILE',
+        'LAND',
+        'SHIELD',
+        'DEFENSE',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYINDIRECTFIRE',
+        'HOVER',
+        'ILLUMINATE',
+    },
+    Death = {
+        DebrisPieces = true,
+        ExplosionEffect = 'IlluminateDefaultDestroyEffectsMed01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 600,
+        MaxHealth = 600,
+        RegenRate = 1,
+        SurfaceThreatLevel = 1,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0066>Mobile Anti-Missile',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0132>Sliptack',
+        EffectGroupClassification = 'Small',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                },
+            },
+            Water = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 50,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 100,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 500,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        MovementEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                },
+            },
+            Water = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                    {
+                        Bones = {
+                            'UIL0203',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.4,
+                        },
+                        Type = 'IlluminateHoverFX03',
+                    },
+                },
+            },
+        },
+        UniformScale = 0.05,
+    },
+    Economy = {
+        BuildTime = 17,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 110,
+        MassValue = 52,
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    General = {
+        BuildIconIndex = 6,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 70,
+        CommandCaps = {
+            RULEUCC_CallTransport = true,
+            RULEUCC_FormAttack = true,
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Stop = true,
+        },
+        ExperienceValue = 150,
+        FactionName = 'Illuminate',
+        Icon = 'amph',
+        MoveEnergyCost = 30,
+        TeleportCooldown = 20,
+        TeleportRange = 70,
+        UnitName = '<LOC UNIT_NAME_0133>Sliptack',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 0.35,
+    LifeBarSize = 1,
+    Navigation = {
+        Radius = 1.4,
+    },
+    Physics = {
+        BankingSlope = 0.5,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        CollisionPushClass = 1,
+        Elevation = 0.5,
+        MaxAcceleration = 10,
+        MaxBrake = 10,
+        MaxSpeed = 3.8,
+        MaxSpeedReverse = 0,
+        MaxSteerForce = 1000,
+        MeshExtentsX = 1,
+        MeshExtentsY = 0.65,
+        MeshExtentsZ = 1,
+        MotionType = 'RULEUMT_Hover',
+        RotateBodyWhileMoving = true,
+        RotateOnSpot = true,
+        RotateOnSpotThreshold = 0.1,
+        TurnFacingRate = 120,
+        TurnRate = 270,
+        WobbleFactor = 0.009,
+        WobbleSpeed = 0.005,
+    },
+    SelectionCenterOffsetZ = 0,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.3,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.5,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 1,
+    SelectionSizeZ = 1.1,
+    SelectionThickness = 0.65,
+    SizeX = 1.25,
+    SizeY = 1.5,
+    SizeZ = 1.25,
+    StrategicIconName = 'icon_land_shield',
+    StrategicIconSortPriority = 125,
+    Transport = {
+        StorageSize = 1,
+        TeleportTime = 1,
+    },
+    Weapons = {
+        {
+            AlwaysRecheckTarget = false,
+            Audio = {
+                Fire = 'SC2/SC2/Units/illuminate/UIL0203/snd_UIL0203_AntiMissile_Missile',
+            },
+            AutoInitiateAttackOnPatrol = true,
+            BallisticArc = 'RULEUBA_None',
+            BeamCollisionDelay = 0.1,
+            BeamLifetime = 0.1,
+            CollideFriendly = false,
+            Damage = 2,
+            DamageFriendly = false,
+            DamageType = 'Normal',
+            DisplayName = 'Zapper Anti Missile',
+            FireTargetLayerCaps = {
+                Land = 'Air',
+                Water = 'Air',
+            },
+            FiringTolerance = 0.2,
+            Label = 'AntiMissile01',
+            MaxRadius = 32,
+            MinRadius = 5,
+            MuzzleFlashEffect = 'UEF_AntiMissile01_Launch02',
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+            NeedPrep = true,
+            ProjectilesPerOnFire = 1,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'T01_B01_Muzzle01',
+                    },
+                    RackBone = 'T01_Barrel01',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = 0,
+            RackReloadTimeout = 10,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RateOfFire = 3,
+            TargetCheckInterval = 0.3,
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TargetRestrictOnlyAllow = 'TACTICAL MISSILE',
+            TargetType = 'RULEWTT_Projectile',
+            TrackingRadius = 1.5,
+            TurretBoneMuzzle = 'T01_B01_Muzzle01',
+            TurretBonePitch = 'T01_Barrel01',
+            TurretBoneYaw = 'Turret01',
+            TurretDualManipulators = false,
+            TurretPitch = 0,
+            TurretPitchRange = 80,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 360,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            ValidateFiringTrajectory = true,
+            WeaponCategory = 'Defense',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Illuminate/UIL0203/UIL0203_wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+        },
+    },
+}

@@ -1,0 +1,41 @@
+RawAnimBlueprint {
+     ucx0113_Attack = {
+     	ScaName = '/units/cybran/ucx0113/ucx0113_ashootidle01.sca',
+		PlaybackSpeed = 0.5,
+     },
+     ucx0113_Deploy = {
+     	ScaName = '/units/cybran/ucx0113/ucx0113_adeploy01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'OnDeployed' },
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     ucx0113_IdleSurface = {
+     	ScaName = '/units/cybran/ucx0113/ucx0113_asurface_idle01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     ucx0113_IdleUnderwater = {
+     	ScaName = '/units/cybran/ucx0113/ucx0113_aidle01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     ucx0113_MoveSurface = {
+     	ScaName = '/units/cybran/ucx0113/ucx0113_asurface_swim01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     ucx0113_MoveUnderwater = {
+     	ScaName = '/units/cybran/ucx0113/ucx0113_aswim01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     ucx0113_Retract = {
+     	ScaName = '/units/cybran/ucx0113/ucx0113_aretract01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     ucx0113_TransitionToSurface = {
+     	ScaName = '/units/cybran/ucx0113/ucx0113_asurface01.sca',
+		PlaybackSpeed = 0.5,
+     },
+     ucx0113_TransitionToUnderwater = {
+     	ScaName = '/units/cybran/ucx0113/ucx0113_adive01.sca',
+		PlaybackSpeed = 0.5,
+     },
+}

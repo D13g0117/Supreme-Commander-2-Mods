@@ -1,0 +1,355 @@
+UnitBlueprint {
+    AnimSet = {
+        build_loop = 'ucb0011_BuildLoop',
+        finish_build = 'ucb0011_FinishBuild',
+        reverse_finish_build = 'ucb0011_ReverseFinishBuild',
+        start_build = 'ucb0011_StartBuild',
+    },
+    AnimTree = '/anims/factory_animtree.bp',
+    Audio = {
+        ConstructClose = 'SC2/SC2/Buildings/CYBRAN/UCB0011/snd_UCB0011_landgantry_Close',
+        ConstructLoop = 'SC2/SC2/Buildings/CYBRAN/UCB0011/snd_UCB0011_landgantry_Construct_Loop',
+        ConstructOpen = 'SC2/SC2/Buildings/CYBRAN/UCB0011/snd_UCB0011_landgantry_OPEN',
+        DeathExplosion = 'SC2/SC2/Buildings/CYBRAN/UCB0011/snd_UCB0011_landgantry_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Buildings/CYBRAN/UCB0011/snd_UCB0011_landgantry_Destroy_Huge',
+    },
+    Build = {
+        AttachBone = 'Buildpoint01',
+        FinishBuildAnimDelay = 2,
+        FinishBuildRolloffDelay = 10,
+    },
+    Categories = {
+        'STRUCTURE',
+        'CIVILIAN',
+        'UNCAPTURABLE',
+        'UNREPAIRABLE',
+        'VISIBLETORECON',
+    },
+    Death = {
+        DebrisPieces = true,
+        ExplosionEffect = 'CybranDefaultDestroyEffectsLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 20000,
+        MaxHealth = 20000,
+        RegenRate = 18,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 0,
+    },
+    Description = 'UNSELECTABLE Custom Scenario Unit',
+    Display = {
+        AnimationFinishBuild = '/units/UEF/UUB0002/UUB0002_aplatform.sca',
+        AnimationUpgrade = '/units/UEF/UUB0002/UUB0002_aupgrade.sca',
+        BlinkingLights = {
+            {
+                BLBone = 0,
+                BLOffsetX = 8.7,
+                BLOffsetY = 6.5,
+                BLOffsetZ = 0.1,
+                BLScale = 3,
+            },
+            {
+                BLBone = 0,
+                BLOffsetX = -8.7,
+                BLOffsetY = 6.5,
+                BLOffsetZ = 0.1,
+                BLScale = 3,
+            },
+            {
+                BLBone = 0,
+                BLOffsetX = 8.7,
+                BLOffsetY = 6.5,
+                BLOffsetZ = 8.25,
+                BLScale = 3,
+            },
+            {
+                BLBone = 0,
+                BLOffsetX = -8.7,
+                BLOffsetY = 6.5,
+                BLOffsetZ = 8.25,
+                BLScale = 3,
+            },
+            {
+                BLBone = 0,
+                BLOffsetX = 8.7,
+                BLOffsetY = 6.5,
+                BLOffsetZ = -8.15,
+                BLScale = 3,
+            },
+            {
+                BLBone = 0,
+                BLOffsetX = -8.7,
+                BLOffsetY = 6.5,
+                BLOffsetZ = -8.15,
+                BLScale = 3,
+            },
+        },
+        BlinkingLightsFx = {
+            Green = '/effects/emitters/ambient/units/light_green_03_emit.bp',
+            Red = '/effects/emitters/ambient/units/light_red_03_emit.bp',
+            Yellow = '/effects/emitters/ambient/units/light_yellow_02_emit.bp',
+        },
+        BuildAttachBone = 'Buildpoint01',
+        DisplayName = '<LOC SCENARIO_0110>Custom Gantry',
+        HideHoverBox = true,
+        HideLifeBars = true,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0011/UCB0011_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0011/UCB0011_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0011/UCB0011_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128',
+                                    TeamName = '/Units/Cybran/UCB0011/UCB0011_Team.dds',
+                                },
+                                {
+                                    MaterialSets = {
+                                        {
+                                            Materials = {
+                                                {
+                                                    ShaderMacros = 'z_pass',
+                                                    ShaderState = 'PortalCutoutState',
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                {
+                                    MaterialSets = {
+                                        {
+                                            Materials = {
+                                                {
+                                                    ShaderMacros = 'z_pass, max_depth',
+                                                    ShaderState = 'PortalDepthState',
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/Units/Scenario/SCB3302/SCB3302_lod0.scm',
+                },
+                {
+                    LODCutoff = 400,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0011/UCB0011_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0011/UCB0011_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0011/UCB0011_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, alpha_test = 128',
+                                    TeamName = '/Units/Cybran/UCB0011/UCB0011_Team.dds',
+                                },
+                                {
+                                    MaterialSets = {
+                                        {
+                                            Materials = {
+                                                {
+                                                    ShaderMacros = 'z_pass',
+                                                    ShaderState = 'PortalCutoutState',
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                {
+                                    MaterialSets = {
+                                        {
+                                            Materials = {
+                                                {
+                                                    ShaderMacros = 'z_pass, max_depth',
+                                                    ShaderState = 'PortalDepthState',
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/Units/Scenario/SCB3302/SCB3302_lod1.scm',
+                },
+                {
+                    LODCutoff = 9001,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Cybran/UCB0011/UCB0011_Diffuse.dds',
+                                    MaskName = '/Units/Cybran/UCB0011/UCB0011_Mask.dds',
+                                    NormalName = '/Units/Cybran/UCB0011/UCB0011_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, alpha_test = 128',
+                                    TeamName = '/Units/Cybran/UCB0011/UCB0011_Team.dds',
+                                },
+                                {
+                                    MaterialSets = {
+                                        {
+                                            Materials = {
+                                                {
+                                                    ShaderMacros = 'z_pass',
+                                                    ShaderState = 'PortalCutoutState',
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                {
+                                    MaterialSets = {
+                                        {
+                                            Materials = {
+                                                {
+                                                    ShaderMacros = 'z_pass, max_depth',
+                                                    ShaderState = 'PortalDepthState',
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    MeshName = '/Units/Scenario/SCB3302/SCB3302_lod2.scm',
+                },
+            },
+            SortOrder = -1,
+        },
+        SimulationBones = {
+            'Cam_L',
+            'Cam_R',
+            'Girder_L',
+            'Girder_R',
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                FadeOut = 150,
+                Length = 12.8,
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 12.8,
+            },
+        },
+        UniformScale = 0.04,
+    },
+    Economy = {
+        BuildTime = 10,
+        CaptureTimeMult = 0.3,
+        EnergyValue = 4000,
+        MassValue = 1200,
+    },
+    Footprint = {
+        SizeX = 24,
+        SizeZ = 24,
+    },
+    General = {
+        BuildBones = {
+            BuildEffectBones = {
+                'Muzzle01',
+            },
+        },
+        ConstructionBar = false,
+        FactionName = 'Cybran',
+        UnitName = '<LOC SCENARIO_0111>Custom Gantry',
+        UnitWeight = 1,
+    },
+    LifeBarRender = false,
+    Navigation = {
+        CostStamp = {
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+            254,254,254,254,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,254,254,254,254,254,
+        },
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 5.5,
+        MeshExtentsY = 4.5,
+        MeshExtentsZ = 5.5,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+        RaisedPlatforms = {
+
+            -- Platform 1
+            -3.6,
+            -11.6,
+            0.5,
+            3.6,
+            -11.6,
+            0.5,
+            -3.6,
+            11.6,
+            0.5,
+            3.6,
+            11.6,
+            0.5,
+        },
+        RollOffPoints = {
+            {
+                UnitSpin = 0,
+                X = 0,
+                Y = 0,
+                Z = 18,
+            },
+        },
+    },
+
+    -- height
+    SizeX = 18,
+    SizeY = 11,
+    SizeZ = 18,
+    Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.3,
+        ReclaimTimeMultiplier = 1,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

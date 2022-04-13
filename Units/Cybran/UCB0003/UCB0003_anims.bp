@@ -1,0 +1,69 @@
+RawAnimBlueprint {
+     ucb0003_StartBuild01 = {
+     	ScaName = '/units/Cybran/ucb0003/ucb0003_astartbuild01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'BuildLoop',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     ucb0003_BuildLoop01 = {
+     	ScaName = '/units/Cybran/ucb0003/ucb0003_abuild01.sca',
+     	Events = {
+			{ Trigger = 'OnStart',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimStartTrigger',	LuaStrArg = 'StartBuildLoop', },
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     ucb0003_FinishBuild01 = {
+     	ScaName = '/units/Cybran/ucb0003/ucb0003_aopen01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'FinishBuild', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'SetStartFrame', 		AnimStateName = 'reverse_finish_build', AnimStartFrame = 0, },
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     ucb0003_ReverseFinishBuild01 = {
+     	ScaName = '/units/Cybran/ucb0003/ucb0003_aclose01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'ReverseFinishBuild' },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'StopBuild',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     ucb0003_StartBuild02 = {
+     	ScaName = '/units/Cybran/ucb0003/ucb0003_astartbuild02.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'BuildLoop',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     ucb0003_BuildLoop02 = {
+     	ScaName = '/units/Cybran/ucb0003/ucb0003_abuild02.sca',
+     	Events = {
+			{ Trigger = 'OnStart',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimStartTrigger',	LuaStrArg = 'StartBuildLoop', },
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     ucb0003_FinishBuild02 = {
+     	ScaName = '/units/Cybran/ucb0003/ucb0003_aopen02.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'FinishBuild', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'SetStartFrame', 		AnimStateName = 'reverse_finish_build', AnimStartFrame = 0, },
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     ucb0003_ReverseFinishBuild02 = {
+     	ScaName = '/units/Cybran/ucb0003/ucb0003_aclose02.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'ReverseFinishBuild' },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'StopBuild',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     ucb0003_Unpack01 = {
+     	ScaName = '/units/cybran/ucb0003/ucb0003_atransform01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimEndTrigger',	LuaStrArg = 'Unpack' },
+     	},
+		PlaybackSpeed = 1.0,
+     },
+}

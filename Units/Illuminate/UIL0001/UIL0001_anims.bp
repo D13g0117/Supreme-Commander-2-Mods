@@ -1,0 +1,25 @@
+RawAnimBlueprint {
+     UIL0001_Hunker = {
+     	ScaName = '/Units/Illuminate/UIL0001/UIL0001_AhunkerStart01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     UIL0001_HunkerEnd = {
+     	ScaName = '/Units/Illuminate/UIL0001/UIL0001_AhunkerEnd01.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'OnIdle',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     UIL0001_Walk = {
+     	ScaName = '/Units/Illuminate/UIL0001/UIL0001_Awalk01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     UIL0001_Idle = {
+     	ScaName = '/Units/Illuminate/UIL0001/UIL0001_Aidle01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     UIL0001_Killed = {
+     	ScaName = '/Units/Illuminate/UIL0001/UIL0001_Adeath01.sca',
+		PlaybackSpeed = 1.0,
+     },
+}

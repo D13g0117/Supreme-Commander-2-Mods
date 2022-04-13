@@ -1,0 +1,246 @@
+UnitBlueprint {
+    Audio = {
+        DeathExplosion = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Huge',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        ShieldOff = 'SC2/SC2/Buildings/UEF/UUB0202/snd_UUB0202_ShieldGen_Shieldoff',
+        ShieldOn = 'SC2/SC2/Buildings/UEF/UUB0202/snd_UUB0202_ShieldGen_ShieldOn',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        BuildScaffoldUnit = 'uub0023',
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'SHIELD',
+        'DEFENSE',
+        'DRAGBUILD',
+        'SIZE12',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYDEFENSE',
+        'SORTDEFENSE',
+        'UEF',
+        'UIADVANCEDSORTCATEGORY',
+    },
+    Death = {
+        DebrisPieces = true,
+        ExplosionEffect = 'UEFStructureDestroyEffectsMedium01',
+    },
+    Defense = {
+        AirThreatLevel = 10,
+        EconomyThreatLevel = 5,
+        Health = 1500,
+        MaxHealth = 1500,
+        RegenRate = 4,
+        Shield = {
+            AllowPenetration = false,
+            CollisionOffsetY = -1,
+            CollisionShape = 'Sphere',
+            ImpactEffects = 'ShieldHit01',
+            Mesh = '/meshes/Shield/Shield01_mesh',
+            PanelArray = {
+                Panel_1 = '/meshes/Shield/ShieldDomeSection01_mesh',
+                Panel_2 = '/meshes/Shield/ShieldDomeSection02_mesh',
+            },
+            ShieldMaxHealth = 10000,
+            ShieldRechargeTime = 40,
+            ShieldRegenRate = 100,
+            ShieldSize = 42,
+            ShieldType = 'Panel',
+        },
+        SurfaceThreatLevel = 10,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0095>Area Defense Structure',
+    Display = {
+        AnimationActivate = '/units/UEF/UUB0202/UUB0202_Aidle01.sca',
+        AnimationActivateLoop = true,
+        DisplayName = '<LOC UNIT_NAME_0190>Shield Generator',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UUB0202',
+                        },
+                        Type = 'UEFShieldGenerator01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 80,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, alpha_test = 128',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, alpha_test = 128, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 160,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, alpha_test = 128',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, alpha_test = 128, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 800,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud, chrome, build_overlay',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                Diffuse = '/UEF/Tar_default_diffuse',
+                FadeOut = 150,
+                Length = 6,
+                Normal = '/UEF/Tar_default_normal',
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 6,
+            },
+        },
+        UniformScale = 0.03,
+    },
+    Economy = {
+        BuildTime = 40,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 750,
+        MassValue = 300,
+        RebuildBonusIds = {
+            'UUB0202',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 4,
+        SizeZ = 4,
+    },
+    General = {
+        BuildIconIndex = 5,
+        BuildIconPage = 2,
+        BuildIconSortPriority = 170,
+        ExperienceValue = 500,
+        FactionName = 'UEF',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0191>Shield Generator',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 1.15,
+    LifeBarSize = 2,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default4x4_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 4.25,
+        MeshExtentsY = 4.25,
+        MeshExtentsZ = 4.5,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    SelectionCenterOffsetX = 0.05,
+    SelectionCenterOffsetZ = 0,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.7,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.95,
+    SelectionMeshScaleY = 0.2,
+    SelectionMeshScaleZ = 0.95,
+    SelectionSizeX = 2.3,
+    SelectionSizeZ = 1.8,
+    SelectionThickness = 0.55,
+    SizeX = 2.25,
+    SizeY = 0.6,
+    SizeZ = 2.25,
+    StrategicIconName = 'icon_structure_shield',
+    StrategicIconSortPriority = 195,
+    Wreckage = {
+        Blueprint = '/props/Wreckage/UEF/UUB0202/UUB0202_wreckage02_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

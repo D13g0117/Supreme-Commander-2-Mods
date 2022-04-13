@@ -1,0 +1,22 @@
+RawAnimBlueprint {
+     ucs0103_Idle = {
+     	ScaName = '/units/cybran/ucs0103/ucs0103_alandidle01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     ucs0103_TransformForLand = {
+     	ScaName = '/units/cybran/ucs0103/ucs0103_aseatoland01.sca',
+     	Events = {
+     	    { Trigger = 'OnStart',	Type = 'LuaCallback',		CallbackFunc = 'OnAnimStartTrigger',	LuaStrArg = 'TransformForLand', },
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'OnMove',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     ucs0103_TransformForSea = {
+     	ScaName = '/units/cybran/ucs0103/ucs0103_alandtosea01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     ucs0103_Walk = {
+     	ScaName = '/units/cybran/ucs0103/ucs0103_awalk01.sca',
+		PlaybackSpeed = 1.8,
+     },
+}

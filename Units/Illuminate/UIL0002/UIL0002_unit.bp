@@ -1,0 +1,496 @@
+UnitBlueprint {
+    Audio = {
+        AmbientMove = 'SC2/SC2/Units/ILLUMINATE/UIL0002/snd_UIL0002_Engineer_Move_Loop',
+        CaptureLoop = 'SC2/SC2/Units/ILLUMINATE/UIL0002/snd_UIL0002_Engineer_Capture_Loop',
+        ConstructLoop = 'SC2/SC2/Units/ILLUMINATE/UIL0002/snd_UIL0002_Engineer_Construct_Loop',
+        HoverKilledOnWater = 'SC2/SC2/Destructions/Explosions/ILLUMINATE/snd_Expl_Water_Lrg',
+        Killed = 'SC2/SC2/Units/ILLUMINATE/UIL0002/snd_UIL0002_Engineer_Destroy',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Sml_Land',
+        ReclaimLoop = 'SC2/SC2/Units/ILLUMINATE/UIL0002/snd_UIL0002_Engineer_Reclaim_Loop',
+        Sinking = 'SC2/SC2/Destructions/Explosions/snd_water_death_Loop_SMALL_NoMetal',
+        TeleportEnd = 'SC2/SC2/Units/ILLUMINATE/snd_TeleportEnd',
+        TeleportStart = 'SC2/SC2/Units/ILLUMINATE/snd_TeleportStart',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Engineers',
+    },
+    Build = {
+        AssistMultiplier = 0.3,
+        BuildArmManipulators = {
+            {
+                AimBone = 'BuildPoint01',
+                PitchBone = 'Elbow01',
+                YawBone = 'Base01',
+            },
+            {
+                AimBone = 'BuildPoint02',
+                PitchBone = 'Elbow02',
+                YawBone = 'Base02',
+            },
+            {
+                AimBone = 'BuildPoint03',
+                PitchBone = 'Elbow03',
+                YawBone = 'Base03',
+            },
+            {
+                AimBone = 'BuildPoint04',
+                PitchBone = 'Elbow04',
+                YawBone = 'Base04',
+            },
+        },
+        EffectBones = {
+            'BuildPoint01',
+            'BuildPoint02',
+            'BuildPoint03',
+            'BuildPoint04',
+        },
+        MaxRepairDistance = 15,
+        RepairScanRadius = 20,
+        RepairTargetCheckInterval = 1,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYFACTORY',
+        'MOBILE',
+        'LAND',
+        'TECH1',
+        'CONSTRUCTION',
+        'HOVER',
+        'ENGINEER',
+        'CAPTURE',
+        'VISIBLETORECON',
+        'OVERLAYRADAR',
+        'RECLAIMABLE',
+        'PATROLHELPER',
+        'SHOWQUEUE',
+        'ILLUMINATE',
+        'MOBILEGANTRYBUILDER',
+    },
+    CollisionOffsetZ = 0.2,
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'Shoulder02',
+                Mesh = '/projectiles/debris/Illuminate/UIL0002/UIL0002_Turret_Debris_01_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Elbow02',
+                Mesh = '/projectiles/debris/Illuminate/UIL0002/UIL0002_Turret_Debris_02_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Elbow01',
+                Mesh = '/projectiles/debris/Illuminate/UIL0002/UIL0002_Turret_Debris_03_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'TopClaw04',
+                Mesh = '/projectiles/debris/Illuminate/UIL0002/UIL0002_Turret_Debris_04_mesh',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'IlluminateDefaultDestroyEffectsMed01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 2,
+        Health = 1800,
+        MaxHealth = 1800,
+        RegenRate = 2,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0060>Mobile Construction and Repair Unit',
+    Display = {
+        AnimationBuild = '/units/illuminate/uil0002/uil0002_abuildstart01.sca',
+        DisplayName = '<LOC UNIT_NAME_0120>Engineer',
+        EffectGroupClassification = 'Small',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                },
+            },
+            Water = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            0,
+                            -0.48,
+                            0,
+                        },
+                        Scale = 4.5,
+                        Type = 'SeaIdle04',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 40,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 120,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 400,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        MovementEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                },
+            },
+            Water = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            0.5,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            -0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            0.55,
+                            -0.48,
+                            -0.6,
+                        },
+                        Type = 'IlluminateHoverFX01',
+                    },
+                    {
+                        Bones = {
+                            'UIL0002',
+                        },
+                        Offset = {
+                            0,
+                            -0.48,
+                            0,
+                        },
+                        Scale = 2.6,
+                        Type = 'BackWake',
+                    },
+                },
+            },
+        },
+        UniformScale = 0.12,
+    },
+    Economy = {
+        BuildRate = 1,
+        BuildTime = 16,
+        BuildableCategory = {
+            'BUILTBYMOBILE ILLUMINATE TECH1',
+            'uix0113',
+            'uix0114',
+            'uib0011',
+        },
+        CaptureRate = 1,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 140,
+        MassValue = 68,
+        MaxBuildDistance = 10,
+        RepairRate = 0.5,
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    General = {
+        Build = {
+            Bones = {
+                BuildEffectBones = {
+                    'BuildPoint02',
+                    'BuildPoint03',
+                },
+            },
+        },
+        BuildIconIndex = 8,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 10,
+        CommandCaps = {
+            RULEUCC_CallTransport = true,
+            RULEUCC_Capture = true,
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Pause = true,
+            RULEUCC_Reclaim = true,
+            RULEUCC_Repair = true,
+            RULEUCC_Sacrifice = true,
+            RULEUCC_Stop = true,
+        },
+        ConstructionBar = true,
+        ExperienceValue = 150,
+        FactionName = 'Illuminate',
+        Icon = 'amph',
+        MoveEnergyCost = 30,
+        SelectionPriority = 3,
+        TeleportCooldown = 20,
+        TeleportRange = 70,
+        UnitName = '<LOC UNIT_NAME_0121>Engineer',
+        UnitWeight = 1,
+    },
+    Intel = {
+        RadarRadius = 90,
+        SonarRadius = 90,
+        VisionRadius = 32,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 0.95,
+    LifeBarSize = 1.6,
+    Navigation = {
+        Radius = 1.8,
+    },
+    Physics = {
+        BackUpDistance = 4,
+        BankingSlope = 0.5,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        CollisionPushClass = 2,
+        CollisionSoftResolve = true,
+        Elevation = 0.4,
+        MaxAcceleration = 10,
+        MaxBrake = 10,
+        MaxSpeed = 3,
+        MaxSpeedReverse = 0,
+        MaxSteerForce = 1000,
+        MeshExtentsX = 1.1,
+        MeshExtentsY = 0.65,
+        MeshExtentsZ = 1.1,
+        MotionType = 'RULEUMT_Hover',
+        RotateBodyWhileMoving = true,
+        RotateOnSpot = true,
+        RotateOnSpotThreshold = 0.1,
+        TurnFacingRate = 120,
+        TurnRate = 270,
+        WobbleFactor = 0.015,
+        WobbleSpeed = 0.005,
+    },
+    SelectionCenterOffsetY = 0,
+    SelectionCenterOffsetZ = -0.1,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.3,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.8,
+    SelectionMeshScaleY = 0.6,
+    SelectionMeshScaleZ = 0.8,
+    SelectionSizeX = 1.4,
+    SelectionSizeZ = 1.8,
+    SelectionThickness = 0.65,
+    SizeX = 2,
+    SizeY = 1.5,
+    SizeZ = 2,
+    StrategicIconName = 'icon_land_engineer',
+    StrategicIconSortPriority = 85,
+    Transport = {
+        StorageSize = 1,
+        TeleportTime = 1,
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/Illuminate/UIL0002/UIL0002_Wreckage01_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+            Seabed = true,
+        },
+    },
+}

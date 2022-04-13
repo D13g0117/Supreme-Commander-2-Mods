@@ -1,0 +1,82 @@
+UnitBlueprint {
+    Death = {
+        DestructionParts = {
+            {
+                AttachBone = 'UUX0114-Shell',
+                Mesh = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_01_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'UUX0114-Shell02',
+                Mesh = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_02_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'UUX0114-Shell03',
+                Mesh = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_03_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'Shell04',
+                Mesh = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_04_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'Shield01',
+                Mesh = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_05_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'Shield02',
+                Mesh = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_06_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'Shield03',
+                Mesh = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_07_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_proj.bp',
+            },
+            {
+                AttachBone = 'Shield04',
+                Mesh = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_08_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/UEF/UUX0114-Shell/UUX0114-Shell_Turret_Debris_proj.bp',
+            },
+        },
+    },
+    Defense = {
+        Health = 1,
+        MaxHealth = 1,
+        RegenRate = 0,
+    },
+    Display = {
+        UniformScale = 0.1,
+    },
+    Economy = {
+        CaptureTimeMult = 0.3,
+        EnergyValue = 0,
+        MassValue = 0,
+    },
+    General = {
+        CapCost = 0,
+        ExperienceValue = 0,
+        FactionName = 'UEF',
+        Icon = 'land',
+        TechLevel = 'RULEUTL_Secret',
+        UnitWeight = 1,
+    },
+    LifeBarRender = false,
+    Physics = {
+        MotionType = 'RULEUMT_None',
+    },
+    SizeX = 1,
+    SizeY = 1,
+    SizeZ = 1,
+}

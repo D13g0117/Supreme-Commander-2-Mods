@@ -1,0 +1,378 @@
+UnitBlueprint {
+    Audio = {
+        ActiveLoop = 'SC2/SC2/Buildings/UEF/UUB0702/snd_UUB0702_EnergyProd_Active',
+        ConstructLoop = 'SC2/SC2/Units/UEF/UUL0002/snd_UUL0002_Engineer_Construct_Loop',
+        DeathExplosion = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Lrg_PreDestroy',
+        Destroyed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        OnReclaimed = 'SC2/SC2/Destructions/Explosions/UEF/snd_Destroy_Med_Land',
+        UISelection = 'SC2/SC2/Selection/snd_GENERIC_Select_Building',
+    },
+    Build = {
+        AssistMultiplier = 0.3,
+        BuildArmManipulators = {
+            {
+                AimBone = 'T01_B01_Muzzle01',
+                PitchBone = 'T01_Barrel01',
+                YawBone = 'Turret01',
+            },
+        },
+        BuildModifiersExclusionCategory = {
+            'EXPERIMENTAL',
+        },
+        BuildScaffoldUnit = 'uub0022',
+        EffectBones = {
+            'T01_B01_Muzzle01',
+            'T01_B01_Muzzle02',
+            'T01_B01_Muzzle03',
+        },
+        MaxRepairDistance = 20,
+        RepairScanRadius = 20,
+        RepairTargetCheckInterval = 0.2,
+        UseBuildMaterial = true,
+    },
+    Categories = {
+        'PRODUCTSC2',
+        'SELECTABLE',
+        'BUILTBYMOBILE',
+        'BUILTBYCOMMANDER',
+        'STRUCTURE',
+        'LAND',
+        'TECH1',
+        'ECONOMIC',
+        'ENERGYPRODUCTION',
+        'ENERGYEXTRACTION',
+        'SIZE4',
+        'VISIBLETORECON',
+        'DRAGBUILD',
+        'RECLAIMABLE',
+        'SORTECONOMY',
+        'UEF',
+        'UIBASICSORTCATEGORY',
+        'REBUILDER',
+    },
+    Death = {
+        DebrisPieces = true,
+        DestructionParts = {
+            {
+                AttachBone = 'ArmTop01',
+                Mesh = '/projectiles/debris/UEF/UUB0702/UUB0702_Turret_Debris_01_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'ArmSupport01',
+                Mesh = '/projectiles/debris/UEF/UUB0702/UUB0702_Turret_Debris_02_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'ArmBase01',
+                Mesh = '/projectiles/debris/UEF/UUB0702/UUB0702_Turret_Debris_03_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'RadioTower01',
+                Mesh = '/projectiles/debris/UEF/UUB0702/UUB0702_Turret_Debris_04_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+            {
+                AttachBone = 'Support01',
+                Mesh = '/projectiles/debris/UEF/UUB0702/UUB0702_Turret_Debris_05_mesh',
+                PivotBone = 'DebrisPivot01',
+                Projectile = '/projectiles/debris/DebrisGenericMedium01/DebrisGenericMedium01_proj.bp',
+            },
+        },
+        ExplosionEffect = 'UEFStructureDestroyEffectsLarge01',
+        ExplosionTendrils = true,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 1,
+        Health = 3000,
+        MaxHealth = 3000,
+        RegenRate = 3,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0100>Energy Production Facility',
+    Display = {
+        DamageEffects = {
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = 0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = -0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+            {
+                Bone = 0,
+                OffsetX = 0.75,
+                OffsetY = 0.25,
+                OffsetZ = -0.75,
+            },
+        },
+        DisabledMeshBones = {
+            'Turret01',
+        },
+        DisplayName = '<LOC UNIT_NAME_0200>Energy Generator',
+        IdleEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'UUB0702',
+                        },
+                        Type = 'UEFPowerGenerator01',
+                    },
+                },
+            },
+        },
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 100,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128',
+                                },
+                                {
+                                    DiffuseName = '/Units/UEF/UUL0002/UUL0002_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUL0002/UUL0002_Mask.dds',
+                                    NormalName = '/Units/UEF/UUL0002/UUL0002_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, glow, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud',
+                                    TeamName = '/Units/UEF/UUL0002/UUL0002_Team.dds',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/UEF/UUL0002/UUL0002_Diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/UEF/UUL0002/UUL0002_Mask.dds',
+                                    NormalName = '/Units/UEF/UUL0002/UUL0002_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, glow, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, chrome, build_overlay',
+                                    TeamName = '/Units/UEF/UUL0002/UUL0002_Team.dds',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, alpha_test = 128',
+                                },
+                                {
+                                    DiffuseName = '/Units/UEF/UUL0002/UUL0002_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUL0002/UUL0002_Mask.dds',
+                                    NormalName = '/Units/UEF/UUL0002/UUL0002_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/UEF/UUL0002/UUL0002_Team.dds',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow, alpha_test = 128, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/UEF/UUL0002/UUL0002_Diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/UEF/UUL0002/UUL0002_Mask.dds',
+                                    NormalName = '/Units/UEF/UUL0002/UUL0002_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, chrome, build_overlay',
+                                    TeamName = '/Units/UEF/UUL0002/UUL0002_Team.dds',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 1000,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud',
+                                },
+                                {
+                                    DiffuseName = '/Units/UEF/UUL0002/UUL0002_Diffuse.dds',
+                                    MaskName = '/Units/UEF/UUL0002/UUL0002_Mask.dds',
+                                    NormalName = '/Units/UEF/UUL0002/UUL0002_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/UEF/UUL0002/UUL0002_Team.dds',
+                                },
+                            },
+                            Name = 'Base',
+                        },
+                        {
+                            Materials = {
+                                {
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/UEF_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, point_cloud, chrome, build_overlay',
+                                },
+                                {
+                                    DiffuseName = '/Units/UEF/UUL0002/UUL0002_Diffuse.dds',
+                                    EffectName = '/textures/units/shared/illuminatebuild.dds',
+                                    MaskName = '/Units/UEF/UUL0002/UUL0002_Mask.dds',
+                                    NormalName = '/Units/UEF/UUL0002/UUL0002_Normal.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, chrome, build_overlay',
+                                    TeamName = '/Units/UEF/UUL0002/UUL0002_Team.dds',
+                                },
+                            },
+                            Name = 'Build',
+                        },
+                    },
+                },
+            },
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 300,
+                Diffuse = '/UEF/Tar_default_diffuse',
+                FadeOut = 150,
+                Length = 10,
+                Normal = '/UEF/Tar_default_normal',
+                Orientations = {
+                    0,
+                    90,
+                    180,
+                    270,
+                },
+                RemoveWhenDead = false,
+                Width = 10,
+            },
+        },
+        UniformScale = 0.09,
+    },
+    Economy = {
+        BuildRate = 1,
+        BuildTime = 24,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 100,
+        MassValue = 70,
+        ProductionPerSecondEnergy = 6,
+        RebuildBonusIds = {
+            'UUB0702',
+        },
+        SacrificeCaptureTimeMult = 0.2,
+    },
+    Footprint = {
+        SizeX = 6,
+        SizeZ = 6,
+    },
+    General = {
+        BuildIconIndex = 8,
+        BuildIconPage = 1,
+        BuildIconSortPriority = 70,
+        ExperienceValue = 500,
+        FactionName = 'UEF',
+        Icon = 'land',
+        SelectionPriority = 5,
+        UnitName = '<LOC UNIT_NAME_0201>Energy Generator',
+        UnitWeight = 1,
+    },
+    Intel = {
+        VisionRadius = 20,
+    },
+    LifeBarHeight = 0.12,
+    LifeBarOffset = 2.1,
+    LifeBarSize = 3,
+    Navigation = {
+        CostStamp = '/coststamps/Default/Default6x6_coststamp.lua',
+    },
+    Physics = {
+        BankingSlope = 0,
+        BuildOnLayerCaps = {
+            LAYER_Land = true,
+        },
+        MaxSteerForce = 0,
+        MeshExtentsX = 3.1,
+        MeshExtentsY = 1.4,
+        MeshExtentsZ = 3.1,
+        MotionType = 'RULEUMT_None',
+        OccupyGround = true,
+    },
+    ResearchUpgrades = {
+        UBP_ENGINEERINGTOWER = {
+            Bones = {
+                Turret01 = true,
+            },
+        },
+    },
+    SelectionCenterOffsetZ = -0.5,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.8,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.2,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 3.4,
+    SelectionSizeZ = 3.4,
+    SelectionThickness = 0.5,
+    SizeX = 3.6,
+    SizeY = 2,
+    SizeZ = 3.6,
+    StrategicIconName = 'icon_structure_energy',
+    StrategicIconSortPriority = 245,
+    Weapons = {
+        {
+            Damage = 900,
+            DamageFriendly = true,
+            DamageRadius = 5,
+            DamageType = 'Normal',
+            DisplayName = 'Death Weapon',
+            DummyWeapon = true,
+            FiringTolerance = 0.2,
+            Label = 'DeathWeapon',
+            WeaponCategory = 'Death',
+        },
+    },
+    Wreckage = {
+        Blueprint = '/props/Wreckage/UEF/UUB0702/UUB0702_Wreckage01_prop.bp',
+        Decay = 360,
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.2,
+        ReclaimTimeMultiplier = 0.1,
+        UseCustomMesh = true,
+        WreckageLayers = {
+            Land = true,
+        },
+    },
+}

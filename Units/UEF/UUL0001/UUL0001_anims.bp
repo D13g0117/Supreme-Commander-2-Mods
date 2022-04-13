@@ -1,0 +1,32 @@
+RawAnimBlueprint {
+     UUL0001_Hunker = {
+     	ScaName = '/units/UEF/UUL0001/UUL0001_AHunkerStart.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'OnHunkerIdle',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     UUL0001_HunkerEnd = {
+     	ScaName = '/units/UEF/UUL0001/UUL0001_AHunkerEnd.sca',
+     	Events = {
+			{ Trigger = 'OnEnd',	Type = 'AnimStateEvent',	AnimCommand = 'OnIdle',},
+     	},
+		PlaybackSpeed = 1.0,
+     },
+     UUL0001_HunkerIdle = {
+        ScaName = '/units/UEF/UUL0001/UUL0001_AIdleHunker.sca',
+        PlaybackSpeed = 1.0,
+     },
+     UUL0001_Walk = {
+     	ScaName = '/units/UEF/UUL0001/UUL0001_AWalk01.sca',
+		PlaybackSpeed = 1.1,
+     },
+     UUL0001_Idle = {
+     	ScaName = '/units/UEF/UUL0001/UUL0001_AIdle01.sca',
+		PlaybackSpeed = 1.0,
+     },
+     UUL0001_Killed = {
+     	ScaName = '/units/UEF/UUL0001/UUL0001_Adeath01.sca',
+		PlaybackSpeed = 1.0,
+     },
+}

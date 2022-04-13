@@ -1,0 +1,168 @@
+UnitBlueprint {
+    Categories = {
+        'DIRECTFIRE',
+        'UPGRADEMODULE',
+        'LAND',
+        'ILLUMINATE',
+        'TECH1',
+        'SORTUPGRADES',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        EconomyThreatLevel = 0,
+        Health = 1000,
+        MaxHealth = 1000,
+        SurfaceThreatLevel = 5,
+    },
+    Description = '<LOC UNIT_DESCRIPTION_0068>Factory Add-on',
+    Display = {
+        DisplayName = '<LOC UNIT_NAME_0136>Tactical Missile Launcher',
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 20,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0101/UIB0101_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0101/UIB0101_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0101/UIB0101_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, point_cloud, glow',
+                                    TeamName = '/Units/Illuminate/UIB0101/UIB0101_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 40,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0101/UIB0101_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0101/UIB0101_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0101/UIB0101_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, glow, environment_mapping',
+                                    TeamName = '/Units/Illuminate/UIB0101/UIB0101_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+                {
+                    LODCutoff = 200,
+                    MaterialSets = {
+                        {
+                            Materials = {
+                                {
+                                    DiffuseName = '/Units/Illuminate/UIB0101/UIB0101_Diffuse.dds',
+                                    MaskName = '/Units/Illuminate/UIB0101/UIB0101_Mask.dds',
+                                    NormalName = '/Units/Illuminate/UIB0101/UIB0101_Normal.dds',
+                                    RampName = '/textures/Units/Shared/Ramps/Illuminate_Ramp01.dds',
+                                    ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color',
+                                    TeamName = '/Units/Illuminate/UIB0101/UIB0101_Team.dds',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        UniformScale = 0.07,
+    },
+    Economy = {
+        BuildTime = 13,
+        CaptureTimeMult = 0.6,
+        EnergyValue = 125,
+        MassValue = 75,
+    },
+    General = {
+        BuildIconIndex = 1,
+        BuildIconPage = 3,
+        BuildIconSortPriority = 910,
+        CapCost = 0,
+        ExperienceValue = 0,
+        FactionName = 'Illuminate',
+        StructureUpgradeUnit = true,
+        UnitName = '<LOC UNIT_NAME_0137>Tactical Missile Launcher',
+    },
+    LifeBarRender = false,
+    SelectionMeshOffsetX = 0,
+    SelectionMeshOffsetY = -0.3,
+    SelectionMeshOffsetZ = 0,
+    SelectionMeshScaleX = 0.9,
+    SelectionMeshScaleY = 0.8,
+    SelectionMeshScaleZ = 0.9,
+    SelectionSizeX = 1,
+    SelectionSizeZ = 1,
+    SelectionThickness = 0.5,
+    Weapons = {
+        {
+            AboveWaterTargetsOnly = true,
+            AlwaysRecheckTarget = false,
+            Audio = {
+                Fire = 'SC2/SC2/Upgrades/ILLUMINATE/UIM0111/snd_UIM0111_Upgrade_Missile',
+            },
+            BallisticArc = 'RULEUBA_None',
+            CollideFriendly = false,
+            Damage = 325,
+            DamageFriendly = false,
+            DamageType = 'Normal',
+            DisplayName = 'Short Range Tactical Missile',
+            FireTargetLayerCaps = {
+                Land = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+            FiringTolerance = 0.2,
+            Label = 'TacticalMissile01',
+            MaxRadius = 100,
+            MinRadius = 5,
+            MuzzleChargeDelay = 0.3,
+            MuzzleFlashEffect = 'Illuminate_Missile03_Launch01',
+            MuzzleSalvoDelay = 0.2,
+            MuzzleSalvoSize = 4,
+            MuzzleVelocity = 3,
+            ProjectileId = '/projectiles/Illuminate/ITacticalMissile01/ITacticalMissile01_proj.bp',
+            ProjectileLifetime = 25,
+            ProjectilesPerOnFire = 4,
+            RackBones = {
+                {
+                    HideMuzzle = true,
+                    MuzzleBones = {
+                        'T02_B01_Muzzle01',
+                    },
+                    RackBone = 'Turret01',
+                },
+            },
+            RackRecoilDistance = 0,
+            RackReloadTimeout = 10,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_IndirectFire',
+            RateOfFire = 0.1,
+            TargetCheckInterval = 2,
+            TargetPriorities = {
+                'LAND MOBILE',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TrackingRadius = 1.15,
+            TurretPitch = 0,
+            TurretPitchRange = 0,
+            TurretPitchSpeed = 0,
+            TurretYaw = 0,
+            TurretYawRange = 0,
+            TurretYawSpeed = 0,
+            Turreted = false,
+            WeaponCategory = 'Missile',
+        },
+    },
+}

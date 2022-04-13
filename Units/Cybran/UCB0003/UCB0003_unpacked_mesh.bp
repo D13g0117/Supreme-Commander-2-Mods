@@ -1,0 +1,59 @@
+MeshBlueprint {
+	LODs = {
+		{
+			MeshName = '/Units/Cybran/UCB0003/UCB0003_unpacked_lod0.scm',
+			LODCutoff = 80,
+			MaterialSets = {
+				{
+					Materials = {
+						{
+							DiffuseName = '/Units/Cybran/UCB0003/UCB0003_Diffuse.dds',
+							MaskName = '/Units/Cybran/UCB0003/UCB0003_Mask.dds',
+							NormalName = '/Units/Cybran/UCB0003/UCB0003_Normal.dds',
+                            RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+							TeamName = '/Units/Cybran/UCB0003/UCB0003_Team.dds',
+							ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow, point_cloud',
+						},
+					},
+				},
+			},
+		},
+		{
+			MeshName = '/Units/Cybran/UCB0003/UCB0003_unpacked_lod1.scm',
+			LODCutoff = 160,
+			MaterialSets = {
+				{
+					Materials = {
+						{
+							DiffuseName = '/Units/Cybran/UCB0003/UCB0003_Diffuse.dds',
+							MaskName = '/Units/Cybran/UCB0003/UCB0003_Mask.dds',
+							NormalName = '/Units/Cybran/UCB0003/UCB0003_Normal.dds',
+                            RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+							TeamName = '/Units/Cybran/UCB0003/UCB0003_Team.dds',
+							ShaderMacros = 'ambient_lighting, diffuse_lighting, specular_lighting, ambient_occlusion, team_color, environment_mapping, glow',
+						},
+					},
+				},
+			},
+		},
+		{
+			MeshName = '/Units/Cybran/UCB0003/UCB0003_unpacked_lod2.scm',
+			LODCutoff = 800,
+			MaterialSets = {
+				{
+					Materials = {
+						{
+							DiffuseName = '/Units/Cybran/UCB0003/UCB0003_Diffuse.dds',
+							MaskName = '/Units/Cybran/UCB0003/UCB0003_Mask.dds',
+							NormalName = '/Units/Cybran/UCB0003/UCB0003_Normal.dds',
+                            RampName = '/textures/Units/Shared/Ramps/Cybran_Ramp01.dds',
+							TeamName = '/Units/Cybran/UCB0003/UCB0003_Team.dds',
+							ShaderMacros = 'ambient_lighting, diffuse_lighting, ambient_occlusion, team_color, environment_mapping',
+						},
+					},
+				},
+			},
+		},
+	},
+	IconFadeInZoom = 4,
+}
