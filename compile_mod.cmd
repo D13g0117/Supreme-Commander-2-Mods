@@ -1,0 +1,1 @@
+7z a -mx0 .\Mods\averno.scd ".\Custom Blueprints\averno_blueprint.bp"
