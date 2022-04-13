@@ -2,7 +2,7 @@
 --UEF
 -------------------
 
-LOG("------------------ Blueprint merges loaded")
+LOG("------------------ Point Defense ------------------ ")
 UnitBlueprint {
    Merge = true,
    BlueprintId = "uub0101", -- UEF Point Defense
@@ -14,6 +14,110 @@ UnitBlueprint {
         {
             Damage = 5000,
             MaxRadius = 200,
+        },
+    },
+}
+
+LOG("------------------ Disruptor ------------------ ")
+UnitBlueprint {
+   Merge = true,
+   BlueprintId = "uux0115", -- UEF Point Defense
+    Defense = {
+        Health = 51350,
+        MaxHealth = 51350,
+        RegenRate = 50,
+    },
+    Economy = {
+        BuildTime = 5,
+        EnergyValue = 10,
+        MassValue = 10,
+    },
+    Weapons = {
+        {
+            Damage = 2750,
+            DamageRadius = 20,
+            FiringRandomness = 3,
+            FiringTolerance = 10,
+            MaxRadius = 2750,
+            ProjectilesPerOnFire = 6,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'T01_B01_Muzzle01',
+                        'T01_B01_Muzzle02',
+                        'T01_B01_Muzzle03',
+                        'T01_B01_Muzzle04',
+                        'T01_B01_Muzzle05',
+                        'T01_B01_Muzzle06',
+                    },
+                },
+            },
+            RateOfFire = 2,
+            TargetCheckInterval = 1,
+        },
+    },
+}
+
+LOG("------------------ Nukes ------------------ ")
+UnitBlueprint {
+   Merge = true,
+   BlueprintId = "uub0107", -- UEF Point Defense
+    Defense = {
+        Health = 80000,
+        MaxHealth = 80000,
+        RegenRate = 50,
+    },
+    Economy = {
+        BuildTime = 10,
+        EnergyValue = 10,
+        MassValue = 10,
+    },
+    Weapons = {
+        {
+            Damage = 10,
+        },
+        {
+            AutoInitiateAttackCommand = true,
+            Ammo = {
+                BuildTime = 1,
+                EnergyCost = 10,
+                InitialStored = 900,
+                MassCost = 10,
+                MaxStorage = 999,
+            },
+            ManualFire = true,
+            NukeData = {
+                InnerDamage = 99000,
+                InnerRadius = 50,
+                InnerToOuterSegmentCount = 20,
+                OuterDamage = 0,
+                OuterRadius = 60,
+                PulseCount = 10,
+                PulseDamage = 3000,
+                StunDuration = 5,
+                TimeToOuterRadius = 3,
+            },
+            ProjectilesPerOnFire = 4,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'Silo_Muzzle01',
+                        'Silo_Muzzle02',
+                        'Silo_Muzzle03',
+                        'Silo_Muzzle04',
+                    },
+                    RackBone = 'Silo_Muzzle01',
+                },
+            },
+            RackFireTogether = true,
+            RateOfFire = 20,
+            TargetCheckInterval = 1,
+            WeaponRepackTimeout = 1,
+            WeaponUnpackAnimationRate = 20,
+        },
+        {
+            Damage = 90000,
+            DamageRadius = 20,
         },
     },
 }
