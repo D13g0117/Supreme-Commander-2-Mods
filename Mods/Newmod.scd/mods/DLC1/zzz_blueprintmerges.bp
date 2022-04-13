@@ -1,0 +1,19 @@
+-------------------
+--UEF
+-------------------
+
+LOG("------------------ Blueprint merges loaded")
+UnitBlueprint {
+   Merge = true,
+   BlueprintId = "uub0101", -- UEF Point Defense
+    Defense = {
+        Health = 40000,
+        MaxHealth = 40000,
+    },
+    Weapons = {
+        {
+            Damage = 5000,
+            MaxRadius = 200,
+        },
+    },
+}
