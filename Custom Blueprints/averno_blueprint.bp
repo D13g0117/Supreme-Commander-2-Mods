@@ -1,6 +1,7 @@
+------------------------------ UEF Shield Generator
 UnitBlueprint {
     Merge = true,
-    BlueprintId = "uub0202", -- UEF Shield Generator
+    BlueprintId = "uub0202",
     Defense = {
         Health = 15000,
         MaxHealth = 15000,
